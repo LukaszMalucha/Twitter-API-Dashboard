@@ -1,0 +1,425 @@
+/*------------------------------------------------------------------------------
+    MAIN  STYLES    
+------------------------------------------------------------------------------*/
+
+body {
+    font-family: 'Jura', sans-serif;
+    position: relative;
+    background-color: #fff;
+    margin: 0;
+    padding-bottom: 0;
+}
+
+
+
+#wrapper {
+    width: 100%;
+
+}
+
+#page-index {
+    width: 100%;
+    display: block;
+    overflow: auto;
+    position: relative;
+    top: 55px;
+    padding-top:50px;
+    min-height: 900px;
+
+}
+
+#page-index a {
+    text-decoration: none;
+    outline: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+
+.plain-element {
+    margin:0px;
+    padding: 0px;
+}
+
+.warning {
+    color: red;
+}
+
+
+.box {
+   display: flex;
+   align-items:center;
+   margin-bottom: 10px;
+}
+
+#error {
+    color: red;
+    display:none;
+}
+
+.header {
+    height: 40px;
+    margin: 0px;
+}
+
+
+#messageAlert {
+
+    color: red;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0px;
+    margin: 0%;
+}
+
+/*------------------------------------------------------------------------------
+    ROWS
+------------------------------------------------------------------------------*/
+
+.dashboard-cards {
+    width: 90%;
+    margin: auto;
+}
+
+
+
+.row-alert {
+    min-height: 72px;
+}
+
+
+.row-title {
+    width: 70%;
+    margin: auto;
+    margin-top: -2%;
+    text-align: left;
+
+}
+
+
+.row-title h3 {
+    font-size: 30px;
+    font-weight: 800;
+    color: #333;
+    text-shadow: 1px 1px #D1D1D1;
+}
+
+.row-title p {
+    color: #868e96;
+    font-size: 12px;
+    text-shadow: 1px 1px #ECECEC;
+    margin-left: 5px;
+}
+
+
+.row-cards {
+    width: 75%;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.row-form {
+    width: 20%;
+    text-align: center;
+}
+
+
+
+/*------------------------------------------------------------------------------
+    CARDS
+------------------------------------------------------------------------------*/
+
+
+.viz-card {
+    width: 100%;
+    box-shadow: 0 3px 3px 0 #A9A9A9, 0 3px 1px -2px #838383, 0 1px 5px 0 #838383;
+    border-radius: 5px;
+    margin: 3% 8% 3% 8%;
+
+}
+
+
+.card.horizontal .card-image {
+    max-width: 50%;
+}
+
+
+.card .card-content {
+    padding: 16px;
+    text-align: left;
+    font-family: 'Raleway';
+    font-size: 12px;
+
+}
+
+.card .card-content h5 {
+    margin-top: 5px;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 1.4rem;
+
+}
+
+
+/*------------------------------------------------------------------------------
+    BUTTONS
+------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------------
+    FOOTER
+------------------------------------------------------------------------------*/
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 12px;
+    color: #8A8A8A;
+    padding: 15px 0px;
+    text-align: center;
+}
+
+.footer a {
+    color: #8A8A8A;
+}
+
+.footer a:hover,
+.footer a:focus,
+.footer a:active {
+    color: #4f84ae;
+    text-decoration: none;
+}
+
+
+
+/*------------------------------------------------------------------------------
+    MEDIA QUERIES     
+------------------------------------------------------------------------------*/
+
+/* MIN WIDTHS ----------------------------------------------------------------*/
+
+@media(min-width:1450px) {
+    .col-lg-3 {
+        width: 16.6666667%;
+    }
+
+}
+
+
+
+@media(min-width:768px) {
+
+
+    #header_card p {
+        font-size: 40px;
+        color: white;
+    }
+}
+
+/* MAX WIDTHS: LARGE SCREEN---------------------------------------------------*/
+
+@media(max-width:1810px) {
+
+
+
+
+
+}
+
+@media(max-width:1600px) {
+
+    .row-form-tweets,
+    .row-form-content,
+    .row-form-title {
+        width: 80%;
+        padding: 5px;
+    }
+
+    .table-card-medium,
+    .table-card {
+        padding: 5px;
+    }
+
+
+
+    .home-button {
+        width: 20%
+    }
+
+    .tweet {
+        margin: 5px;
+        width: auto;
+        height: auto;
+        min-height: 160px;
+        font-size: 12px;
+    }
+
+    .card-top {
+        font-size: 18px;
+    }
+
+    .card-middle {
+        font-size: 13px;
+        min-height: 120px;
+    }
+}
+
+/* MAX WIDTHS: MEDIUM SCREEN---------------------------------------------------*/
+
+@media(max-width:1200px) {
+
+    .card-middle {
+        font-size: 13px;
+        min-height: 110px;
+    }
+
+    #title_card p {
+        font-size: 24px;
+        font-weight: bold;
+        padding: 17px;
+    }
+
+
+    th,
+    tr {
+        font-size: 12px;
+    }
+}
+
+@media(max-width:1056px) {
+
+
+
+
+}
+
+@media(max-width:993px) {
+
+    .row-cards {
+        text-align: center;
+    }
+
+    .row-form-tweets,
+    .row-form-content,
+    .row-form-title {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .home-button {
+        width: 50%
+    }
+
+    #navigation {
+        padding: 3%;
+    }
+    .tweet {
+        margin: 5px;
+        width: auto;
+        height: auto;
+        min-height: 160px;
+        font-size: 12px;
+    }
+
+    .form-submit-button {
+        width: 60%;
+    }
+
+    .modal {
+    width: 80%;
+    }
+
+
+
+
+}
+@media(max-width:767px) {
+    .tweet {
+        margin: 20px 0px 20px 0px;
+        width: auto;
+        height: auto;
+    }
+
+    .button-etl-back,
+    .button-etl {
+        width: 60%;
+        font-weight: bold;
+        font-size: 1rem;
+        padding: 3%;
+        margin: 2%;
+
+    }
+
+    .row-form-title {
+        font-size: 2rem;
+    }
+
+
+
+}
+
+
+
+/* MAX WIDTHS: EXTRA-SMALL SCREEN---------------------------------------------*/
+
+@media(max-width:521px) {
+
+
+    #page-index {
+        margin-top: 80px;
+    }
+
+    .card-panel {
+        font-size: 12px;
+        font-weight: bold;
+        border-radius: 15px;
+    }
+
+    .input-field .prefix~input {
+        width: 80%;
+        margin-top: 5px;
+    }
+    .prefix~.select-wrapper {
+        width: 70%;
+    }
+    .row-title,
+    .row-cards {
+    margin-left: 5px;
+    }
+
+
+    .dashboard-card {
+        width: 100%
+    }
+
+
+}
+
+
+@media(max-width:480px) {
+
+
+}
+
+@media(max-width:376px) {
+    th,
+    tr {
+        font-size: 9px;
+    }
+}

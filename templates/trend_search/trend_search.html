@@ -1,0 +1,46 @@
+{% extends 'base.html' %} {% block content %}
+
+<form action="{{url_for('trendsearch')}}" method="POST">
+<input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+<div class="dashboard-cards">
+<br>
+<div class="row row-form-title">
+    Check what's trending in US at the moment
+    <br>
+    <span class="form-span"><p>Specify how many tweets you want to upload to database (max. 100)</p>
+    <input id="count" name="count" type="number" class="validate" max="100" required></span>
+    {% if message %}
+    <p style="color: red;"> {{ message }} </p>
+    {% endif %}
+</div>
+<br><br>
+    <div class="row row-form-tweets">
+        <div class="card trend-card">
+            {% for element in us_trends_list %}
+            <div class="col-md-3 text-left">
+                <p>
+                    <label>
+                        <input class="with-gap" name="trend" type="radio" value="{{element}}" checked />
+                        <span>{{element}}</span>
+                    </label>
+                </p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <br>
+<div class="row row-form-content">
+    <button class="btn form-submit-button" type="submit">Submit to DB</button>
+</div>
+</form>
+</div>
+<br>
+
+<div class="fixed-action-btn">
+    <a class="btn-floating btn-large" href="{{url_for('dashboard')}}">
+        <i class="large material-icons">exit_to_app</i>
+    </a>
+</div>
+
+
+{% endblock %}

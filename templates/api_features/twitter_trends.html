@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+{% block styles %} {{super()}}
+    <!-- Data Tables-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#dataTables-example').dataTable();
+        });
+    </script>
+{% endblock %}
+{% block content %}
+<div class="dashboard-cards">
+<br>
+<div class="row row-form-title">
+    Specify woe_id of two locations
+    <br>
+    <p>(To find out what's the city's woe_id please visit <a target="_blank" href="http://woeid.rosselliot.co.nz/lookup/"> woeidlookup.com </a> or choose from the <a class="modal-trigger" href="#modal1"> sample list </a> )<p>
+    {% if message %}
+    <p style="color: red;"> {{ message }} </p>
+    {% endif %}
+</div>
+<br><br>
+<form action="{{ url_for('commontrends') }}" method="POST">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+    <div class="row row-form-content">
+        <div class="col-xs-6 col-md-4 col-lg-6 text-center">
+            <div class="card form-card">
+                    <i class="fas fa-3x fa-city"></i>
+                    <br><br><br>
+                    <input id="city_1" name="city_1" type="number" class="validate" required>
+            </div>
+        </div>
+        <div class="col-xs-6  col-sm-6 col-md-4 col-lg-6 text-center">
+            <div class="card form-card">
+                    <i class="fas fa-3x fa-city"></i>
+                    <br><br><br>
+                    <input id="city_2" name="city_2" type="number" class="validate" required>
+            </div>
+        </div>
+    </div>
+<br><br>
+<div class="row row-form-content">
+    <button class="btn form-submit-button" type="submit">Submit</button>
+</div>
+</form>
+<div class="row row-form-content">
+
+</div>
+</div>
+
+<br>
+<div class="fixed-action-btn">
+    <a class="btn-floating btn-large" href="{{url_for('dashboard')}}">
+        <i class="large material-icons">exit_to_app</i>
+    </a>
+</div>
+
+  <div id="modal1" class="modal">
+    <div class="table-responsive">
+            <table class="table table-striped table-bordered"  >
+                <thead>
+                    <tr>
+                        <th class="center">City</th>
+                        <th class="center">woe_id</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="odd gradeA">
+                        <td class="center" >New York</td>
+                        <td class="center">2459115</td>
+                    </tr>
+                    <tr class="odd gradeA">
+                        <td class="center" >San Francisco</td>
+                        <td class="center">2487956</td>
+                    </tr>
+                    <tr class="odd gradeA">
+                        <td class="center" >Sydney</td>
+                        <td class="center">1105779</td>
+                    </tr>
+                    <tr class="odd gradeA">
+                        <td class="center" >Toronto</td>
+                        <td class="center">4118</td>
+                    </tr>
+                    <tr class="odd gradeA">
+                        <td class="center" >London</td>
+                        <td class="center">44418</td>
+                    </tr>
+                    <tr class="odd gradeA">
+                        <td class="center" >Paris</td>
+                        <td class="center">615702</td>
+                    </tr>
+                    <tr class="odd gradeA">
+                        <td class="center" >Berlin</td>
+                        <td class="center">638242</td>
+                    </tr>
+                    <tr class="odd gradeA">
+                        <td class="center" >Rome</td>
+                        <td class="center">721943</td>
+                    </tr>
+                     <tr class="odd gradeA">
+                        <td class="center" >Warsaw</td>
+                        <td class="center">523920</td>
+                    </tr>
+                    <tr class="odd gradeA">
+                        <td class="center" >Krakow</td>
+                        <td class="center">502075</td>
+                    </tr>
+                    <tr class="odd gradeA">
+                        <td class="center" >Dublin</td>
+                        <td class="center">560743</td>
+                    </tr>
+                    <tr class="odd gradeA">
+                        <td class="center" >Cork</td>
+                        <td class="center">560472</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+  </div>
+
+<script>
+  $(document).ready(function(){
+    $('.modal').modal();
+  });
+</script>
+
+{% endblock %}

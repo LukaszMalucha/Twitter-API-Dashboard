@@ -1,0 +1,45 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="dashboard-cards">
+    <br>
+    <div class="row row-form-title">
+        Popular Retweets
+        <br>
+        <p>Specify the keyword search, min. retweets threshold and max. search results</p>
+    </div>
+    <br><br>
+    <form action="{{url_for('retweetpopularity')}}" method="POST">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+        <div class="row row-form-content">
+
+            <div class="col-xs-12  col-sm-12 col-md-12 col-lg-12 text-center">
+                <div class="card form-card">
+                    <div class="row text-center">
+                        Searched Keyword
+                        <input id="keyword" name="keyword" type="text" class="validate" required>
+                    </div>
+                     <div class="row text-center">
+                        Min. Retweets
+                         <input id="retweets" name="retweets" type="number" class="validate" required>
+                    </div>
+                    <div class="row text-center">
+                        Search Results (max.50)
+                        <input id="count" name="count" type="number" class="validate" max="50" required>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="row row-form-content">
+            <button class="btn form-submit-button" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+<br>
+<div class="fixed-action-btn">
+    <a class="btn-floating btn-large" href="{{url_for('dashboard')}}">
+        <i class="large material-icons">exit_to_app</i>
+    </a>
+</div>
+{% endblock %}

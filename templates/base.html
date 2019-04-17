@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Search Engine Meta-->
+    <title>Twitter API Dashboard</title>
+    <meta name="Description" content="Flask application hosting Twitter API. Main functionality allows user to find out what is currently trending and extract data sample to MongoDB.
+    Once data sample is extracted, next step is to pre-process it and load to SQL database. Final step is to apply Keras LSTM model on processed tweets to find out what's the dominating sentiment
+    among conversation participants - positive, negative or neutral.">
+    <meta name="KeyWords" content="twitter, flask, api, sentiment analysis">
+    <link rel="shortcut icon" type="image/png" href="{{url_for('static', filename='img/septellar.png')}}"/>
+    <!-- Material Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Materialize-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- FontAwesome Styles-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+          integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <!-- Custom Styles-->
+    <link href="{{url_for('static', filename='css/custom-styles.css')}}" rel="stylesheet"/>
+    <link href="{{url_for('static', filename='css/data.css')}}" rel="stylesheet"/>
+    <link href="{{url_for('static', filename='css/navbar.css')}}" rel="stylesheet"/>
+    <!-- Google Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
+    <!-- jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    {% block extrahead %}{% endblock %}
+</head>
+
+
+<body>
+<!-- WRAPPER -->
+<div id="wrapper">
+
+    <!-- TOP NAVBAR -->
+    <nav class="navbar navbar-default top-navbar" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand company-logo" href="{{ url_for('dashboard') }}"><img class="company-logo"
+                                                                                        src="/static/img/logo-white.png"
+                                                                                        alt="Logo"/></a>
+        </div>
+        <ul class="nav navbar-top-links navbar-right">
+            <li><a class="nav-link" target="_blank" href="https://www.linkedin.com/in/lukaszmalucha/"><i
+                    class="fab fa-linkedin"></i><b> LinkedIn</b></a></li>
+            <li><a class="nav-link" target="_blank" href="https://lukaszmalucha.github.io/portfolio/"><i
+                    class="fab fa-github"></i> <b> GitHub</b></a></li>
+            <li><a class='dropdown-trigger nav-link' href='#' data-target='dropdown1' id="user_dropdown"><i
+                    class="fas fa-caret-down"></i><b> {{ current_user.email }}</b></a></li>
+            <li><a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons" id="trigger">menu</i></a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- DROPDOWN -->
+    <ul id="dropdown1" class="dropdown-content">
+        {% if current_user.email != "Guest" %}
+        <li><a href="{{ url_for('userlogout') }}" id="dropdown_link"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+        </li>
+        {% else %}
+        <li><a href="{{ url_for('userlogin') }}" id="dropdown_link"><i class="fa fa-user fa-fw"></i> Log In</a>
+        </li>
+        <li><a href="{{ url_for('userregister') }}" id="dropdown_link"><i class="fas fa-tasks"></i> Register</a>
+        </li>
+        {% endif %}
+    </ul>
+
+    <!-- MOBILE -->
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="{{ url_for('blog') }}"><i class="fas fa-terminal"></i> Code Blog</a></li>
+        <li><a target="_blank" href="https://github.com/LukaszMalucha/"><i
+                class="fab fa-github"></i> GitHub</a></li>
+        {% if current_user.email != "Guest" %}
+        <li><a href="{{ url_for('userlogout') }}" id="dropdown_link"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+        </li>
+        {% else %}
+        <li><a href="{{ url_for('userlogin') }}" id="dropdown_link"><i class="fa fa-user fa-fw"></i> Log In</a>
+        </li>
+        <li><a href="{{ url_for('userregister') }}" id="dropdown_link"><i class="fas fa-tasks"></i> Register</a>
+        </li>
+        {% endif %}
+    </ul>
+
+    <!--/. TOP NAVBAR ****************************************************************************************************************************************************************************************** -->
+
+    <!-- PAGE-INDEX -->
+    <div id="page-index">
+        <div class="row header">
+            <div id="messageAlert" class="alert alert-message" role="alert">
+                {% block alert %} {% endblock %}
+            </div>
+        </div>
+
+        {% block content %} {% endblock %}
+
+
+    </div>
+</div>
+<!-- PAGE-INDEX -->
+<div class="footer">
+    <p><a target="_blank" href="https://www.freeprivacypolicy.com/privacy/view/9b972ff9a2aaeda03f07216c15625791/">Privacy
+        Policy</a> • © 2019 - 2020 www.unflasked.com - All Rights Reserved • Powered by Septellar &trade;</p>
+</div>
+
+
+<!-- PAGE-WRAPPER -->
+
+<!-- WRAPPER -->
+
+<!-- Bootstrap Js -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+<!-- Materialize Js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+<!-- Custom Js -->
+<script src="{{url_for('static', filename='js/custom-scripts.js')}}"></script>
+
+<script type="text/javascript">
+        $(document).ready(function() {
+            $('select').formSelect();
+        });
+        $(document).ready(function() {
+            $('.datepicker').datepicker();
+        });
+
+
+</script>
+<!-- Custom Js -->
+
+
+<script>
+        $('.dropdown-trigger').dropdown();
+
+
+</script>
+
+<script>
+      $(document).ready(function(){
+        $('.fixed-action-btn').floatingActionButton();
+      });
+
+</script>
+
+<script>
+        $(document).ready(function() {
+            $('.sidenav').sidenav();
+        });
+
+</script>
+
+</body>
+
+</html>
