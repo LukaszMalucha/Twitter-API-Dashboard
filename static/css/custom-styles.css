@@ -5,7 +5,7 @@
 body {
     font-family: 'Jura', sans-serif;
     position: relative;
-    background-color: #fff;
+    background-color: #fcfcfc;
     margin: 0;
     padding-bottom: 0;
 }
@@ -134,8 +134,8 @@ body {
 
 
 .card-menu {
-    width: 100%;
-    box-shadow: 0 3px 3px 0 #A9A9A9, 0 3px 1px -2px #838383, 0 1px 5px 0 #838383;
+    width: 95%;
+    box-shadow: 0 3px 3px 0 #A9A9A9, 0 3px 1px -2px #757575, 0 1px 5px 0 #757575;
     border-radius: 5px;
     margin: auto;
 
@@ -148,7 +148,7 @@ body {
 
 
 .card .card-content {
-    padding: 10px 16px 10px 16px;
+    padding: 8px 16px 8px 16px;
     text-align: left;
     font-size: 12px;
     color: black;
@@ -180,7 +180,7 @@ body {
     height: 100%;
     width: 100%;
     text-align: right;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
     background: transparent;
     background-color: transparent;
@@ -191,7 +191,7 @@ body {
 }
 
 .btn-enter i {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 .btn-enter:hover, .btn-enter:focus, .btn-enter:active {

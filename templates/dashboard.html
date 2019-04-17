@@ -11,7 +11,7 @@
         <div class="col-md-4">
             <div class="card horizontal card-menu">
                 <div class="card-image">
-                    <img src="{{url_for('static', filename='img/trends.png')}}" class="img responsive">
+                    <img src="{{url_for('static', filename='img/trends.jpg')}}" class="img responsive">
                 </div>
                 <div class="card-stacked">
                     <div class="card-content">
@@ -20,6 +20,47 @@
                         </h5>
                         <p>Find out what is currently trending in US. Pick most interesting subject and guide your data
                             through ETL pipeline towards sentiment analysis. </p>
+                    </div>
+                    <div class="card-action">
+                        <button onclick="window.location=''" type="submit"
+                                class="btn-enter"><span><i class="fas fa-terminal"></i> Continue </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card horizontal card-menu">
+                <div class="card-image">
+                    <img src="{{url_for('static', filename='img/sentiment.png')}}" class="img responsive">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <h5>
+                            Sentiment Analysis
+                        </h5>
+                        <p>Apply LSTM model on previously stored Twitter dataset.
+                            Find out what's the dominating sentiment among conversation participants. </p>
+                    </div>
+                    <div class="card-action">
+                        <button onclick="window.location=''" type="submit"
+                                class="btn-enter"><span><i class="fas fa-terminal"></i> Continue </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card horizontal card-menu">
+                <div class="card-image">
+                    <img src="{{url_for('static', filename='img/winter.jpg')}}" class="img responsive">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <h5>
+                            Tale of Two Cities
+                        </h5>
+                        <p>Find out what is currently trending in two chosen locations. Specify woe_id and find out common trends.  </p>
                     </div>
                     <div class="card-action">
                         <button onclick="window.location=''" type="submit"
