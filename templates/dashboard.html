@@ -11,7 +11,7 @@
         <div class="col-md-4">
             <div class="card horizontal card-menu">
                 <div class="card-image">
-                    <img src="{{url_for('static', filename='img/trends.jpg')}}" class="img responsive">
+                    <img src="{{url_for('static', filename='img/trend_search.jpg')}}" class="img responsive">
                 </div>
                 <div class="card-stacked">
                     <div class="card-content">
@@ -19,28 +19,7 @@
                             Trend Search
                         </h5>
                         <p>Find out what is currently trending in US. Pick most interesting subject and guide your data
-                            through ETL pipeline towards sentiment analysis. </p>
-                    </div>
-                    <div class="card-action">
-                        <button onclick="window.location=''" type="submit"
-                                class="btn-enter"><span><i class="fas fa-terminal"></i> Continue </span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card horizontal card-menu">
-                <div class="card-image">
-                    <img src="{{url_for('static', filename='img/sentiment.png')}}" class="img responsive">
-                </div>
-                <div class="card-stacked">
-                    <div class="card-content">
-                        <h5>
-                            Sentiment Analysis
-                        </h5>
-                        <p>Apply LSTM model on previously stored Twitter dataset.
-                            Find out what's the dominating sentiment among conversation participants. </p>
+                            through ETL. </p>
                     </div>
                     <div class="card-action">
                         <button onclick="window.location=''" type="submit"
@@ -60,7 +39,27 @@
                         <h5>
                             Tale of Two Cities
                         </h5>
-                        <p>Find out what is currently trending in two chosen locations. Specify woe_id and find out common trends.  </p>
+                        <p>Find out what are the common trends in two chosen locations. </p>
+                    </div>
+                    <div class="card-action">
+                        <button onclick="window.location=''" type="submit"
+                                class="btn-enter"><span><i class="fas fa-terminal"></i> Continue </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card horizontal card-menu">
+                <div class="card-image">
+                    <img src="{{url_for('static', filename='img/retweets.jpg')}}" class="img responsive">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <h5>
+                            Popular Retweets
+                        </h5>
+                        <p>Choose a keyword and find out most popular tweets in a subject. </p>
                     </div>
                     <div class="card-action">
                         <button onclick="window.location=''" type="submit"
@@ -71,94 +70,61 @@
             </div>
         </div>
     </div>
+    <div class="row row-title">
+        <h3>Deep Learning</h3>
+        <p><i class="fab fa-python"></i>&nbsp; Deep learning application on Twitter data </p>
+    </div>
+    <div class="row row-cards">
+        <div class="col-md-4">
+            <div class="card horizontal card-menu">
+                <div class="card-image">
+                    <img src="{{url_for('static', filename='img/sentiment.png')}}" class="img responsive">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <h5>
+                            Sentiment Analysis
+                        </h5>
+                        <p>Apply LSTM on stored data to
+                            find out what's the dominating sentiment among conversation participants. </p>
+                    </div>
+                    <div class="card-action">
+                        <button onclick="window.location=''" type="submit"
+                                class="btn-enter"><span><i class="fas fa-terminal"></i> Continue </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row row-title">
+        <h3>App Utilities</h3>
+        <p><i class="fab fa-python"></i>&nbsp; Various useful features </p>
+    </div>
+    <div class="row row-cards">
+        <div class="col-md-4">
+            <div class="card horizontal card-menu">
+                <div class="card-image">
+                    <img src="{{url_for('static', filename='img/manage_db.jpg')}}" class="img responsive">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <h5>
+                            Manage Database
+                        </h5>
+                        <p>Get rid of obsolete collections from MongoDB or delete processed data from SQLite database. </p>
+                    </div>
+                    <div class="card-action">
+                        <button onclick="window.location=''" type="submit"
+                                class="btn-enter"><span><i class="fas fa-terminal"></i> Continue </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row row-cards"></div>
 </div>
 
 
 {% endblock %}
-
-
-<div class="dashboard-cards">
-    <div class="row row-title">
-        Twitter Analytics
-    </div>
-
-    <div class="row row-cards">
-        <div class="col-sm-6 col-md-3 col-lg-3 text-center">
-            <div class="card dashboard-card">
-                <div class="card-top">
-                    Trend Search
-                </div>
-                <div class="card-middle">
-                    Find out what is currently trending in US. Pick most interesting subject and guide your data sample
-                    through ETL pipeline to make it ready for sentiment analysis.
-                </div>
-                <div class="card-bottom">
-                    <a href="{{url_for('trendsearch')}}" class="waves-effect waves-light btn" id="navigation">Trends</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 text-center">
-            <div class="card dashboard-card">
-                <div class="card-top">
-                    Manage Database
-                </div>
-                <div class="card-middle">
-                    Get rid of obsolete collections from MongoDB or delete processed data from SQLite database.
-                </div>
-                <div class="card-bottom">
-                    <a href="{{url_for('managedb')}}" class="waves-effect waves-light btn" id="navigation">Manage</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 text-center">
-            <div class="card dashboard-card">
-                <div class="card-top">
-                    Sentiment Analysis
-                </div>
-                <div class="card-middle">
-                    Apply Deep learning LSTM model on previously stored Twitter dataset. Find out what's the dominating
-                    sentiment among conversation participants.
-                </div>
-                <div class="card-bottom">
-                    <a href="{{url_for('sentimentanalysis')}}" class="waves-effect waves-light btn" id="navigation">Analysis</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <br>
-    <div class="row row-title">
-        Twitter API Features
-    </div>
-
-    <div class="row row-cards">
-        <div class="col-sm-6 col-md-3 col-lg-3 text-center">
-            <div class="card dashboard-card">
-                <div class="card-top">
-                    Tale of Two Cities
-                </div>
-                <div class="card-middle">
-                    Find out what is currently trending in two chosen locations. Specify woe_id and find out common
-                    trends.
-                </div>
-                <div class="card-bottom">
-                    <a href="{{url_for('commontrends')}}" class="waves-effect waves-light btn"
-                       id="navigation">Common</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-lg-3 text-center">
-            <div class="card dashboard-card">
-                <div class="card-top">
-                    Popular Retweets
-                </div>
-                <div class="card-middle">
-                    Choose a keyword and find out most popular tweets in a subject.
-                </div>
-                <div class="card-bottom">
-                    <a href="{{url_for('retweetpopularity')}}" class="waves-effect waves-light btn" id="navigation">Retweets</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
