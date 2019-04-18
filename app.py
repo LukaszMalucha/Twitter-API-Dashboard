@@ -58,6 +58,17 @@ def dashboard():
     return render_template('dashboard.html')
 
 
+@app.route('/two_cities')
+def two_cities():
+    """Tale of Two Cities View"""
+    return render_template('two_cities/dashboard.html')
+
+@app.route('/popular_retweets')
+def popular_retweets():
+    """Tale of Two Cities View"""
+    return render_template('popular_retweets/dashboard.html')
+
+
 @app.route('/blog')
 def blog():
     """Blog"""

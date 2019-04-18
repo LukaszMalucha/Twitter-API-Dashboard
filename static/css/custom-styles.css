@@ -22,8 +22,7 @@ body {
     overflow: auto;
     position: relative;
     top: 55px;
-    padding-top:50px;
-    min-height: 900px;
+    min-height: 800px;
 
 }
 
@@ -60,7 +59,7 @@ body {
 }
 
 .header {
-    height: 40px;
+    height: 100px;
     margin: 0px;
 }
 
@@ -200,6 +199,27 @@ body {
     color: green;
 }
 
+
+.fixed-action-btn {
+   right: 360px;
+   bottom: 60px;
+
+}
+
+
+.btn-floating {
+    background-color: #003f67;
+}
+
+.btn-floating i {
+    font-size: 24px;
+}
+
+.btn-floating:hover,
+.btn-floating:active,
+.btn-floating:focus {
+    background: #002740;
+}
 
 /*------------------------------------------------------------------------------
     FOOTER

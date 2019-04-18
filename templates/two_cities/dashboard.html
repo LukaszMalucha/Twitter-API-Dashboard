@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block extrahead %}
+<link href="{{url_for('static', filename='css/data.css')}}" rel="stylesheet"/>
+{% endblock %}
+
+{% block row_header %}
+<div class="row row-header">
+    <div class="row">
+        <div class="col-xs-0 col-sm-0 col-md-4 col-lg-2 text-right">
+
+            <img src="{{url_for('static', filename='img/main/two_cities.jpg')}}" class="img responsive img-header">
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-10">
+            <div class="row row-summary">
+                <h5>The Tale of Two Cities</h5>
+                <p>To find out what's the city's woe_id please visit <a target="_blank"
+                                                                        href="http://woeid.rosselliot.co.nz/lookup/">
+                    woeidlookup.com </a>.
+                <p>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+<div class="dashboard-cards">
+
+    <div class="row row-cards">
+        <div class="col-md-4">
+            <form class="col s12" id="formTransaction">
+                <div class="card form-card">
+                    <div class="card-content">
+                        <span class="card-title">Specify woe_id of two cities</span>
+                        <a class="modal-trigger" href="#modal1">( sample woe_id's )</a>
+                        <div class="input-field">
+                            <img class="img-responsive prefix" src="{{url_for('static', filename='img/data/city_1.jpg')}}"/>
+                            <input id="city_1" name="city_1" type="number" class="validate" required>
+                            <label for="city_1">City #1</label>
+                        </div>
+                        <div class="input-field">
+                            <img class="img-responsive prefix" src="{{url_for('static', filename='img/data/city_2.jpg')}}"/>
+                            <input id="city_2" name="city_2" type="number" class="validate" required>
+                            <label for="city_2">City #2</label>
+                        </div>
+
+                    </div>
+
+                    <button type="submit" class="btn-card" id="modalClose"><span><i class="fas fa-terminal"></i> Submit </span>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="row row-cards"></div>
+    </div>
+</div>
+
+<div class="fixed-action-btn">
+    <a class="btn-floating btn-large" href="{{url_for('dashboard')}}">
+        <i class="large material-icons">exit_to_app</i>
+    </a>
+</div>
+
+{% endblock %}

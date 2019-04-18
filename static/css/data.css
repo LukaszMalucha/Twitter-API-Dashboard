@@ -1,0 +1,136 @@
+/*------------------------------------------------------------------------------
+    ROWS
+------------------------------------------------------------------------------*/
+
+.header {
+    display: none;
+}
+
+.row-header {
+    max-height: 180px;
+    margin: 0px;
+    background: white;
+    padding: 0 16% 0 13%;
+}
+
+.row-header h5 {
+    color: black;
+    font-weight: 800;
+}
+
+
+
+.row-summary {
+    padding: 2% 0% 3% 0%;
+    color: #333333 !important;
+}
+
+.row-title {
+    width: 100%;
+    color: #181818;
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+    text-shadow: 1px 1px #d1d1d1;
+    margin-top: auto;
+}
+
+
+.row-cards {
+    width: 70%;
+    text-align: center;
+}
+
+
+/*------------------------------------------------------------------------------
+    DASHBOARD CARDS
+------------------------------------------------------------------------------*/
+
+.form-card {
+  background: #fff;
+  color: black;
+  padding-top: 10px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+
+.form-card .card-content {
+    text-align: center;
+}
+
+
+/*------------------------------------------------------------------------------
+    BUTTONS
+------------------------------------------------------------------------------*/
+
+
+.btn-card {
+    width: 100%;
+    height: 50px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-color: transparent;
+    text-align: right;
+    color: white;
+    background-color: #003f67;
+    font-size: 1.1rem;
+    font-family: 'Jura', sans-serif;
+    font-weight: 600;
+}
+
+.btn-card:hover, .btn-card:active, .btn-card:focus {
+    background-color: #003252;
+}
+
+.btn-card i{
+    font-size: 0.8rem;
+}
+
+
+/*------------------------------------------------------------------------------
+    FORMS
+------------------------------------------------------------------------------*/
+
+
+input[type=text] {
+    border-radius: 10px;
+    border-color: #1a2026;
+    background-color: #fff;
+    color: white;
+}
+
+.input-field {
+    width: 80%;
+    margin: 10% 10% 10% 10%;
+
+}
+
+input[type="number"]:not(.browser-default):focus:not([readonly]),
+input[type="text"]:not(.browser-default):focus:not([readonly]) {
+    border-bottom: 1px solid #003f67;
+    box-shadow: 0 1px 0 0 #003f67;
+}
+
+input[type="number"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="text"]:not(.browser-default):focus:not([readonly]) + label {
+    color: #003f67;
+}
+
+.input-field .prefix {
+    left: -1rem;
+}
+
+
+
+
+
+
+/*------------------------------------------------------------------------------
+    IMAGES
+------------------------------------------------------------------------------*/
+.img-header {
+    margin-top: 6%;
+    height: 160px;
+}

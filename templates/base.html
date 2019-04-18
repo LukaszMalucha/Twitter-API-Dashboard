@@ -24,7 +24,7 @@
           integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <!-- Custom Styles-->
     <link href="{{url_for('static', filename='css/custom-styles.css')}}" rel="stylesheet"/>
-    <link href="{{url_for('static', filename='css/data.css')}}" rel="stylesheet"/>
+
     <link href="{{url_for('static', filename='css/navbar.css')}}" rel="stylesheet"/>
     <!-- Google Fonts-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
@@ -32,7 +32,8 @@
     <link href="https://fonts.googleapis.com/css?family=Jura" rel="stylesheet">
     <!-- jQuery-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    {% block extrahead %}{% endblock %}
+    {% block extrahead %}
+    {% endblock %}
 </head>
 
 
@@ -48,8 +49,8 @@
                                                                                         alt="Logo"/></a>
         </div>
         <ul class="nav navbar-top-links navbar-right">
-            <li><a class="nav-link" target="_blank" href="https://www.linkedin.com/in/lukaszmalucha/"><i
-                    class="fab fa-linkedin"></i><b> LinkedIn</b></a></li>
+            <li><a class="nav-link" href="{{ url_for('blog') }}"><i class="fas fa-terminal"></i><b> Code Blog</b></a>
+            </li>
             <li><a class="nav-link" target="_blank" href="https://lukaszmalucha.github.io/portfolio/"><i
                     class="fab fa-github"></i> <b> GitHub</b></a></li>
             <li><a class='dropdown-trigger nav-link' href='#' data-target='dropdown1' id="user_dropdown"><i
@@ -96,8 +97,9 @@
             <div id="messageAlert" class="alert alert-message" role="alert">
                 {% block alert %} {% endblock %}
             </div>
-        </div>
 
+        </div>
+        {% block row_header %}{% endblock %}
         {% block content %} {% endblock %}
 
 

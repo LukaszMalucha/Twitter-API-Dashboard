@@ -162,15 +162,15 @@ nav ul b {
 
 nav ul a:hover {
     background-color: #fff;
-    color: #2f2f2f;
+    color: #003252;
 }
 
 nav ul li:hover, nav ul li:active {
-    background: #2f2f2f;
+    background: #003252;
 }
 
 .sidenav li:hover {
-     background: #2f2f2f;
+     background: #003252;
 }
 
 /*------------------------------------------------------------------------------
