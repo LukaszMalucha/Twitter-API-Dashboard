@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------------
-    ROWS
+    ROWS $ COLUMNS
 ------------------------------------------------------------------------------*/
 
 .header {
@@ -41,12 +41,25 @@
     text-align: center;
 }
 
+#tweetColumn {
+    max-height: 510px;
+    overflow: auto;
+}
+
+#tweetColumn a {
+    color: black;
+}
+
+#tweetColumn a:hover {
+    color: #1DA1F2;
+}
 
 /*------------------------------------------------------------------------------
     DASHBOARD CARDS
 ------------------------------------------------------------------------------*/
 
 .form-card {
+  width: 100%;
   background: #fff;
   color: black;
   padding-top: 10px;
@@ -61,42 +74,45 @@
 }
 
 
-
-
-.tweet {
-    width: 468px;
-    height: 150px;
-    padding: 15px;
+.card-tweet {
+    width: 85%;
+    margin: 0.5rem 5% 5% 10%;
     text-align: left;
-    font-size: 12px;
-    font-weight: bold;
+    font-size: 0.8rem;
     line-height: 16px;
     border-color: #eee #ddd #bbb;
-    border-radius: 5px;
     border-style: solid;
     border-width: 1px;
+    border-radius: 5px;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.30);
-    margin: 20px;
-    padding: 16px;
+    padding: 4% 4% 2% 4%;
     float: left;
+    font-family: Georgia;
 }
 
-.tweet p {
+.card-tweet h5 {
+    font-size: 0.8rem;
+    font-family: 'Open Sans', sans-serif;
+    margin: 5px;
+}
+
+.card-tweet p {
     font-family: Georgia;
-    font-size: 16px;
+    font-size: 0.8rem;
     font-weight: normal;
     line-height: 20px;
+    min-height: 60px;
 }
 
-.tweet a {
+.card-tweet a {
     color: inherit;
     font-weight: normal;
     text-decoration: none;
     outline: 0 none;
 }
 
-.tweet i {
-    font-size: 16px;
+.card-tweet i {
+    font-size: 0.8rem;
     color: #818286;
 }
 
@@ -141,8 +157,8 @@ input[type=text] {
 }
 
 .input-field {
-    width: 80%;
-    margin: 10% 10% 10% 10%;
+    width: 90%;
+    margin: 10% 4% 10% 6%;
 
 }
 

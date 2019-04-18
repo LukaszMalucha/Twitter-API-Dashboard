@@ -15,7 +15,8 @@
         <div class="col-xs-12 col-sm-12 col-md-8 col-lg-10">
             <div class="row row-summary">
                 <h5>Popular Retweets</h5>
-                <p>Specify the keyword search, min. retweets threshold and max. search results<p>
+                <p>Specify the keyword search, min. retweets threshold and max. search results
+                <p>
             </div>
 
         </div>
@@ -26,33 +27,40 @@
 <div class="dashboard-cards">
 
     <div class="row row-cards">
-        <div class="col-md-4">
-            <form method="POST" class="col s12" id="popularRetweets">
+        <div class="col-md-3 plain-element">
+            <form method="POST" id="popularRetweets">
                 <div class="card form-card">
                     <div class="card-content">
                         <span class="card-title">Retweet Search</span>
+                        <br>
                         <div class="input-field">
-                            <img class="img-responsive prefix" src="{{url_for('static', filename='img/data/searched_keyword.jpg')}}"/>
+                            <img class="img-responsive prefix"
+                                 src="{{url_for('static', filename='img/data/searched_keyword.jpg')}}"/>
                             <input id="keyword" name="keyword" type="text" class="validate" required>
                             <label for="keyword">Searched Keyword </label>
                         </div>
                         <div class="input-field">
-                            <img class="img-responsive prefix" src="{{url_for('static', filename='img/data/min_retweets.jpg')}}"/>
+                            <img class="img-responsive prefix"
+                                 src="{{url_for('static', filename='img/data/min_retweets.jpg')}}"/>
                             <input id="retweets" name="retweets" type="number" class="validate" required>
                             <label for="retweets">Min. Retweets</label>
                         </div>
                         <div class="input-field">
-                            <img class="img-responsive prefix" src="{{url_for('static', filename='img/data/search_results.jpg')}}"/>
+                            <img class="img-responsive prefix"
+                                 src="{{url_for('static', filename='img/data/search_results.jpg')}}"/>
                             <input id="count" name="count" type="number" class="validate" max="50" required>
                             <label for="count">Search Results (max.50)</label>
                         </div>
 
                     </div>
-
                     <button type="submit" class="btn-card"><span><i class="fas fa-terminal"></i> Submit </span>
                     </button>
                 </div>
             </form>
+        </div>
+        <div class="loader"></div>
+        <div class="col-md-9 plain-element" id="tweetColumn">
+
         </div>
         <div class="row row-cards"></div>
     </div>
