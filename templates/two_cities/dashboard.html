@@ -2,6 +2,10 @@
 
 {% block extrahead %}
 <link href="{{url_for('static', filename='css/data.css')}}" rel="stylesheet"/>
+<!-- Data Tables-->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+
 {% endblock %}
 
 {% block row_header %}
@@ -29,8 +33,8 @@
 <div class="dashboard-cards">
 
     <div class="row row-cards">
-        <div class="col-md-4">
-            <form class="col s12" id="formTransaction">
+        <div class="col-md-3 plain-element">
+            <form method="POST" id="twoCities">
                 <div class="card form-card">
                     <div class="card-content">
                         <span class="card-title">Specify woe_id of two cities</span>
@@ -54,6 +58,44 @@
                     </button>
                 </div>
             </form>
+        </div>
+        <div class="loader"></div>
+        <div class="col-md-2 plain-element"></div>
+        <div class="col-md-6 plain-element" id="tweetColumn">
+            <div class="card card-table">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-tweets" id="twoCitiesTable">
+                        <thead>
+                        <tr>
+                            <th class="center">Hashtag</th>
+                            <th class="center">Link</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="odd gradeA">
+                            <td class="center">#Act Up</td>
+                            <td class="center"><a target="_blank" href="https://twitter.com/search?q=BetrayedMeWhen&src=typd"
+                                                  class="waves-effect waves-light btn-small btn-link"><i
+                                    class="fab fa-twitter"></i></a></td>
+                        </tr>
+                        <tr class="odd gradeA">
+                            <td class="center">#Act Up</td>
+                            <td class="center"><a target="_blank" href="https://twitter.com/search?q=BetrayedMeWhen&src=typd"
+                                                  class="waves-effect waves-light btn-small btn-link"><i
+                                    class="fab fa-twitter"></i></a></td>
+                        </tr>
+                        <tr class="odd gradeA">
+                            <td class="center">#Act Up</td>
+                            <td class="center"><a target="_blank" href="https://twitter.com/search?q=BetrayedMeWhen&src=typd"
+                                                  class="waves-effect waves-light btn-small btn-link"><i
+                                    class="fab fa-twitter"></i></a></td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
         </div>
         <div class="row row-cards"></div>
     </div>
@@ -127,5 +169,8 @@
         </table>
     </div>
 </div>
+
+<script src="{{url_for('static', filename='js/two_cities.js')}}"></script>
+
 
 {% endblock %}

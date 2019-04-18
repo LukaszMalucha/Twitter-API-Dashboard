@@ -28,21 +28,19 @@ class CommonTrends(Resource):
             # find out common trends
             common_trends = set.intersection(city_1_trends_set, city_2_trends_set)
 
-            clean_trends = set()
+            clean_trends = []
             for trend in common_trends:
                 trend = trend.replace('#', '')
-                clean_trends.add(trend)
+                clean_trends.append(trend)
 
-            return Response(render_template("api_features/common_trends.html", clean_trends=clean_trends))
-
-        except:
-
-            return Response(render_template("api_features/twitter_trends.html",
-                                            message="Requested ID does not exist, try another one:"))
+            return clean_trends
+        except Exception as e:
+            return {'error': 'Requested ID does not exist, try another one'}
 
 
 class RetweetPopularity(Resource):
     """Retweet popularity search"""
+
     def post(self):
         keyword = request.form.get('keyword')
         count = int(request.form.get('count'))
@@ -60,14 +58,9 @@ class RetweetPopularity(Resource):
                          }
                 popular_tweets.append(dict_)
 
-
         tweets_list = popular_tweets[: count]
         tweets_sorted = sorted(tweets_list, key=itemgetter('retweet_count'), reverse=True)
         return tweets_sorted
-
-
-
-
 
         # IF PYTHON LIST NEEDED INSTEAD OF JSON:
         # results = [status._json for status in tweepy.Cursor(twitter_api.search, q=keyword, min_retweets=50).items(count)]

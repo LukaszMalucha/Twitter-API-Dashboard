@@ -116,6 +116,17 @@
     color: #818286;
 }
 
+.card-table {
+    padding: 1%;
+    border-color: #eee #ddd #bbb;
+    background: #fdfdfd;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.30);
+
+}
+
 /*------------------------------------------------------------------------------
     BUTTONS
 ------------------------------------------------------------------------------*/
@@ -132,7 +143,7 @@
     background-color: #003f67;
     font-size: 1.1rem;
     font-family: 'Jura', sans-serif;
-    font-weight: 600;
+
 }
 
 .btn-card:hover, .btn-card:active, .btn-card:focus {
@@ -143,6 +154,26 @@
     font-size: 0.8rem;
 }
 
+.btn-link {
+    background: transparent;
+    box-shadow: none;
+    width: 30%;
+    border-radius: 20px;
+
+}
+
+.btn-link i {
+    color: #1da1f2;
+
+}
+
+.btn-link:hover,
+.btn-link:focus,
+.btn-link:active {
+   background: transparent;
+   box-shadow: none;
+   top: -5px;
+}
 
 /*------------------------------------------------------------------------------
     FORMS
@@ -204,4 +235,74 @@ input[type="text"]:not(.browser-default):focus:not([readonly]) + label {
     margin-top: 8%;
     height: 160px;
     border-radius: 5px;
+}
+
+/*------------------------------------------------------------------------------
+    TABLES
+------------------------------------------------------------------------------*/
+
+.table-responsive {
+    width: 95%;
+    padding: 1%;
+    margin: auto;
+    overflow-x: hidden;
+
+}
+
+#twoCitiesTable {
+    width: 100%;
+    overflow-x: hidden;
+    margin-bottom: 1%;
+}
+
+
+
+.twoCitiesTables_wrapper .twoCitiesTables_filter {
+    text-align: left !important;
+}
+
+.select-wrapper  {
+    margin: 2% 2% 0% 2%;
+    width: 20%;
+    display: inherit;
+
+}
+
+.select-wrapper input.select-dropdown {
+    text-align: center;
+}
+
+input[type="search"]:not(.browser-default) {
+    width: 75%;
+
+}
+
+.dataTables_length {
+    margin-left: -12%;
+
+}
+
+
+.table-bordered,
+.table-bordered > thead > tr > th {
+    border-color: transparent;
+}
+
+
+
+.table-bordered > tbody > tr > td {
+    border-color: #dddddd;
+}
+
+.table-bordered > thead > tr {
+    background-color: #fff;
+}
+
+.table-striped > tbody > tr:nth-of-type(2n) {
+    background-color: #f9f9f9;
+}
+
+
+.table-striped > tbody > tr:nth-of-type(2n+1) {
+    background-color: #fff;
 }

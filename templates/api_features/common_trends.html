@@ -25,21 +25,23 @@
 
 <div class="row row-form-content">
     <div class="card table-card">
-    <div class="table-responsive">
-            <table class="table table-striped table-bordered" id="dataTables-example" >
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered" id="dataTables-example">
                 <thead>
-                    <tr>
-                        <th class="center">Hashtag</th>
-                        <th class="center">Link </th>
-                    </tr>
+                <tr>
+                    <th class="center">Hashtag</th>
+                    <th class="center">Link</th>
+                </tr>
                 </thead>
                 <tbody>
-                    {% for trend in clean_trends %}
-                    <tr class="odd gradeA">
-                        <td class="center" >#{{trend}}</td>
-                        <td class="center"><a target="_blank" href="https://twitter.com/search?q={{trend}}&src=typd" class="waves-effect waves-light btn-small" id="btn-tiny"><i class="fab fa-twitter"></i></a></td>
-                    </tr>
-                    {% endfor %}
+                {% for trend in clean_trends %}
+                <tr class="odd gradeA">
+                    <td class="center">#{{trend}}</td>
+                    <td class="center"><a target="_blank" href="https://twitter.com/search?q={{trend}}&src=typd"
+                                          class="waves-effect waves-light btn-small" id="btn-tiny"><i
+                            class="fab fa-twitter"></i></a></td>
+                </tr>
+                {% endfor %}
                 </tbody>
             </table>
     </div>
