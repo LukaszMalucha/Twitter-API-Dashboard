@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block extrahead %}
+<link href="{{url_for('static', filename='css/data.css')}}" rel="stylesheet"/>
+{% endblock %}
+
+{% block row_header %}
+<form method="POST" id="trendSearch">
+    <div class="row row-header">
+        <div class="row">
+            <div class="col-xs-0 col-sm-0 col-md-4 col-lg-2 text-right">
+
+                <img src="{{url_for('static', filename='img/main/trend_search.jpg')}}"
+                     class="img responsive img-header">
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-10">
+                <div class="row row-summary">
+                    <h5>Check what's trending in US at the moment</h5>
+                    <div class="box">
+                    <p>Specify how many tweets you want to upload to database (max. 100)</p>
+                         <input id="count" name="count" type="number" class="max-tweets" max="100" placeholder="100" required>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+    {% block content %}
+    <div class="dashboard-cards">
+
+        <div class="row row-cards">
+            <div class="col-md-4">
+            </div>
+            <div class="row row-cards"></div>
+        </div>
+    </div>
+</form>
+<div class="fixed-action-btn">
+    <a class="btn-floating btn-large" href="{{url_for('dashboard')}}">
+        <i class="large material-icons">exit_to_app</i>
+    </a>
+</div>
+
+<script src="{{url_for('static', filename='js/trend_search.js')}}"></script>
+{% endblock %}

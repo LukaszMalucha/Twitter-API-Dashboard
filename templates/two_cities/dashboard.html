@@ -36,19 +36,21 @@
                         <span class="card-title">Specify woe_id of two cities</span>
                         <a class="modal-trigger" href="#modal1">( sample woe_id's )</a>
                         <div class="input-field">
-                            <img class="img-responsive prefix" src="{{url_for('static', filename='img/data/city_1.jpg')}}"/>
+                            <img class="img-responsive prefix"
+                                 src="{{url_for('static', filename='img/data/city_1.jpg')}}"/>
                             <input id="city_1" name="city_1" type="number" class="validate" required>
                             <label for="city_1">City #1</label>
                         </div>
                         <div class="input-field">
-                            <img class="img-responsive prefix" src="{{url_for('static', filename='img/data/city_2.jpg')}}"/>
+                            <img class="img-responsive prefix"
+                                 src="{{url_for('static', filename='img/data/city_2.jpg')}}"/>
                             <input id="city_2" name="city_2" type="number" class="validate" required>
                             <label for="city_2">City #2</label>
                         </div>
 
                     </div>
 
-                    <button type="submit" class="btn-card" id="modalClose"><span><i class="fas fa-terminal"></i> Submit </span>
+                    <button type="submit" class="btn-card"><span><i class="fas fa-terminal"></i> Submit </span>
                     </button>
                 </div>
             </form>
@@ -61,6 +63,69 @@
     <a class="btn-floating btn-large" href="{{url_for('dashboard')}}">
         <i class="large material-icons">exit_to_app</i>
     </a>
+</div>
+
+<div id="modal1" class="modal">
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+            <thead>
+            <tr>
+                <th class="center">City</th>
+                <th class="center">woe_id</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="odd gradeA">
+                <td class="center">New York</td>
+                <td class="center">2459115</td>
+            </tr>
+            <tr class="odd gradeA">
+                <td class="center">San Francisco</td>
+                <td class="center">2487956</td>
+            </tr>
+            <tr class="odd gradeA">
+                <td class="center">Sydney</td>
+                <td class="center">1105779</td>
+            </tr>
+            <tr class="odd gradeA">
+                <td class="center">Toronto</td>
+                <td class="center">4118</td>
+            </tr>
+            <tr class="odd gradeA">
+                <td class="center">London</td>
+                <td class="center">44418</td>
+            </tr>
+            <tr class="odd gradeA">
+                <td class="center">Paris</td>
+                <td class="center">615702</td>
+            </tr>
+            <tr class="odd gradeA">
+                <td class="center">Berlin</td>
+                <td class="center">638242</td>
+            </tr>
+            <tr class="odd gradeA">
+                <td class="center">Rome</td>
+                <td class="center">721943</td>
+            </tr>
+            <tr class="odd gradeA">
+                <td class="center">Warsaw</td>
+                <td class="center">523920</td>
+            </tr>
+            <tr class="odd gradeA">
+                <td class="center">Krakow</td>
+                <td class="center">502075</td>
+            </tr>
+            <tr class="odd gradeA">
+                <td class="center">Dublin</td>
+                <td class="center">560743</td>
+            </tr>
+            <tr class="odd gradeA">
+                <td class="center">Cork</td>
+                <td class="center">560472</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 
 {% endblock %}

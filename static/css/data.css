@@ -7,7 +7,7 @@
 }
 
 .row-header {
-    max-height: 180px;
+    max-height: 190px;
     margin: 0px;
     background: white;
     padding: 0 16% 0 13%;
@@ -61,6 +61,45 @@
 }
 
 
+
+
+.tweet {
+    width: 468px;
+    height: 150px;
+    padding: 15px;
+    text-align: left;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 16px;
+    border-color: #eee #ddd #bbb;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.30);
+    margin: 20px;
+    padding: 16px;
+    float: left;
+}
+
+.tweet p {
+    font-family: Georgia;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20px;
+}
+
+.tweet a {
+    color: inherit;
+    font-weight: normal;
+    text-decoration: none;
+    outline: 0 none;
+}
+
+.tweet i {
+    font-size: 16px;
+    color: #818286;
+}
+
 /*------------------------------------------------------------------------------
     BUTTONS
 ------------------------------------------------------------------------------*/
@@ -98,7 +137,7 @@ input[type=text] {
     border-radius: 10px;
     border-color: #1a2026;
     background-color: #fff;
-    color: white;
+    color: black;
 }
 
 .input-field {
@@ -120,17 +159,33 @@ input[type="text"]:not(.browser-default):focus:not([readonly]) + label {
 
 .input-field .prefix {
     left: -1rem;
+    border-radius: 5px;
 }
 
+.max-tweets {
+    width: 6% !important;
+    margin-left: 2% !important;
+    height: 1.5rem !important;
+    text-align: center !important;
 
 
+}
 
+/*------------------------------------------------------------------------------
+    MODALS
+------------------------------------------------------------------------------*/
 
+.modal {
+    width: 20%;
+    height: 550px;
 
+}
 /*------------------------------------------------------------------------------
     IMAGES
 ------------------------------------------------------------------------------*/
+
 .img-header {
-    margin-top: 6%;
+    margin-top: 8%;
     height: 160px;
+    border-radius: 5px;
 }

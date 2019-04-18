@@ -41,13 +41,10 @@ class CommonTrends(Resource):
                                             message="Requested ID does not exist, try another one:"))
 
 
-################################################ Retweet popularity
 
 
 class RetweetPopularity(Resource):
-
-    def get(self):
-        return Response(render_template('api_features/retweet_popularity.html'))
+    """Retweet popularity search"""
 
     def post(self):
         keyword = request.form.get('keyword')
@@ -70,6 +67,7 @@ class RetweetPopularity(Resource):
         ## sort descending
         most_popular_tweets = sorted(tweet_list, key=itemgetter(3), reverse=True)[:count]
 
-        return Response(
-            render_template("api_features/most_retweets.html", most_popular_tweets=most_popular_tweets, keyword=keyword,
-                            count=count, min_retweets=min_retweets))
+        # return Response(
+        #     render_template("api_features/most_retweets.html", most_popular_tweets=most_popular_tweets, keyword=keyword,
+        #                     count=count, min_retweets=min_retweets))
+        return most_popular_tweets

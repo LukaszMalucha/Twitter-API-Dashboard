@@ -38,7 +38,7 @@ api.add_resource(ManageDB, '/managedb')
 api.add_resource(DeleteCollection, '/deletecollection')
 api.add_resource(DeleteTable, '/deletetable')
 api.add_resource(CommonTrends, '/commontrends')
-api.add_resource(RetweetPopularity, '/retweetpopularity')
+api.add_resource(RetweetPopularity, '/retweets')
 api.add_resource(TrendSearch, '/trendsearch')
 api.add_resource(DataTransform, '/datatransform')
 api.add_resource(DataLoad, '/dataload')
@@ -57,6 +57,12 @@ api.add_resource(UserLogout, '/logout')
 def dashboard():
     return render_template('dashboard.html')
 
+
+
+@app.route('/trend_search')
+def trend_search():
+    """Trend Search View"""
+    return render_template('trend_search/dashboard.html')
 
 @app.route('/two_cities')
 def two_cities():
@@ -88,7 +94,7 @@ def error500(error):
 
 ## DB INIT
 db.init_app(app)
-csrf = CSRFProtect(app)
+# csrf = CSRFProtect(app) @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 ## APP INITIATION
 if __name__ == '__main__':

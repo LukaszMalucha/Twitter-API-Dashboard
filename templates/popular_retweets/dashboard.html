@@ -27,7 +27,7 @@
 
     <div class="row row-cards">
         <div class="col-md-4">
-            <form class="col s12" id="formTransaction">
+            <form method="POST" class="col s12" id="popularRetweets">
                 <div class="card form-card">
                     <div class="card-content">
                         <span class="card-title">Retweet Search</span>
@@ -49,7 +49,7 @@
 
                     </div>
 
-                    <button type="submit" class="btn-card" id="modalClose"><span><i class="fas fa-terminal"></i> Submit </span>
+                    <button type="submit" class="btn-card"><span><i class="fas fa-terminal"></i> Submit </span>
                     </button>
                 </div>
             </form>
@@ -63,5 +63,8 @@
         <i class="large material-icons">exit_to_app</i>
     </a>
 </div>
+
+
+<script src="{{url_for('static', filename='js/popular_retweets.js')}}"></script>
 
 {% endblock %}
