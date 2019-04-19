@@ -58,6 +58,11 @@ body {
     display:none;
 }
 
+.warning {
+   color: red !important;
+   margin-bottom: 10px;
+}
+
 .header {
     height: 100px;
     margin: 0px;
@@ -76,6 +81,8 @@ body {
 .no-border {
     border:none !important;
 }
+
+
 
 /*------------------------------------------------------------------------------
     ROWS
@@ -137,7 +144,7 @@ body {
 
 
 .card-menu {
-    width: 90%;
+    width: 88%;
     border-color: #eee #ddd #bbb;
     border-style: solid;
     border-width: 1px;
@@ -208,7 +215,7 @@ body {
 
 
 .fixed-action-btn {
-   right: 360px;
+   right: 352px;
    bottom: 60px;
 
 }

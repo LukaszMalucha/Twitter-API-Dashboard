@@ -8,7 +8,7 @@
         <p><i class="fab fa-python"></i>&nbsp; Choose between Twitter API functionalities</p>
     </div>
     <div class="row row-cards">
-        <div class="col-md-4">
+        <div class="col-md-4 plain-element">
             <div class="card horizontal card-menu">
                 <div class="card-image">
                     <img src="{{url_for('static', filename='img/main/trend_search.jpg')}}" class="img responsive">
@@ -29,7 +29,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 plain-element">
             <div class="card horizontal card-menu">
                 <div class="card-image">
                     <img src="{{url_for('static', filename='img/main/two_cities.jpg')}}" class="img responsive">
@@ -49,7 +49,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 plain-element">
             <div class="card horizontal card-menu">
                 <div class="card-image">
                     <img src="{{url_for('static', filename='img/main/retweets.jpg')}}" class="img responsive">
@@ -75,7 +75,7 @@
         <p><i class="fab fa-python"></i>&nbsp; Deep learning application on Twitter data </p>
     </div>
     <div class="row row-cards">
-        <div class="col-md-4">
+        <div class="col-md-4 plain-element">
             <div class="card horizontal card-menu">
                 <div class="card-image">
                     <img src="{{url_for('static', filename='img/main/sentiment.png')}}" class="img responsive">
@@ -102,7 +102,7 @@
         <p><i class="fab fa-python"></i>&nbsp; Various useful features </p>
     </div>
     <div class="row row-cards">
-        <div class="col-md-4">
+        <div class="col-md-4 plain-element">
             <div class="card horizontal card-menu">
                 <div class="card-image">
                     <img src="{{url_for('static', filename='img/main/manage_db.jpg')}}" class="img responsive">
@@ -115,7 +115,7 @@
                         <p>Get rid of obsolete collections from MongoDB or delete processed data from SQLite database. </p>
                     </div>
                     <div class="card-action">
-                        <button onclick="window.location=''" type="submit"
+                        <button onclick="window.location='{{ url_for('manage_db') }}'" type="submit"
                                 class="btn-enter"><span><i class="fas fa-terminal"></i> Continue </span>
                         </button>
                     </div>

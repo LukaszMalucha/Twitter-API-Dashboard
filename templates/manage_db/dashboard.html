@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block extrahead %}
+<link href="{{url_for('static', filename='css/data.css')}}" rel="stylesheet"/>
+{% endblock %}
+
+{% block row_header %}
+<div class="row row-header">
+    <div class="row">
+        <div class="col-xs-0 col-sm-0 col-md-4 col-lg-2 text-right">
+
+            <img src="{{url_for('static', filename='img/main/manage_db.jpg')}}" class="img responsive img-header">
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-10">
+            <div class="row row-summary">
+                <h5>Manage Databases</h5>
+                <p>Get rid of obsolete collections from MongoDB or delete processed data from SQLite database.</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+<div class="dashboard-cards">
+    <div class="row row-cards">
+        <div class="col-md-1 plain-element"></div>
+        <div class="col-md-4 plain-element">
+            <div class="card card-data">
+
+                <div class="card-content">
+                    <span class="card-title">Delete MongoDB Collection:</span>
+                    {% for element in mongo_hashtags %}
+                    <div class="row row-form-content">
+                        <form id="mongoDBForm" method="post">
+                            <input id="hashtag_collection" name="hashtag_collection" type="hidden" value="{{element}}">
+                            <button class="waves-effect waves-light btn button-trash" type="submit"><span><i
+                                    class="fas fa-trash-alt"></i>  {{ element }}</span></button>
+                        </form>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2 plain-element"></div>
+        <div class="col-md-4 plain-element">
+            <div class="card card-data">
+                <div class="card-content">
+
+                    <span class="card-title">Delete SQL Table:</span>
+                    {% for element in sqlite_hashtags %}
+                    <div class="row row-form-content">
+                        <form id="sqlTableForm" method="post">
+                            <input id="hashtag_table" name="hashtag_table" type="hidden" value="XXX">
+                            <button class="waves-effect waves-light btn button-trash" type="submit"><span><i
+                                    class="fas fa-trash-alt"></i>  #MyTwitterDay</span></button>
+                        </form>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1 plain-element"></div>
+    </div>
+    <div class="row row-cards">
+
+
+    </div>
+</div>
+
+<div class="fixed-action-btn">
+    <a class="btn-floating btn-large" href="{{url_for('dashboard')}}">
+        <i class="large material-icons">exit_to_app</i>
+
+    </a>
+</div>
+
+<script src="{{url_for('static', filename='js/two_cities.js')}}"></script>
+
+<script>
+function confirmDeletion() {
+  confirm("Are you sure you want to delete that collection");
+}
+</script>
+
+
+{% endblock %}
+ onclick="confirmDeletion()"

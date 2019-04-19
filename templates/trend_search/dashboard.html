@@ -22,6 +22,9 @@
                         <input id="count" name="count" type="number" class="max-tweets" max="100" placeholder="100"
                                required>
                     </div>
+                    <br>
+                    <button class="btn-header"><i class="fas fa-chevron-circle-left"></i> Trend Search</button>
+
                 </div>
 
             </div>
@@ -32,7 +35,8 @@
     <div class="dashboard-cards">
 
         <div class="row row-cards">
-            <div class="col-md-12">
+            <div class="loader popular-loader"></div>
+            <div class="col-md-12 plain-element"  id="tweetColumn">
                 <div class="card card-data no-border">
                     <span class="card-title">Top US Trends </span>
                     <div class="card-content" id="trendtData">
@@ -40,7 +44,7 @@
                         <div class="col-md-3 text-left">
                             <p>
                                 <label>
-                                    <input class="with-gap" class="with-gap" name="trend" type="radio" value="{{element}}" checked/>
+                                    <input class="with-gap" id="trend" name="trend" type="radio" value="{{element}}" />
                                     <span class="span-trend">{{element}}</span>
                                 </label>
                             </p>
@@ -61,6 +65,7 @@
         <i class="large material-icons">exit_to_app</i>
     </a>
 </div>
+
 
 <script src="{{url_for('static', filename='js/trend_search.js')}}"></script>
 {% endblock %}

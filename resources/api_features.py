@@ -1,4 +1,4 @@
-from flask import Response, render_template, request
+from flask import request
 from flask_restful import Resource
 from twitter import twitter_api
 import tweepy

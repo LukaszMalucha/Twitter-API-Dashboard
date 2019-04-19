@@ -65,7 +65,7 @@
 ------------------------------------------------------------------------------*/
 
 .form-card {
-  width: 100%;
+  width: 95%%;
   background: #fff;
   color: black;
   padding-top: 10px;
@@ -81,8 +81,8 @@
 
 
 .card-tweet {
-    width: 85%;
-    margin: 0.5rem 5% 5% 10%;
+    width: 90%;
+    margin: 0.5rem 2% 5% 8%;
     text-align: left;
     font-size: 0.8rem;
     line-height: 16px;
@@ -94,6 +94,9 @@
     padding: 4% 4% 2% 4%;
     float: left;
     font-family: Georgia;
+    max-height: 140px;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .card-tweet h5 {
@@ -107,8 +110,9 @@
     font-size: 0.8rem;
     font-weight: normal;
     line-height: 20px;
-    min-height: 60px;
+    height: 60px;
 }
+
 
 .card-tweet a {
     color: inherit;
@@ -153,7 +157,7 @@
 }
 
 .card-data .span-trend {
-    color: #595959;
+    color: #7f7f7f;
 }
 
 
@@ -206,8 +210,6 @@
 
 .btn-link i {
     color: #1da1f2;
-
-
 }
 
 .btn-link:hover,
@@ -217,6 +219,64 @@
    box-shadow: none;
    top: -2px;
 }
+
+
+.btn-header {
+    border-radius: 5px;
+    height: 32px;
+    width: auto;
+    background: #004f81;
+    padding: 5px 10px;
+    font-size: 1rem;
+    font-weight: 800;
+    font-family: 'Jura', sans-serif;
+    line-height: 16px;
+    color: white;
+    border: none;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.30);
+    display: none;
+}
+
+.btn-header i {
+    font-size: 0.8rem;
+}
+
+.btn-header:hover,
+.btn-header:focus,
+.btn-header:active {
+    color: white;
+    background: #003252;
+}
+
+
+.button-trash {
+    width: 100%;
+    text-align: left;
+    font-family: 'Jura', sans-serif;
+    background-color: transparent;
+    color: black;
+    font-weight: 500;
+    font-size: 1.2rem;
+    box-shadow: none;
+    text-transform: inherit;
+
+}
+
+.button-trash i {
+    color: #E63C2E;
+    font-size: 1.2rem;
+}
+
+
+.button-trash:hover,
+.button-trash:focus,
+.button-trash:active {
+    font-size: 1.3rem;
+    background-color: #fcfcfc;
+    box-shadow: none;
+}
+
+
 
 /*------------------------------------------------------------------------------
     FORMS
@@ -248,7 +308,7 @@ input[type="text"]:not(.browser-default):focus:not([readonly]) + label {
 }
 
 [type="radio"]:not(:checked) + span::before {
-        border: 2px solid #595959;
+        border: 2px solid #7f7f7f;
 }
 
 [type="radio"].with-gap:checked + span::before, [type="radio"].with-gap:checked + span::after {

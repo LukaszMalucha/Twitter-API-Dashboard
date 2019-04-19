@@ -24,7 +24,7 @@ $(document).ready(function() {
                     '<div class="col-md-6 plain-element">' +
                     '<a target="_blank" href="https://twitter.com/search?q=' + value.keyword + '&src=typd/">' +
                     '<div class="card card-tweet"><p>' + value.text + '</p>' +
-                    '<b>&mdash;' +  value.user + '</b> ' + value.created_at +
+                    '<b >&mdash;' +  value.user + '</b> ' + value.created_at +
                     '<br/> <span><h5><i class="fas fa-retweet"></i> ' +
                     value.retweet_count +
                     '</h5></span></div></div>' +

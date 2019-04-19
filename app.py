@@ -9,6 +9,9 @@ from flask_bootstrap import Bootstrap
 from flask_restful import Api
 from flask_wtf.csrf import CSRFProtect
 
+from models.collection import Collection
+from models.tweets import TweetsModel
+
 from resources.user import UserRegister, UserLogin, UserLogout, login_manager
 from resources.blog_list import blog_list
 from resources.api_features import CommonTrends, RetweetPopularity
@@ -16,7 +19,6 @@ from resources.managedb import ManageDB, DeleteCollection, DeleteTable
 from resources.trend_search import TrendSearch
 from resources.data_management import DataTransform, DataLoad
 from resources.sentiment_analysis import SentimentAnalysis, TweetTokenizer, Results
-
 
 # APP SETTINGS
 
@@ -32,8 +34,6 @@ api = Api(app)
 mongo.init_app(app)
 Bootstrap(app)
 login_manager.init_app(app)
-
-
 
 api.add_resource(ManageDB, '/managedb')
 api.add_resource(DeleteCollection, '/deletecollection')
@@ -52,12 +52,10 @@ api.add_resource(UserLogin, '/login')
 api.add_resource(UserLogout, '/logout')
 
 
-
 ## Main View
 @app.route('/')
 def dashboard():
     return render_template('dashboard.html')
-
 
 
 @app.route('/trend_search')
@@ -65,17 +63,27 @@ def trend_search():
     """Trend Search View"""
     us_trends = twitter_api.trends_place(23424977)
     us_trends_list = [trend['name'] for trend in us_trends[0]['trends'][:40]]
-    return render_template('trend_search/dashboard.html', us_trends_list=us_trends_list )
+    return render_template('trend_search/dashboard.html', us_trends_list=us_trends_list)
+
 
 @app.route('/two_cities')
 def two_cities():
     """Tale of Two Cities View"""
     return render_template('two_cities/dashboard.html')
 
+
 @app.route('/popular_retweets')
 def popular_retweets():
     """Tale of Two Cities View"""
     return render_template('popular_retweets/dashboard.html')
+
+
+@app.route('/manage_db')
+def manage_db():
+    """Manage Databases View"""
+    mongo_hashtags = Collection.hashtags()
+    sqlite_hashtags = TweetsModel.distinct_hashtags()
+    return render_template('manage_db/dashboard.html', mongo_hashtags=mongo_hashtags, sqlite_hashtags=sqlite_hashtags)
 
 
 @app.route('/blog')
