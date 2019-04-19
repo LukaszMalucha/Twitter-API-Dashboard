@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block extrahead %}
+<link href="{{url_for('static', filename='css/data.css')}}" rel="stylesheet"/>
+{% endblock %}
+
+{% block row_header %}
+<div class="row row-header">
+    <div class="row">
+        <div class="col-xs-0 col-sm-0 col-md-4 col-lg-2 text-right">
+
+            <img src="{{url_for('static', filename='img/main/sentiment.png')}}" class="img responsive img-header">
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-10">
+            <div class="row row-summary">
+                <h5>Manage Databases</h5>
+                <p>Get rid of obsolete collections from MongoDB or delete processed data from SQLite database.</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+<div class="dashboard-cards">
+    <div class="row row-cards">
+
+        <div class="col-md-1 plain-element"></div>
+    </div>
+    <div class="row row-cards">
+
+
+    </div>
+</div>
+
+<div class="fixed-action-btn">
+    <a class="btn-floating btn-large" href="{{url_for('dashboard')}}">
+        <i class="large material-icons">exit_to_app</i>
+
+    </a>
+</div>
+
+<script src="{{url_for('static', filename='js/two_cities.js')}}"></script>
+
+<script>
+function confirmDeletion() {
+  confirm("Are you sure you want to delete that collection");
+}
+
+</script>
+
+
+{% endblock %}
+onclick="confirmDeletion()"

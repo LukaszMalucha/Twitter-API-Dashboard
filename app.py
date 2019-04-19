@@ -15,9 +15,9 @@ from models.tweets import TweetsModel
 from resources.user import UserRegister, UserLogin, UserLogout, login_manager
 from resources.blog_list import blog_list
 from resources.api_features import CommonTrends, RetweetPopularity
-from resources.managedb import ManageDB, DeleteCollection, DeleteTable
+from resources.managedb import DeleteCollection, DeleteTable, DataTransform
 from resources.trend_search import TrendSearch
-from resources.data_management import DataTransform, DataLoad
+from resources.data_management import DataLoad
 from resources.sentiment_analysis import SentimentAnalysis, TweetTokenizer, Results
 
 # APP SETTINGS
@@ -35,7 +35,6 @@ mongo.init_app(app)
 Bootstrap(app)
 login_manager.init_app(app)
 
-api.add_resource(ManageDB, '/managedb')
 api.add_resource(DeleteCollection, '/deletecollection')
 api.add_resource(DeleteTable, '/deletetable')
 api.add_resource(CommonTrends, '/commontrends')
@@ -77,6 +76,11 @@ def popular_retweets():
     """Tale of Two Cities View"""
     return render_template('popular_retweets/dashboard.html')
 
+
+@app.route('/sentiment_analysis')
+def sentiment_analysis():
+    """Apply LSTM View"""
+    return render_template('sentiment_analysis/dashboard.html')
 
 @app.route('/manage_db')
 def manage_db():
