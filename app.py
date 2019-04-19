@@ -2,6 +2,7 @@
 import os
 import env
 from db import db, mongo
+from twitter import twitter_api
 
 from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
@@ -62,7 +63,9 @@ def dashboard():
 @app.route('/trend_search')
 def trend_search():
     """Trend Search View"""
-    return render_template('trend_search/dashboard.html')
+    us_trends = twitter_api.trends_place(23424977)
+    us_trends_list = [trend['name'] for trend in us_trends[0]['trends'][:40]]
+    return render_template('trend_search/dashboard.html', us_trends_list=us_trends_list )
 
 @app.route('/two_cities')
 def two_cities():

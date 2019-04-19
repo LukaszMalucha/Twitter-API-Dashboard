@@ -32,43 +32,23 @@
     <div class="dashboard-cards">
 
         <div class="row row-cards">
-            <div class="col-md-8">
-                <div class="card card-data">
-                    <span class="card-title">Common Trends</span>
+            <div class="col-md-12">
+                <div class="card card-data no-border">
+                    <span class="card-title">Top US Trends </span>
                     <div class="card-content" id="trendtData">
+                        {% for element in us_trends_list %}
                         <div class="col-md-3 text-left">
                             <p>
                                 <label>
-                                    <input class="with-gap" name="trend" type="radio" value="XXXX" checked/>
-                                    <span>#GoodFriday</span>
+                                    <input class="with-gap" class="with-gap" name="trend" type="radio" value="{{element}}" checked/>
+                                    <span class="span-trend">{{element}}</span>
                                 </label>
                             </p>
                         </div>
-                        <div class="col-md-3 text-left">
-                            <p>
-                                <label>
-                                    <input class="with-gap" name="trend" type="radio" value="XXXX" checked/>
-                                    <span>#GoodFriday</span>
-                                </label>
-                            </p>
-                        </div>
-                        <div class="col-md-3 text-left">
-                            <p>
-                                <label>
-                                    <input class="with-gap" name="trend" type="radio" value="XXXX" checked/>
-                                    <span>#GoodFriday</span>
-                                </label>
-                            </p>
-                        </div>
-                        <div class="col-md-3 text-left">
-                            <p>
-                                <label>
-                                    <input class="with-gap" name="trend" type="radio" value="XXXX" checked/>
-                                    <span>#GoodFriday</span>
-                                </label>
-                            </p>
-                        </div>
+                        {% endfor %}
                     </div>
+                    <div class="row"></div>
+                    <button type="submit" class="btn-card"><span><i class="fas fa-database"></i> Submit to Database</span></button>
                 </div>
             </div>
 

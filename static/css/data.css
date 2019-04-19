@@ -124,23 +124,24 @@
 
 
 .card-data {
-    padding: 15px;
     text-align: left;
     border: 1px solid #e6ecf0;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .card-data .card-title {
     font-weight: 800;
+    padding: 15px;
 }
 
 .card-data .card-content {
+    padding: 15px;
     margin-top: 10px;
     padding: 0px;
     color: #1DA1F2;
     font-weight: 600;
     font-size: 1rem;
-    max-height: 400px;
+    max-height: 500px;
     overflow: auto;
 }
 
@@ -151,8 +152,9 @@
     font-weight: 500;
 }
 
-
-
+.card-data .span-trend {
+    color: #595959;
+}
 
 
 .card-table {
@@ -245,6 +247,24 @@ input[type="text"]:not(.browser-default):focus:not([readonly]) + label {
     color: #003f67;
 }
 
+[type="radio"]:not(:checked) + span::before {
+        border: 2px solid #595959;
+}
+
+[type="radio"].with-gap:checked + span::before, [type="radio"].with-gap:checked + span::after {
+    border: 2px solid #1da1f2;
+}
+
+[type="radio"]:checked + span::after, [type="radio"].with-gap:checked + span::after {
+    background-color: #1da1f2;
+}
+
+[type="radio"]:checked + span {
+    color: #1da1f2;
+    font-size: 1.2rem;
+
+}
+
 .input-field .prefix {
     left: -1rem;
     border-radius: 5px;
@@ -256,7 +276,6 @@ input[type="text"]:not(.browser-default):focus:not([readonly]) + label {
     margin-left: 2% !important;
     height: 1.5rem !important;
     text-align: center !important;
-
 
 }
 

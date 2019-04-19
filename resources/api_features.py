@@ -28,7 +28,6 @@ class CommonTrends(Resource):
                 trend = [(trend[0]).replace('#', ''), (trend[1]).replace('None', '')]
                 clean_trends.append(trend)
 
-
             return clean_trends
 
         except Exception as e:

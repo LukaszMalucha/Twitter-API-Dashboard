@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-    $('#twoCitiesTable').dataTable();
 
     $('#twoCities').on('submit', function(event){
         $('#trendtData').empty();

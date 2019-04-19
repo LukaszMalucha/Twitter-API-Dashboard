@@ -5,7 +5,7 @@ import tweepy
 from models.collection import Collection
 
 
-################################################################### Trend Search
+# Trend Search
 
 
 class TrendSearch(Resource):
