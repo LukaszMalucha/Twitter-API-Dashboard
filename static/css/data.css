@@ -2,6 +2,9 @@
     ROWS $ COLUMNS
 ------------------------------------------------------------------------------*/
 
+
+
+
 .header {
     display: none;
 }
@@ -24,6 +27,9 @@
     padding: 2% 0% 3% 0%;
     color: #333333 !important;
 }
+
+
+
 
 .row-title {
     width: 100%;
@@ -80,7 +86,7 @@
     text-align: left;
     font-size: 0.8rem;
     line-height: 16px;
-    border-color: #eee #ddd #bbb;
+    border: 1px solid #e6ecf0;
     border-style: solid;
     border-width: 1px;
     border-radius: 5px;
@@ -116,14 +122,47 @@
     color: #818286;
 }
 
+
+.card-data {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #e6ecf0;
+    border-radius: 5px;
+}
+
+.card-data .card-title {
+    font-weight: 800;
+}
+
+.card-data .card-content {
+    margin-top: 10px;
+    padding: 0px;
+    color: #1DA1F2;
+    font-weight: 600;
+    font-size: 1rem;
+    max-height: 400px;
+    overflow: auto;
+}
+
+.card-data .card-content p {
+    color: #657786;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+
+
+
+
 .card-table {
     padding: 1%;
-    border-color: #eee #ddd #bbb;
+    border: 1px solid #e6ecf0;
     background: #fdfdfd;
     border-style: solid;
     border-width: 1px;
-    border-radius: 5px;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.30);
+    border-radius: 10px;
+    box-shadow: 0 3px 3px 0 #A9A9A9, 0 3px 1px -2px #838383, 0 1px 5px 0 #838383;
 
 }
 
@@ -157,13 +196,15 @@
 .btn-link {
     background: transparent;
     box-shadow: none;
-    width: 30%;
+    width: 80%;
     border-radius: 20px;
+    font-size: 0.9rem;
 
 }
 
 .btn-link i {
     color: #1da1f2;
+
 
 }
 
@@ -172,7 +213,7 @@
 .btn-link:active {
    background: transparent;
    box-shadow: none;
-   top: -5px;
+   top: -2px;
 }
 
 /*------------------------------------------------------------------------------
@@ -207,6 +248,7 @@ input[type="text"]:not(.browser-default):focus:not([readonly]) + label {
 .input-field .prefix {
     left: -1rem;
     border-radius: 5px;
+
 }
 
 .max-tweets {
@@ -235,6 +277,7 @@ input[type="text"]:not(.browser-default):focus:not([readonly]) + label {
     margin-top: 8%;
     height: 160px;
     border-radius: 5px;
+    border: 1px solid #e6ecf0;
 }
 
 /*------------------------------------------------------------------------------
@@ -253,6 +296,7 @@ input[type="text"]:not(.browser-default):focus:not([readonly]) + label {
     width: 100%;
     overflow-x: hidden;
     margin-bottom: 1%;
+    border-bottom: 1px solid #fff;
 }
 
 
@@ -260,6 +304,14 @@ input[type="text"]:not(.browser-default):focus:not([readonly]) + label {
 .twoCitiesTables_wrapper .twoCitiesTables_filter {
     text-align: left !important;
 }
+
+
+tbody {
+    max-height: 300px;
+    overflow-y: auto;
+
+}
+
 
 .select-wrapper  {
     margin: 2% 2% 0% 2%;
@@ -273,7 +325,7 @@ input[type="text"]:not(.browser-default):focus:not([readonly]) + label {
 }
 
 input[type="search"]:not(.browser-default) {
-    width: 75%;
+    width: 50%;
 
 }
 
@@ -292,6 +344,7 @@ input[type="search"]:not(.browser-default) {
 
 .table-bordered > tbody > tr > td {
     border-color: #dddddd;
+    line-height: 2;
 }
 
 .table-bordered > thead > tr {

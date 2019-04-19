@@ -14,6 +14,7 @@ $(document).ready(function() {
             url : '/retweets'
         })
         .done(function(data){
+
             console.log(data);
             $('.loader').hide();
             jQuery.each(data, function(index, value){

@@ -3,14 +3,11 @@ from flask_restful import Resource
 from twitter import twitter_api
 import tweepy
 from operator import itemgetter
-
+import itertools
 
 # City Trends Intersection
 
 class CommonTrends(Resource):
-
-    def get(self):
-        return Response(render_template('api_features/twitter_trends.html'))
 
     def post(self):
 
@@ -21,19 +18,19 @@ class CommonTrends(Resource):
             city_1_trends = twitter_api.trends_place(city_1)
             city_2_trends = twitter_api.trends_place(city_2)
 
-            if city_1_trends and city_2_trends:
-                city_1_trends_set = set([trend['name'] for trend in city_1_trends[0]['trends']])
-                city_2_trends_set = set([trend['name'] for trend in city_2_trends[0]['trends']])
-            #
-            # find out common trends
-            common_trends = set.intersection(city_1_trends_set, city_2_trends_set)
+            city_1_trends_list = [(str(trend['name']), str(trend['tweet_volume'])) for trend in city_1_trends[0]['trends']]
+            city_2_trends_list = [(str(trend['name']), str(trend['tweet_volume'])) for trend in city_2_trends[0]['trends']]
+
+            city_intersection = [a for (a, b) in itertools.product(city_1_trends_list, city_2_trends_list) if a[:2] == b[:2]]
 
             clean_trends = []
-            for trend in common_trends:
-                trend = trend.replace('#', '')
+            for trend in city_intersection:
+                trend = [(trend[0]).replace('#', ''), (trend[1]).replace('None', '')]
                 clean_trends.append(trend)
 
+
             return clean_trends
+
         except Exception as e:
             return {'error': 'Requested ID does not exist, try another one'}
 
@@ -81,3 +78,4 @@ class RetweetPopularity(Resource):
         # return Response(
         #     render_template("api_features/most_retweets.html", most_popular_tweets=most_popular_tweets, keyword=keyword,
         #                     count=count, min_retweets=min_retweets))
+

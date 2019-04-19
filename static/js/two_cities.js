@@ -3,7 +3,7 @@ $(document).ready(function() {
     $('#twoCitiesTable').dataTable();
 
     $('#twoCities').on('submit', function(event){
-//        $('#tweetColumn').empty();
+        $('#trendtData').empty();
         $('.loader').show();
         $.ajax({
             data: {
@@ -16,21 +16,19 @@ $(document).ready(function() {
         .done(function(data){
             console.log(data);
             $('.loader').hide();
-//            jQuery.each(data, function(index, value){
-//                console.log(value.user);
-//                console.log(value.text);
-//                $('#tweetColumn').append(
-//                    '<div class="col-md-6 plain-element">' +
-//                    '<a target="_blank" href="https://twitter.com/search?q=' + value.keyword + '&src=typd/">' +
-//                    '<div class="card card-tweet"><p>' + value.text + '</p>' +
-//                    '<b>&mdash;' +  value.user + '</b> ' + value.created_at +
-//                    '<br/> <span><h5><i class="fas fa-retweet"></i> ' +
-//                    value.retweet_count +
-//                    '</h5></span></div></div>' +
-//                    '</a>'
-//                )
-//
-//            });
+            jQuery.each(data, function(index, value){
+                console.log(value);
+                $('#trendtData').append(
+                    '<div class="col-md-4">' +
+                    '<div class="row plain-element"><a  target="_blank" href="https://twitter.com/search?q=' +
+                    value[0] +
+                    '&src=typd"> #' +
+                    value[0] +
+                    '</a><p>Tweets: ' +
+                    value[1] +
+                    '</p></div></div>'
+                )
+            });
         });
         event.preventDefault();
 
