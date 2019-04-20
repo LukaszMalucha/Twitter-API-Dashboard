@@ -3,6 +3,7 @@ from flask_restful import Resource
 
 from models.tweets import TweetsModel
 from models.collection import Collection
+from collections import Counter
 
 import pickle
 from keras.preprocessing.sequence import pad_sequences
@@ -51,8 +52,8 @@ class Results(Resource):
         tokenized = session.get('tokenized')
 
         # for table display
-        tweets = Collection.find_by_hashtag(hashtag=hashtag)
-        tweets = [element['text'] for element in tweets]
+        tweets = TweetsModel.find_by_hashtag(hashtag=hashtag)
+        tweets = [element.tweet for element in tweets]
 
         # apply model
         predictions = []
@@ -70,5 +71,6 @@ class Results(Resource):
 
         # zip predictions with ORIGINAL tweet for better clarity
         sentiment_predictions = list(zip(tweets, predictions))
+        sentiment_counter = dict(Counter(predictions))
 
-        return sentiment_predictions
+        return {'sentiment_predictions' : sentiment_predictions, 'sentiment_counter': sentiment_counter}

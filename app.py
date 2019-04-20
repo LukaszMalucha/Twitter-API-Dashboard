@@ -7,7 +7,6 @@ from twitter import twitter_api
 from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
 from flask_restful import Api
-from flask_wtf.csrf import CSRFProtect
 
 from models.collection import Collection
 from models.tweets import TweetsModel
@@ -109,7 +108,7 @@ def error500(error):
 
 ## DB INIT
 db.init_app(app)
-# csrf = CSRFProtect(app) @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
 
 ## APP INITIATION
 if __name__ == '__main__':

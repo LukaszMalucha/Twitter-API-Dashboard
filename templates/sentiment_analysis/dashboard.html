@@ -2,6 +2,7 @@
 
 {% block extrahead %}
 <link href="{{url_for('static', filename='css/data.css')}}" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 {% endblock %}
 
 {% block row_header %}
@@ -15,8 +16,11 @@
         <div class="col-xs-12 col-sm-12 col-md-8 col-lg-10">
             <div class="row row-summary">
                 <h5>Sentiment Analysis</h5>
-                <p>Apply LSTM on stored data to find out what's the dominating sentiment among conversation
+                <p id="pDescription">Apply LSTM on stored data to find out what's the dominating sentiment among conversation
                     participants.</p>
+                <br>
+                <button class="btn-header"><i class="fas fa-chevron-circle-left"></i> Trend Search</button>
+                <button class="btn-navigation" onclick="window.location='{{ url_for('manage_db') }}'"><i class="fas fa-chevron-circle-left"></i> Prepare Dataset</button>
             </div>
 
         </div>
@@ -67,7 +71,13 @@
         </div>
     </div>
     <div class="row row-cards">
-        <div class="col-md-9 plain-element" id="tweetColumn">
+        <div class="col-md-4 plain-element">
+            <div class="card card-chart">
+            <canvas id="sentimentChart"></canvas>
+            </div>
+        </div>
+        <div class="col-md-1 plain-element"></div>
+        <div class="col-md-7 plain-element" id="tweetColumn">
         </div>
 
     </div>

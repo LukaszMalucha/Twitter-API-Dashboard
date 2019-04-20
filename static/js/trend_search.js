@@ -7,6 +7,7 @@ $(document).ready(function() {
     });
 
 
+
     $('#trendSearch').on('submit', function(event){
         var trend_choice = $("input:radio:checked").val();
         $('#tweetColumn').show();
@@ -23,6 +24,15 @@ $(document).ready(function() {
         })
         .done(function(data){
             console.log(data);
+            if (data.error) {
+                console.log(data.error)
+                $('.loader').hide();
+                $('.card-data').show();
+                $('#pDescription').text(data.error).css('color', 'red');
+                $('.btn-navigation').show();
+                $('#count').hide();
+            }
+            else {
             $('.loader').hide();
             $('.card-data').hide();
             $('.btn-header').show();
@@ -39,7 +49,7 @@ $(document).ready(function() {
                 )
 
             });
-
+            }
         });
 
         event.preventDefault();

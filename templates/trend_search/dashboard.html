@@ -18,13 +18,13 @@
                 <div class="row row-summary">
                     <h5>Check what's trending in US at the moment</h5>
                     <div class="box">
-                        <p>Specify how many tweets you want to upload to database (max. 100)</p>
+                        <p id="pDescription">Specify how many tweets you want to upload to database (max. 100)</p>
                         <input id="count" name="count" type="number" class="max-tweets" max="100" placeholder="100"
                                required>
                     </div>
                     <br>
                     <button class="btn-header"><i class="fas fa-chevron-circle-left"></i> Trend Search</button>
-
+                    <button class="btn-navigation" onclick="window.location='{{ url_for('manage_db') }}'"><i class="fas fa-chevron-circle-left"></i> Manage DB</button>
                 </div>
 
             </div>

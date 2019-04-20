@@ -9,6 +9,11 @@ class TrendSearch(Resource):
 
     def post(self):
 
+        mongo_hashtags = len(Collection.hashtags())
+        if mongo_hashtags >= 10:
+            return {"error": "MongoDB max capacity (10 already reached). Remove some Collections first:"}
+
+
         # Upload tweets to MongoDB
         mongodb = Collection()
         keyword = request.form.get('trend')
