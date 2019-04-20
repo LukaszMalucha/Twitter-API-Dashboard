@@ -47,6 +47,13 @@
     text-align: center;
 }
 
+
+.row-form-content {
+    margin-bottom: 10px;
+}
+
+
+
 #tweetColumn {
     max-height: 510px;
     overflow: auto;
@@ -135,7 +142,10 @@
 
 .card-data .card-title {
     font-weight: 800;
-    padding: 15px;
+    padding: 15px 15px 10px 15px;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 0px !important;
 }
 
 .card-data .card-content {
@@ -149,6 +159,11 @@
     overflow: auto;
 }
 
+.card-content-long {
+    max-height: 600px  !important;
+}
+
+
 .card-data .card-content p {
     color: #657786;
     font-size: 0.8rem;
@@ -159,6 +174,34 @@
 .card-data .span-trend {
     color: #7f7f7f;
 }
+
+
+.card-sentiment {
+    width: 90%;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 3px 3px 0 #A9A9A9, 0 3px 1px -2px #838383, 0 1px 5px 0 #838383;
+    margin: 0.7rem 2% 5% 8%;
+
+}
+
+.card-sentiment .card-content .card-title {
+    color: #1e3242;
+    font-weight: bolder;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+
+.card-sentiment .card-content p {
+    color: black;
+    font-size: 0.8rem;
+    text-shadow: 0px 1px #ebebeb;
+}
+
+
+
+
 
 
 .card-table {
@@ -187,6 +230,7 @@
     color: white;
     background-color: #003f67;
     font-size: 1.1rem;
+    font-weight: 600;
     font-family: 'Jura', sans-serif;
 
 }
@@ -249,34 +293,44 @@
 }
 
 
-.button-trash {
+.button-db {
     width: 100%;
     text-align: left;
     font-family: 'Jura', sans-serif;
     background-color: transparent;
     color: black;
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 1rem;
     box-shadow: none;
     text-transform: inherit;
 
 }
 
-.button-trash i {
+.button-db i {
     color: #E63C2E;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 
-.button-trash:hover,
-.button-trash:focus,
-.button-trash:active {
-    font-size: 1.3rem;
+.button-db:hover,
+.button-db:focus,
+.button-db:active {
+    font-size: 1.2rem;
     background-color: #fcfcfc;
     box-shadow: none;
 }
 
+.btn-sentiment {
+    padding: 8px;
+    text-align: center;
+}
 
+.btn-sentiment:hover,
+.btn-sentiment:focus,
+.btn-sentiment:active {
+    background-color: #794492;
+    color: white;
+}
 
 /*------------------------------------------------------------------------------
     FORMS

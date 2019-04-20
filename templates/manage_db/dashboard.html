@@ -25,16 +25,19 @@
 {% block content %}
 <div class="dashboard-cards">
     <div class="row row-cards">
+        <div class="loader popular-loader"></div>
         <div class="col-md-4">
             <div class="card card-data">
-
-                <div class="card-content">
-                    <span class="card-title">Delete MongoDB Collection:</span>
+                <div class="card-content card-content-long">
+                    <span class="card-title">Delete MongoDB Collection </span>
+                    <div class="row plain-element text-center">
+                        <p>(10/10)</p>
+                    </div>
                     {% for element in mongo_hashtags %}
                     <div class="row row-form-content">
                         <form action="{{url_for('deletecollection')}}" method="POST">
                             <input id="hashtag_collection" name="hashtag_collection" type="hidden" value="{{element}}">
-                            <button class="waves-effect waves-light btn button-trash" type="submit"><span><i
+                            <button class="waves-effect waves-light btn button-db" type="submit"><span><i
                                     class="fas fa-trash-alt" style=" color: #e63c2e"></i> {{ element }}</span></button>
                         </form>
                     </div>
@@ -44,14 +47,17 @@
         </div>
         <div class="col-md-4">
             <div class="card card-data">
-                <div class="card-content">
-                    <span class="card-title">Clean MongoDB Collection</span>
+                <div class="card-content card-content-long">
+                    <span class="card-title">Transform & Load Trend Data</span>
+                    <div class="row plain-element text-center">
+                        <p>(10/10)</p>
+                    </div>
                     {% for element in mongo_hashtags %}
                     <div class="row row-form-content">
                         <form action="{{url_for('datatransform')}}" method="POST">
                             <input id="hashtag_cleaning" name="hashtag_cleaning" type="hidden" value="{{element}}">
-                            <button class="waves-effect waves-light btn button-trash" type="submit"><span><i class="fas fa-database" style=" color: green"></i> &nbsp; {{ element }}
-                                &nbsp; <i class="fas fa-long-arrow-alt-right" style=" color: green"></i> &nbsp; <i class="fas fa-long-arrow-alt-right" style=" color: green"></i></span></button>
+                            <button class="waves-effect waves-light btn button-db" type="submit"><span><i class="fas fa-database" style=" color: green"></i> &nbsp; {{ element }}
+                                &nbsp; <i class="fas fa-long-arrow-alt-right" style=" color: green"></i></span></button>
                         </form>
                     </div>
                     {% endfor %}
@@ -61,13 +67,16 @@
 
         <div class="col-md-4">
             <div class="card card-data">
-                <div class="card-content">
-                    <span class="card-title">Delete SQL Table:</span>
+                <div class="card-content card-content-long">
+                    <span class="card-title">Delete SQL Table</span>
+                    <div class="row plain-element text-center">
+                        <p>(10/10)</p>
+                    </div>
                     {% for element in sqlite_hashtags %}
                     <div class="row row-form-content">
                         <form action="{{url_for('deletetable')}}" method="POST">
                             <input id="hashtag_table" name="hashtag_table" type="hidden" value="{{element[0]}}">
-                            <button class="waves-effect waves-light btn button-trash" type="submit"><span><i
+                            <button class="waves-effect waves-light btn button-db" type="submit"><span><i
                                     class="fas fa-trash-alt" style=" color: #e63c2e"></i> {{ element[0] }}</span>
                             </button>
                         </form>
@@ -91,15 +100,9 @@
     </a>
 </div>
 
-<script src="{{url_for('static', filename='js/two_cities.js')}}"></script>
+<script src="{{url_for('static', filename='js/manage_db.js')}}"></script>
 
-<script>
-function confirmDeletion() {
-  confirm("Are you sure you want to delete that collection");
-}
 
-</script>
 
 
 {% endblock %}
-onclick="confirmDeletion()"

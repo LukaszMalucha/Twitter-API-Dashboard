@@ -12,7 +12,8 @@ import numpy as np
 
 import os.path
 
-# PATHS
+## PATHS ############################################################################
+
 
 my_path = os.path.abspath(os.path.dirname(__file__))
 tokenizer_path = os.path.join(my_path, "../sentiment_model/tokenizer.pickle")

@@ -14,8 +14,9 @@
 
         <div class="col-xs-12 col-sm-12 col-md-8 col-lg-10">
             <div class="row row-summary">
-                <h5>Manage Databases</h5>
-                <p>Get rid of obsolete collections from MongoDB or delete processed data from SQLite database.</p>
+                <h5>Sentiment Analysis</h5>
+                <p>Apply LSTM on stored data to find out what's the dominating sentiment among conversation
+                    participants.</p>
             </div>
 
         </div>
@@ -26,7 +27,41 @@
 <div class="dashboard-cards">
     <div class="row row-cards">
 
-        <div class="col-md-1 plain-element"></div>
+        <div class="col-md-3 plain-element">
+            <div class="card card-data no-border">
+                <div class="card-content card-content-long">
+                    <span class="card-title">Tokenize Dataset</span>
+                    <form method="POST" id="XXXXXXXX">
+                        <div class="card-content">
+                            {% for element in sqlite_hashtags %}
+                            <div class="row">
+                                <div class="col-md-12 text-left">
+                                    <p>
+                                        <label>
+                                            <input class="with-gap" id="XXXXXXX" name="XXXXXXXXX" type="radio"
+                                                   value="{{element.0 }}"/>
+                                            <span class="span-sentiment">{{element.0 }}</span>
+                                        </label>
+                                    </p>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <button type="submit" class="btn-card"><span><i class="fas fa-terminal"></i> Tokenize </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+       <div class="col-md-4 plain-element">
+            <div class="card card-sentiment">
+                <div class="card-image">
+                    <img src="{{url_for('static', filename='img/data/sentiment.jpg')}}">
+                </div>
+                <a href="" class="btn btn-card btn-sentiment">  #Adele Sentiment Analysis</a>
+            </div>
+        </div>
     </div>
     <div class="row row-cards">
 
@@ -41,14 +76,8 @@
     </a>
 </div>
 
-<script src="{{url_for('static', filename='js/two_cities.js')}}"></script>
+<script src="{{url_for('static', filename='js/sentiment.js')}}"></script>
 
-<script>
-function confirmDeletion() {
-  confirm("Are you sure you want to delete that collection");
-}
-
-</script>
 
 
 {% endblock %}

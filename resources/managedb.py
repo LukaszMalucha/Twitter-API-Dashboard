@@ -1,4 +1,4 @@
-from flask import session, Response, render_template, redirect, request
+from flask import redirect, request
 from flask_restful import Resource
 from models.collection import Collection
 from models.tweets import TweetsModel
