@@ -1,0 +1,424 @@
+/*------------------------------------------------------------------------------
+    MAIN  STYLES    
+------------------------------------------------------------------------------*/
+
+body {
+    font-family: 'Jura', sans-serif;
+    position: relative;
+    background-color: #e8e8e8;
+    margin: 0;
+    padding-bottom: 0;
+}
+
+
+#wrapper {
+    width: 100%;
+
+}
+
+#page-index {
+    width: 100%;
+    display: block;
+    overflow: auto;
+    position: relative;
+    top: 55px;
+    min-height: 800px;
+
+}
+
+#page-index a {
+    text-decoration: none;
+    outline: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+
+.plain-element {
+    margin:0px;
+    padding: 0px;
+}
+
+.warning {
+    color: red;
+}
+
+
+.box {
+   display: flex;
+   align-items:center;
+   margin-bottom: 10px;
+}
+
+#error {
+    color: red;
+    display:none;
+}
+
+.warning {
+   color: red !important;
+   margin-bottom: 10px;
+}
+
+.header {
+    height: 80px;
+    margin: 0px;
+}
+
+
+#messageAlert {
+
+    color: red;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0px;
+    margin: 0%;
+}
+
+.no-border {
+    border:none !important;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+
+/*------------------------------------------------------------------------------
+    ROWS
+------------------------------------------------------------------------------*/
+
+.dashboard-cards {
+    width: 90%;
+    margin: auto;
+}
+
+
+
+.row-alert {
+    min-height: 72px;
+}
+
+
+.row-title {
+    width: 70%;
+    margin: auto;
+    margin-top: -2%;
+    text-align: left;
+
+}
+
+
+.row-title h3 {
+    font-size: 30px;
+    font-weight: 800;
+    color: black;
+    text-shadow: 1px 1px #D1D1D1;
+}
+
+.row-title p {
+    color: #868e96;
+    font-size: 12px;
+    text-shadow: 1px 1px #ECECEC;
+    margin-left: 5px;
+}
+
+
+.row-cards {
+    width: 70%;
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 3%;
+}
+
+.row-form {
+    width: 20%;
+    text-align: center;
+}
+
+
+
+/*------------------------------------------------------------------------------
+    CARDS
+------------------------------------------------------------------------------*/
+
+
+.card-menu {
+    width: 88%;
+    border-color: #eee #ddd #bbb;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.30);
+    border-radius: 5px;
+    margin: auto;
+
+}
+
+
+.card.horizontal .card-image {
+    max-width: 30%;
+}
+
+
+.card .card-content {
+    padding: 8px 12px 8px 12px;
+    text-align: left;
+    font-size: 12px;
+    color: black;
+
+}
+
+.card .card-content h5 {
+    margin-top: 5px;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: black;
+    text-shadow: 1px 1px #D1D1D1;
+
+}
+
+.card .card-action {
+    border-top: none;
+    padding: 3%;
+
+}
+
+/*------------------------------------------------------------------------------
+    BUTTONS
+------------------------------------------------------------------------------*/
+
+
+.btn-enter {
+
+    height: 100%;
+    width: 100%;
+    text-align: right;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background: transparent;
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    color: #003f67;
+    font-family: 'Jura', sans-serif;
+}
+
+.btn-enter i {
+    font-size: 0.8rem;
+}
+
+.btn-enter:hover, .btn-enter:focus, .btn-enter:active {
+    background: transparent;
+    background-color: transparent;
+    color: green;
+}
+
+
+.fixed-action-btn {
+   right: 352px;
+   bottom: 60px;
+
+}
+
+
+.btn-floating {
+    background-color: #003f67;
+}
+
+.btn-floating i {
+    font-size: 24px;
+}
+
+.btn-floating:hover,
+.btn-floating:active,
+.btn-floating:focus {
+    background: #002740;
+}
+
+/*------------------------------------------------------------------------------
+    FOOTER
+------------------------------------------------------------------------------*/
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 12px;
+    color: #8A8A8A;
+    padding: 15px 0px;
+    text-align: center;
+}
+
+.footer a {
+    color: #8A8A8A;
+}
+
+.footer a:hover,
+.footer a:focus,
+.footer a:active {
+    color: #4f84ae;
+    text-decoration: none;
+}
+
+
+
+/*------------------------------------------------------------------------------
+    ANIMATIONS
+------------------------------------------------------------------------------*/
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 1.5s linear infinite;
+  margin-top: 20%;
+  margin-left: 40%;
+  display: none;
+}
+
+.popular-loader {
+  margin-top: 10%;
+  margin-left: 50%;
+
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+.glow {
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    box-shadow: 0 0 2px #fff, 0 0 4px #ddbbdc;
+  }
+  to {
+    box-shadow: 0 0 4px #fff, 0 0 6px #a26ab2;
+  }
+}
+
+
+/*------------------------------------------------------------------------------
+    MEDIA QUERIES
+------------------------------------------------------------------------------*/
+
+
+/* MAX WIDTHS: LARGE SCREEN---------------------------------------------------*/
+
+
+@media(max-width:1700px) {
+
+    .row-title {
+        width: 95%;
+        font-size: 1.5rem;
+
+    }
+
+    .row-cards {
+        width: 95%;
+        margin-bottom: 50px;
+    }
+
+    .card-menu {
+        width: 90%;
+    }
+
+    .fixed-action-btn {
+       right: 50px;
+       bottom: 80px;
+
+    }
+
+}
+
+/* MAX WIDTHS: MEDIUM SCREEN---------------------------------------------------*/
+
+@media(max-width:993px) {
+
+    .row-title {
+        width:90%;
+        font-size: 1.5rem;
+
+    }
+
+    .row-cards {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    .row-form {
+        width: 50%;
+    }
+
+    .btn-submit {
+        width: 60%;
+    }
+
+    .fixed-action-btn {
+       right: 50px;
+       bottom: 80px;
+
+    }
+
+    .card-menu {
+        margin-bottom: 20px;
+    }
+
+}
+
+
+/* MAX WIDTHS: EXTRA-SMALL SCREEN---------------------------------------------*/
+
+@media(max-width:522px) {
+
+    .row-title {
+        width:100%;
+        text-align: center;
+        margin-bottom: 20px;
+
+    }
+
+    .row-title h3 {
+        font-size: 2.5rem;
+
+    }
+
+    .row-cards {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .row-form {
+        width: 80%;
+    }
+
+    .fixed-action-btn {
+       right: 50px;
+       bottom: 80px;
+
+    }
+
+    .card .card-content p {
+       font-size: 10px;
+    }
+
+
+
+}
+
