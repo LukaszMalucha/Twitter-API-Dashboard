@@ -197,11 +197,11 @@ nav ul a {
 
 .dropdown-content li>a {
     color: white;
-    background-color: #191919;
+    background-color: #003f67;
 }
 
 .dropdown-content li>fa {
-    color: #191919;
+    color: #003f67;
 }
 
 
@@ -217,7 +217,7 @@ nav ul a {
 }
 
  nav ul a:hover {
-     color: #191919;
+     color: #003f67;
  }
 
 .nav > li > a:hover,
@@ -232,7 +232,7 @@ nav ul a {
  }
 
 .sidenav {
-    background: #191919;
+    background: #003f67;
 }
 
 .sidenav li > a {
@@ -249,9 +249,9 @@ nav ul a {
 ------------------------------------------------------------------------------*/
 
 
-@media(max-width:1600px) {
+@media(max-width:1700px) {
     .top-navbar {
-        padding-left: 3%;
+        padding-left: 7%;
         padding-right: 3%;
     }
 

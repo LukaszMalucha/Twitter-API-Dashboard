@@ -9,6 +9,9 @@ $(".alert-user").delay(3000).fadeOut(200, function() {
 
 
 $(document).ready(function() {
+
+    $('select').formSelect();
+
     $('.sidenav').sidenav();
 
     $('.modal').modal();

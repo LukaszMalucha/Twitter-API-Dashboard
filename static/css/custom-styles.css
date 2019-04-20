@@ -82,6 +82,9 @@ body {
     border:none !important;
 }
 
+a:hover {
+    text-decoration: none !important;
+}
 
 
 /*------------------------------------------------------------------------------
@@ -312,217 +315,110 @@ body {
 
 
 /*------------------------------------------------------------------------------
-    MEDIA QUERIES     
+    MEDIA QUERIES
 ------------------------------------------------------------------------------*/
 
-/* MIN WIDTHS ----------------------------------------------------------------*/
-
-@media(min-width:1450px) {
-    .col-lg-3 {
-        width: 16.6666667%;
-    }
-
-}
-
-
-
-@media(min-width:768px) {
-
-
-    #header_card p {
-        font-size: 40px;
-        color: white;
-    }
-}
 
 /* MAX WIDTHS: LARGE SCREEN---------------------------------------------------*/
 
-@media(max-width:1810px) {
 
+@media(max-width:1700px) {
 
+    .row-title {
+        width: 95%;
+        font-size: 1.5rem;
 
-
-
-}
-
-@media(max-width:1600px) {
-
-    .row-form-tweets,
-    .row-form-content,
-    .row-form-title {
-        width: 80%;
-        padding: 5px;
     }
 
-    .table-card-medium,
-    .table-card {
-        padding: 5px;
+    .row-cards {
+        width: 95%;
+        margin-bottom: 50px;
     }
 
-
-
-    .home-button {
-        width: 20%
+    .card-menu {
+        width: 90%;
     }
 
-    .tweet {
-        margin: 5px;
-        width: auto;
-        height: auto;
-        min-height: 160px;
-        font-size: 12px;
+    .fixed-action-btn {
+       right: 50px;
+       bottom: 80px;
+
     }
 
-    .card-top {
-        font-size: 18px;
-    }
-
-    .card-middle {
-        font-size: 13px;
-        min-height: 120px;
-    }
 }
 
 /* MAX WIDTHS: MEDIUM SCREEN---------------------------------------------------*/
 
-@media(max-width:1200px) {
-
-    .card-middle {
-        font-size: 13px;
-        min-height: 110px;
-    }
-
-    #title_card p {
-        font-size: 24px;
-        font-weight: bold;
-        padding: 17px;
-    }
-
-
-    th,
-    tr {
-        font-size: 12px;
-    }
-}
-
-@media(max-width:1056px) {
-
-
-
-
-}
-
 @media(max-width:993px) {
 
+    .row-title {
+        width:90%;
+        font-size: 1.5rem;
+
+    }
+
     .row-cards {
-        text-align: center;
+        width: 80%;
+        margin-bottom: 10px;
     }
 
-    .row-form-tweets,
-    .row-form-content,
-    .row-form-title {
-        width: 100%;
-        padding: 5px;
+    .row-form {
+        width: 50%;
     }
 
-    .home-button {
-        width: 50%
-    }
-
-    #navigation {
-        padding: 3%;
-    }
-    .tweet {
-        margin: 5px;
-        width: auto;
-        height: auto;
-        min-height: 160px;
-        font-size: 12px;
-    }
-
-    .form-submit-button {
+    .btn-submit {
         width: 60%;
     }
 
-    .modal {
-    width: 80%;
+    .fixed-action-btn {
+       right: 50px;
+       bottom: 80px;
+
     }
 
-
-
+    .card-menu {
+        margin-bottom: 20px;
+    }
 
 }
-@media(max-width:767px) {
-    .tweet {
-        margin: 20px 0px 20px 0px;
-        width: auto;
-        height: auto;
-    }
-
-    .button-etl-back,
-    .button-etl {
-        width: 60%;
-        font-weight: bold;
-        font-size: 1rem;
-        padding: 3%;
-        margin: 2%;
-
-    }
-
-    .row-form-title {
-        font-size: 2rem;
-    }
-
-
-
-}
-
 
 
 /* MAX WIDTHS: EXTRA-SMALL SCREEN---------------------------------------------*/
 
-@media(max-width:521px) {
+@media(max-width:522px) {
 
+    .row-title {
+        width:100%;
+        text-align: center;
+        margin-bottom: 20px;
 
-    #page-index {
-        margin-top: 80px;
     }
 
-    .card-panel {
-        font-size: 12px;
-        font-weight: bold;
-        border-radius: 15px;
+    .row-title h3 {
+        font-size: 2.5rem;
+
     }
 
-    .input-field .prefix~input {
-        width: 80%;
-        margin-top: 5px;
-    }
-    .prefix~.select-wrapper {
-        width: 70%;
-    }
-    .row-title,
     .row-cards {
-    margin-left: 5px;
+        width: 100%;
+        margin-bottom: 50px;
     }
 
-
-    .dashboard-card {
-        width: 100%
+    .row-form {
+        width: 80%;
     }
+
+    .fixed-action-btn {
+       right: 50px;
+       bottom: 80px;
+
+    }
+
+    .card .card-content p {
+       font-size: 10px;
+    }
+
 
 
 }
 
-
-@media(max-width:480px) {
-
-
-}
-
-@media(max-width:376px) {
-    th,
-    tr {
-        font-size: 9px;
-    }
-}

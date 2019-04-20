@@ -50,7 +50,7 @@
         <ul class="nav navbar-top-links navbar-right">
             <li><a class="nav-link" href="{{ url_for('blog') }}"><i class="fas fa-terminal"></i><b> Code Blog</b></a>
             </li>
-            <li><a class="nav-link" target="_blank" href="https://lukaszmalucha.github.io/portfolio/"><i
+            <li><a class="nav-link" target="_blank" href="https://github.com/LukaszMalucha/"><i
                     class="fab fa-github"></i> <b> GitHub</b></a></li>
             <li><a class='dropdown-trigger nav-link' href='#' data-target='dropdown1' id="user_dropdown"><i
                     class="fas fa-caret-down"></i><b> {{ current_user.email }}</b></a></li>
@@ -128,38 +128,6 @@
 <!-- Custom Js -->
 <script src="{{url_for('static', filename='js/custom-scripts.js')}}"></script>
 
-<script type="text/javascript">
-        $(document).ready(function() {
-            $('select').formSelect();
-        });
-        $(document).ready(function() {
-            $('.datepicker').datepicker();
-        });
-
-
-</script>
-
-
-
-<script>
-        $('.dropdown-trigger').dropdown();
-
-
-</script>
-
-<script>
-      $(document).ready(function(){
-        $('.fixed-action-btn').floatingActionButton();
-      });
-
-</script>
-
-<script>
-        $(document).ready(function() {
-            $('.sidenav').sidenav();
-        });
-
-</script>
 
 </body>
 

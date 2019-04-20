@@ -58,23 +58,3 @@ class RetweetPopularity(Resource):
         tweets_sorted = sorted(tweets_list, key=itemgetter('retweet_count'), reverse=True)
         return tweets_sorted
 
-        # IF PYTHON LIST NEEDED INSTEAD OF JSON:
-        # results = [status._json for status in tweepy.Cursor(twitter_api.search, q=keyword, min_retweets=50).items(count)]
-        # pop_tweets = [status
-        #               for status in results
-        #               if status._json['retweet_count'] > min_retweets]
-        #
-        # ## tuple of tweet + retweet count
-        # tweet_list = [[tweet._json['text'], tweet._json['created_at'][:19], tweet._json['user']['name'],
-        #                tweet._json['retweet_count']]
-        #               for tweet in pop_tweets]
-        # # tweet_list = {k: v  for v,k in enumerate(pop_tweets)}
-        #
-        #
-        # ## sort descending
-        # most_popular_tweets = sorted(tweet_list, key=itemgetter(3), reverse=True)[:count]
-
-        # return Response(
-        #     render_template("api_features/most_retweets.html", most_popular_tweets=most_popular_tweets, keyword=keyword,
-        #                     count=count, min_retweets=min_retweets))
-

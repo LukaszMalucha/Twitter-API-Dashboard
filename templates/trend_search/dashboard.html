@@ -22,7 +22,6 @@
                         <input id="count" name="count" type="number" class="max-tweets" max="100" placeholder="100"
                                required>
                     </div>
-                    <br>
                     <button class="btn-header"><i class="fas fa-chevron-circle-left"></i> Trend Search</button>
                     <button class="btn-navigation" onclick="window.location='{{ url_for('manage_db') }}'"><i class="fas fa-chevron-circle-left"></i> Manage DB</button>
                 </div>
@@ -41,7 +40,7 @@
                     <span class="card-title">Top US Trends </span>
                     <div class="card-content" id="trendtData">
                         {% for element in us_trends_list %}
-                        <div class="col-md-3 text-left">
+                        <div class="col-xs-12 col-sm-6 col-md-3 text-left">
                             <p>
                                 <label>
                                     <input class="with-gap" id="trend" name="trend" type="radio" value="{{element}}" />

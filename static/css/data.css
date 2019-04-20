@@ -459,82 +459,77 @@ input[type="text"]:not(.browser-default):focus:not([readonly]) + label {
     border: 1px solid #e6ecf0;
 }
 
-/*------------------------------------------------------------------------------
-    TABLES
-------------------------------------------------------------------------------*/
+/*----------------------------------------------
+    MEDIA QUERIES
+------------------------------------------------*/
 
-.table-responsive {
-    width: 95%;
-    padding: 1%;
-    margin: auto;
-    overflow-x: hidden;
 
-}
+@media(max-width:1700px) {
+    .row-cards,
+    .row-title {
+        width: 95%;
+    }
 
-#twoCitiesTable {
-    width: 100%;
-    overflow-x: hidden;
-    margin-bottom: 1%;
-    border-bottom: 1px solid #fff;
+    .row-header {
+        padding: 0px;
+    }
 }
 
 
-
-.twoCitiesTables_wrapper .twoCitiesTables_filter {
-    text-align: left !important;
-}
+@media(max-width:992px) {
 
 
-tbody {
-    max-height: 300px;
-    overflow-y: auto;
 
-}
+    .img-header {
+        display: none;
+    }
 
+    .max-tweets {
+        width: 30% !important;
+    }
 
-.select-wrapper  {
-    margin: 2% 2% 0% 2%;
-    width: 20%;
-    display: inherit;
+    .card-data .card-content {
+        max-height: 800px;
+    }
 
-}
-
-.select-wrapper input.select-dropdown {
-    text-align: center;
-}
-
-input[type="search"]:not(.browser-default) {
-    width: 50%;
-
-}
-
-.dataTables_length {
-    margin-left: -12%;
+    .form-card {
+        width: 50%;
+        margin: auto;
+    }
 
 }
 
 
-.table-bordered,
-.table-bordered > thead > tr > th {
-    border-color: transparent;
-}
+@media(max-width:520px) {
+
+    .card-sentiment {
+        width: 100%;
+        margin: auto;
+    }
+
+    .row-title h3 {
+        font-size: 24px;
+    }
+
+    .row-title p {
+        font-size: 10px;
+    }
 
 
 
-.table-bordered > tbody > tr > td {
-    border-color: #dddddd;
-    line-height: 2;
-}
+    .max-tweets {
+        width: 30% !important;
+    }
 
-.table-bordered > thead > tr {
-    background-color: #fff;
-}
+    .card-tweet {
+        margin: 2%;
+    }
 
-.table-striped > tbody > tr:nth-of-type(2n) {
-    background-color: #f9f9f9;
-}
+    .form-card {
+        width: 100%;
+    }
 
 
-.table-striped > tbody > tr:nth-of-type(2n+1) {
-    background-color: #fff;
+
+
 }

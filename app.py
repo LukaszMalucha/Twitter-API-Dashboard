@@ -16,7 +16,6 @@ from resources.blog_list import blog_list
 from resources.api_features import CommonTrends, RetweetPopularity
 from resources.managedb import DeleteCollection, DeleteTable, DataTransform
 from resources.trend_search import TrendSearch
-from resources.data_management import DataLoad
 from resources.sentiment_analysis import TweetTokenizer, Results
 
 # APP SETTINGS
@@ -40,7 +39,6 @@ api.add_resource(CommonTrends, '/commontrends')
 api.add_resource(RetweetPopularity, '/retweets')
 api.add_resource(TrendSearch, '/trendsearch')
 api.add_resource(DataTransform, '/datatransform')
-api.add_resource(DataLoad, '/dataload')
 api.add_resource(TweetTokenizer, '/tweettokenizer')
 api.add_resource(Results, '/results')
 
