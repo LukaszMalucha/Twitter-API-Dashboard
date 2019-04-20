@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 
-    $('#popularRetweets').on('submit', function(event){
+    $('#tokenizeDataset').on('submit', function(event){
         $('#tweetColumn').empty();
         $('.loader').show();
         $.ajax({

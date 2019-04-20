@@ -34,6 +34,9 @@ class DataTransform(Resource):
 
         hashtag = request.form.get('hashtag_cleaning')
 
+        # Prevent overpopulating
+        TweetsModel.delete_by_hashtag(hashtag=hashtag)
+
         if hashtag is None:
             return redirect('trendsearch', message="hashtag was not specified")
 
@@ -58,7 +61,5 @@ class DataTransform(Resource):
             except Exception as e:
                 pass
 
-        # Once Collection is transformed into SQL Database:
-        Collection.delete_by_hashtag(hashtag=hashtag)
 
         return redirect('manage_db')

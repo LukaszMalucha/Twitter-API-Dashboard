@@ -26,19 +26,19 @@
 {% block content %}
 <div class="dashboard-cards">
     <div class="row row-cards">
-
+        <div class="loader popular-loader"></div>
         <div class="col-md-3 plain-element">
             <div class="card card-data no-border">
                 <div class="card-content card-content-long">
                     <span class="card-title">Tokenize Dataset</span>
-                    <form method="POST" id="XXXXXXXX">
+                    <form method="POST" id="tokenizeDataset">
                         <div class="card-content">
                             {% for element in sqlite_hashtags %}
                             <div class="row">
                                 <div class="col-md-12 text-left">
                                     <p>
                                         <label>
-                                            <input class="with-gap" id="XXXXXXX" name="XXXXXXXXX" type="radio"
+                                            <input class="with-gap" id="hashtag" name="hashtag" type="radio"
                                                    value="{{element.0 }}"/>
                                             <span class="span-sentiment">{{element.0 }}</span>
                                         </label>
@@ -54,17 +54,21 @@
             </div>
         </div>
         <div class="col-md-1"></div>
-       <div class="col-md-4 plain-element">
-            <div class="card card-sentiment">
+        <div class="col-md-4 plain-element">
+            <div class="card card-sentiment glow">
                 <div class="card-image">
                     <img src="{{url_for('static', filename='img/data/sentiment.jpg')}}">
                 </div>
-                <a href="" class="btn btn-card btn-sentiment">  #Adele Sentiment Analysis</a>
+                <button class="btn btn-card btn-sentiment" id="buttonSentiment">
+                    <p id="sentiment"></p>
+                    <p>Sentiment Analysis</p>
+                </button>
             </div>
         </div>
     </div>
     <div class="row row-cards">
-
+        <div class="col-md-9 plain-element" id="tweetColumn">
+        </div>
 
     </div>
 </div>
@@ -77,7 +81,6 @@
 </div>
 
 <script src="{{url_for('static', filename='js/sentiment.js')}}"></script>
-
 
 
 {% endblock %}

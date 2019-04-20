@@ -17,6 +17,9 @@ class TrendSearch(Resource):
             keyword = '#' + keyword
         count = int(request.form.get('count'))
 
+        # Prevent overpopulating by deleting previously loaded tweets
+        Collection.delete_by_hashtag(hashtag=keyword)
+
         for tweet in tweepy.Cursor(twitter_api.search, q=keyword).items(count):
             data = {}
             data['text'] = tweet.text
@@ -42,10 +45,3 @@ class TrendSearch(Resource):
                 pass
 
         return results
-
-
-
-
-
-
-

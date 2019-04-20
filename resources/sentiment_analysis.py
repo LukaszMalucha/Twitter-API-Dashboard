@@ -13,7 +13,6 @@ import numpy as np
 import os.path
 
 # PATHS
-
 my_path = os.path.abspath(os.path.dirname(__file__))
 tokenizer_path = os.path.join(my_path, "../sentiment_model/tokenizer.pickle")
 
@@ -21,26 +20,25 @@ tokenizer_path = os.path.join(my_path, "../sentiment_model/tokenizer.pickle")
 class TweetTokenizer(Resource):
 
     def post(self):
-
         hashtag = request.form.get('hashtag')
 
-        ## for backend sentiment analysis
+        # for backend sentiment analysis
         hashtag_tweets = TweetsModel.find_by_hashtag(hashtag=hashtag)
         hashtag_tweets = [element.tweet for element in hashtag_tweets]
 
-        ## load pickled tokenizer
+        # load pickled tokenizer
         with open(tokenizer_path, 'rb') as handle:
             tokenizer = pickle.load(handle)
 
-        ## preprocess data for prediction
+        # preprocess data for prediction
         tokenized = []
         for element in hashtag_tweets:
             element = element.split()
             element = tokenizer.texts_to_sequences(element)
             tokenized.append(element)
         session['tokenized'] = tokenized
-
-        return Response(render_template("sentiment_analysis/tweettokenizer.html", hashtag=hashtag))
+        session['hashtag'] = hashtag
+        return hashtag
 
 
 class Results(Resource):
@@ -49,19 +47,14 @@ class Results(Resource):
 
         K.clear_session()
         model, graph = init_model()
-        hashtag = request.form.get('hashtag')
+        hashtag = session.get('hashtag')
         tokenized = session.get('tokenized')
 
-        ## for table display
-
+        # for table display
         tweets = Collection.find_by_hashtag(hashtag=hashtag)
         tweets = [element['text'] for element in tweets]
 
-        ## for backend sentiment analysis
-        hashtag_tweets = TweetsModel.find_by_hashtag(hashtag=hashtag)
-        hashtag_tweets = [element.tweet for element in hashtag_tweets]
-
-        ## apply model
+        # apply model
         predictions = []
         with graph.as_default():
             for element in tokenized:
@@ -75,10 +68,7 @@ class Results(Resource):
                     prediction = 'Positive'
                 predictions.append(prediction)
 
-        ## zip predictions with ORIGINAL tweet for better clarity
-        zipper = zip(tweets, predictions)
+        # zip predictions with ORIGINAL tweet for better clarity
+        sentiment_predictions = list(zip(tweets, predictions))
 
-        return Response(render_template("sentiment_analysis/results.html", hashtag_tweets=hashtag_tweets,
-                                        predictions=predictions,
-                                        zipper=zipper,
-                                        hashtag=hashtag))
+        return sentiment_predictions

@@ -64,7 +64,7 @@ body {
 }
 
 .header {
-    height: 100px;
+    height: 80px;
     margin: 0px;
 }
 
@@ -127,8 +127,8 @@ body {
 .row-cards {
     width: 70%;
     text-align: center;
-    margin-top: 2%;
-    margin-bottom: 5%;
+    margin-top: 1%;
+    margin-bottom: 3%;
 }
 
 .row-form {
@@ -294,6 +294,20 @@ body {
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+
+.glow {
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    box-shadow: 0 0 2px #fff, 0 0 4px #ddbbdc;
+  }
+  to {
+    box-shadow: 0 0 4px #fff, 0 0 6px #a26ab2;
+  }
 }
 
 

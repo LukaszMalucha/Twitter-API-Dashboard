@@ -182,8 +182,10 @@
     border-radius: 10px;
     box-shadow: 0 3px 3px 0 #A9A9A9, 0 3px 1px -2px #838383, 0 1px 5px 0 #838383;
     margin: 0.7rem 2% 5% 8%;
+    display:none;
 
 }
+
 
 .card-sentiment .card-content .card-title {
     color: #1e3242;
@@ -323,6 +325,14 @@
 .btn-sentiment {
     padding: 8px;
     text-align: center;
+    font-size: 1rem;
+}
+
+
+.btn-sentiment p {
+    margin-bottom: 1px;
+    line-height: 16px;
+
 }
 
 .btn-sentiment:hover,
