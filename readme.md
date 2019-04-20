@@ -1,6 +1,9 @@
 ## Twitter API Dashboard
 
-#### [Visit App](https://twitter-rest-api-dashboard.herokuapp.com/)
+#### [Visit App](https://twitter-rest-api-dashboard1.herokuapp.com/)
+
+
+![1](https://user-images.githubusercontent.com/26208598/56461857-839d5c00-63b1-11e9-9c8a-4d1b5a4d0884.JPG)
 
 
 ## PROJECT OVERVIEW
@@ -20,7 +23,7 @@ Choose between app main functionalities:
 
 <br>
 
-![1](https://user-images.githubusercontent.com/26208598/52292307-57ef0600-296c-11e9-872b-f8ccdf31c024.JPG)
+![1](https://user-images.githubusercontent.com/26208598/56461857-839d5c00-63b1-11e9-9c8a-4d1b5a4d0884.JPG)
 
 <br>
 
@@ -30,7 +33,7 @@ Find out what is currently trending in US. Pick most interesting subject and gui
 
 <br>
 
-![2](https://user-images.githubusercontent.com/26208598/52292311-59b8c980-296c-11e9-9f31-d6eeb323c1c3.JPG)
+![2](https://user-images.githubusercontent.com/26208598/56461858-839d5c00-63b1-11e9-88b9-a4c4e0bd0221.JPG)
 
 <br>
 
@@ -40,7 +43,7 @@ Get rid of obsolete collections from MongoDB or delete processed data from SQLit
 
 <br>
 
-![3](https://user-images.githubusercontent.com/26208598/52292313-59b8c980-296c-11e9-9169-45209ee43dec.JPG)
+![3](https://user-images.githubusercontent.com/26208598/56461859-8435f280-63b1-11e9-82ca-2fdd7f27be71.JPG)
 
 <br>
 
@@ -50,7 +53,7 @@ Apply Deep learning LSTM model on previously stored Twitter dataset. Find out wh
 
 <br>
 
-![4](https://user-images.githubusercontent.com/26208598/52292314-59b8c980-296c-11e9-83ea-ca378f0ffd97.JPG)
+![4](https://user-images.githubusercontent.com/26208598/56461860-8435f280-63b1-11e9-816d-46d989e0f853.JPG)
 
 <br>
 
@@ -60,7 +63,7 @@ Find out what is currently trending in two chosen locations. Specify woe_id and 
 
 <br>
 
-![5](https://user-images.githubusercontent.com/26208598/52292315-5a516000-296c-11e9-87f2-979aabbfc221.JPG)
+![6](https://user-images.githubusercontent.com/26208598/56461861-8435f280-63b1-11e9-9b28-0ce89dca1a18.JPG)
 
 <br>
 
@@ -71,7 +74,7 @@ Choose a keyword and find out most popular tweets in a subject:
 
 <br>
 
-![6](https://user-images.githubusercontent.com/26208598/52292319-5c1b2380-296c-11e9-92da-f5d8c7672f59.JPG)
+![7](https://user-images.githubusercontent.com/26208598/56461862-8435f280-63b1-11e9-9557-db3468aa9de3.JPG)
 
 <br>
 
@@ -102,6 +105,10 @@ HTML | CSS | Bootstrap | Materialize | Conda | Heroku | Docker
 
 ##### Testing
 selenium | unittest
+
+##### Images:
+
+[Ractapopulous - Pixabay ](https://pixabay.com/users/ractapopulous-24766/?tab=popular&pagi=5)
 
 <br>
 

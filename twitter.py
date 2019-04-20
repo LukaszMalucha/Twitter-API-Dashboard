@@ -1,5 +1,5 @@
 import os
-import env
+# import env
 import tweepy
 from tweepy import OAuthHandler
 
