@@ -25,7 +25,7 @@ class CommonTrends(Resource):
 
             clean_trends = []
             for trend in city_intersection:
-                trend = [(trend[0]).replace('#', ''), (trend[1]).replace('None', '')]
+                trend = [(trend[0]).replace('#', '')[:27], (trend[1]).replace('None', '< 10000'), (trend[0]).replace('#', '%23')]
                 clean_trends.append(trend)
 
             return clean_trends
