@@ -23,7 +23,7 @@ Choose between app main functionalities:
 
 <br>
 
-![1](https://user-images.githubusercontent.com/26208598/56461857-839d5c00-63b1-11e9-9c8a-4d1b5a4d0884.JPG)
+![1](https://user-images.githubusercontent.com/26208598/57719179-178fda00-7677-11e9-951c-bb751ac65602.JPG)
 
 <br>
 
@@ -77,6 +77,14 @@ Choose a keyword and find out most popular tweets in a subject:
 ![7](https://user-images.githubusercontent.com/26208598/56461862-8435f280-63b1-11e9-9557-db3468aa9de3.JPG)
 
 <br>
+
+### Top 10 US Trends 
+
+Find out what are the top Twitter trends in US at the moment. Trends are updated every 60 seconds. 
+
+<br>
+
+![2](https://user-images.githubusercontent.com/26208598/57719279-4dcd5980-7677-11e9-8647-9721da6eed9a.JPG)
 
 ### Travis CI:
 
