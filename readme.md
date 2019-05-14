@@ -3,7 +3,7 @@
 #### [Visit App](https://twitter-rest-api-dashboard2.herokuapp.com/)
 
 
-![1](https://user-images.githubusercontent.com/26208598/56461857-839d5c00-63b1-11e9-9c8a-4d1b5a4d0884.JPG)
+![1](https://user-images.githubusercontent.com/26208598/57719179-178fda00-7677-11e9-951c-bb751ac65602.JPG)
 
 
 ## PROJECT OVERVIEW
