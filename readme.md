@@ -1,6 +1,6 @@
 ## Twitter API Dashboard
 
-#### [Visit App](https://twitter-rest-api-dashboard2.herokuapp.com/)
+#### [Visit App](https://twitter-rest-api-dashboard.herokuapp.com/)
 
 
 ![1](https://user-images.githubusercontent.com/26208598/57719179-178fda00-7677-11e9-951c-bb751ac65602.JPG)
