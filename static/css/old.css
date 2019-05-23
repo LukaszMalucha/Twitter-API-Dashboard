@@ -62,7 +62,7 @@
 }
 
 .row-form-title p {
-    font-weight: normal;
+    font-weight: 500;
     font-size: 1.5rem;
 }
 
@@ -222,13 +222,13 @@
 .tweet p {
     font-family: Georgia;
     font-size: 16px;
-    font-weight: normal;
+    font-weight: 500;
     line-height: 20px;
 }
 
 .tweet a {
     color: inherit;
-    font-weight: normal;
+    font-weight: 500;
     text-decoration: none;
     outline: 0 none;
 }

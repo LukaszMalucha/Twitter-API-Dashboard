@@ -125,7 +125,7 @@ a:hover {
 
 .row-title h3 {
     font-size: 30px;
-    font-weight: 800;
+   font-weight: 600;
     color: black;
     text-shadow: 1px 1px #D1D1D1;
 }
@@ -184,7 +184,7 @@ a:hover {
 
 .card .card-content h5 {
     margin-top: 5px;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1.4rem;
     color: black;
     text-shadow: 1px 1px #D1D1D1;
