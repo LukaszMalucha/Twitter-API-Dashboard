@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="dashboard-cards">
+    <div class="row row-title">
+        <h3>Twitter Deep Learning</h3>
+        <p><i class="fab fa-python"></i>&nbsp; Deep learning application on Twitter data </p>
+    </div>
+    <div class="row row-cards">
+        <div class="col-md-4 plain-element">
+            <div class="card horizontal card-menu">
+                <div class="card-image">
+                    <img src="{{url_for('static', filename='img/main/trend_search.jpg')}}" class="img responsive" alt="trend search">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <h5>
+                            I. Trend Search
+                        </h5>
+                        <p>Find out what is currently trending in US. Pick most interesting subject and guide your data
+                            through ETL. </p>
+                    </div>
+                    <div class="card-action">
+                        <button onclick="window.location='{{ url_for('trend_search') }}'" type="submit"
+                                class="btn-enter"><span><i class="fas fa-terminal"></i> Continue </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 plain-element">
+            <div class="card horizontal card-menu">
+                <div class="card-image">
+                    <img src="{{url_for('static', filename='img/main/manage_db.jpg')}}" class="img responsive" alt="manage db">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <h5>
+                            II. Tweet Data ETL
+                        </h5>
+                        <p>Get rid of obsolete collections from MongoDB or delete processed data from SQLite database. </p>
+                    </div>
+                    <div class="card-action">
+                        <button onclick="window.location='{{ url_for('manage_db') }}'" type="submit"
+                                class="btn-enter"><span><i class="fas fa-terminal"></i> Continue </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 plain-element">
+            <div class="card horizontal card-menu">
+                <div class="card-image">
+                    <img src="{{url_for('static', filename='img/main/sentiment.png')}}" class="img responsive" alt="sentiment">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <h5>
+                            III. Sentiment Analysis
+                        </h5>
+                        <p>Apply LSTM on stored data to
+                            find out what's the dominating sentiment among conversation participants. </p>
+                    </div>
+                    <div class="card-action">
+                        <button onclick="window.location='{{ url_for('sentiment_analysis') }}'" type="submit"
+                                class="btn-enter"><span><i class="fas fa-terminal"></i> Continue </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row row-title">
+        <h3>Twitter API Features</h3>
+        <p><i class="fab fa-python"></i>&nbsp; Choose between Twitter API functionalities</p>
+    </div>
+
+    <div class="row row-cards">
+        <div class="col-md-4 plain-element">
+            <div class="card horizontal card-menu">
+                <div class="card-image">
+                    <img src="{{url_for('static', filename='img/main/two_cities.jpg')}}" class="img responsive" alt="two cities">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <h5>
+                            Tale of Two Cities
+                        </h5>
+                        <p>Find out what are the common trends in two chosen locations. </p>
+                    </div>
+                    <div class="card-action">
+                        <button onclick="window.location='{{ url_for('two_cities') }}'" type="submit"
+                                class="btn-enter"><span><i class="fas fa-terminal"></i> Continue </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 plain-element">
+            <div class="card horizontal card-menu">
+                <div class="card-image">
+                    <img src="{{url_for('static', filename='img/main/retweets.jpg')}}" class="img responsive" alt="retweets">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <h5>
+                            Popular Retweets
+                        </h5>
+                        <p>Choose a keyword and find out most popular tweets in a subject. </p>
+                    </div>
+                    <div class="card-action">
+                        <button onclick="window.location='{{ url_for('popular_retweets') }}'" type="submit"
+                                class="btn-enter"><span><i class="fas fa-terminal"></i> Continue </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 plain-element">
+            <div class="card horizontal card-menu">
+                <div class="card-image">
+                    <img src="{{url_for('static', filename='img/main/top-trends.jpg')}}" class="img responsive" alt="top trends">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <h5>
+                            Top 10 US Trends
+                        </h5>
+                        <p>Find out what are the top Twitter trends in US at the moment. Trends are updated every 60 seconds. </p>
+                    </div>
+                    <div class="card-action">
+                        <button onclick="window.open('http://www.tweetever.com/')" type="submit"
+                                class="btn-enter"><span><i class="fas fa-terminal"></i> Continue </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row row-cards"></div>
+</div>
+
+
+{% endblock %}

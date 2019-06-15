@@ -11,7 +11,8 @@
     Once data sample is extracted, next step is to pre-process it and load to SQL database. Final step is to apply Keras LSTM model on processed tweets to find out what's the dominating sentiment
     among conversation participants - positive, negative or neutral.">
     <meta name="KeyWords" content="twitter, flask, api, sentiment analysis">
-    <link rel="shortcut icon" type="image/png" href="{{url_for('static', filename='img/septellar.png')}}" alt="logo small"/>
+    <link rel="shortcut icon" type="image/png" href="{{url_for('static', filename='img/septellar.png')}}"
+          alt="logo small"/>
     <!-- Material Icons-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Bootstrap-->
@@ -25,6 +26,7 @@
     <!-- Custom Styles-->
     <link href="{{url_for('static', filename='css/custom-styles.css')}}" rel="stylesheet"/>
     <link href="{{url_for('static', filename='css/navbar.css')}}" rel="stylesheet"/>
+    <link href="{{url_for('static', filename='css/data.css')}}" rel="stylesheet"/>
     <!-- jQuery-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     {% block extrahead %}
@@ -43,12 +45,12 @@
                 <i class="fab fa-twitter-square"></i><strong> Twitter API Dashboard</strong></a>
         </div>
         <ul class="nav navbar-top-links navbar-right">
-            <li><a class="nav-link" href="{{ url_for('blog') }}"><i class="fas fa-terminal"></i><b> Code Blog</b></a>
-            </li>
+            <li><a class="nav-link" target="_blank" href="">
+            <i class="fas fa-globe"></i> WOEID Search Engine </a></li>
             <li><a class="nav-link" target="_blank" href="https://github.com/LukaszMalucha/"><i
-                    class="fab fa-github"></i> <b> GitHub</b></a></li>
+                    class="fab fa-github"></i> GitHub</a></li>
             <li><a class='dropdown-trigger nav-link' href='#' data-target='dropdown1' id="user_dropdown"><i
-                    class="fas fa-caret-down"></i><b> {{ current_user.email }}</b></a></li>
+                    class="fas fa-caret-down"></i> {{ current_user.email }}</a></li>
             <li><a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons" id="trigger">menu</i></a>
             </li>
         </ul>
@@ -73,12 +75,12 @@
         <li><a target="_blank" href="https://github.com/LukaszMalucha/"><i
                 class="fab fa-github"></i> GitHub</a></li>
         {% if current_user.email != "Guest" %}
-        <li><a href="{{ url_for('userlogout') }}" id="dropdown_link"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+        <li><a href="{{ url_for('userlogout') }}" class="dropdown-link"><i class="fas fa-sign-out-alt"></i> Log Out</a>
         </li>
         {% else %}
-        <li><a href="{{ url_for('userlogin') }}" id="dropdown_link"><i class="fa fa-user fa-fw"></i> Log In</a>
+        <li><a href="{{ url_for('userlogin') }}" class="dropdown-link"><i class="fa fa-user fa-fw"></i> Log In</a>
         </li>
-        <li><a href="{{ url_for('userregister') }}" id="dropdown_link"><i class="fas fa-tasks"></i> Register</a>
+        <li><a href="{{ url_for('userregister') }}" class="dropdown-link"><i class="fas fa-tasks"></i> Register</a>
         </li>
         {% endif %}
     </ul>
@@ -87,26 +89,24 @@
 
     <!-- PAGE-INDEX -->
     <div id="page-index">
-        <div class="row header">
-            <div id="messageAlert" class="alert alert-message" role="alert">
-                {% block alert %} {% endblock %}
-            </div>
 
-        </div>
         {% block row_header %}{% endblock %}
         {% block content %} {% endblock %}
 
 
     </div>
 </div>
+<div class="row header">
+    <div id="messageAlert" class="alert alert-message" role="alert">
+        {% block alert %} {% endblock %}
+    </div>
 
+</div>
 
 <div class="footer">
     <p><a target="_blank" href="https://www.freeprivacypolicy.com/privacy/view/9b972ff9a2aaeda03f07216c15625791/">Privacy
         Policy</a> • © 2019 - 2020 www.unflasked.com - All Rights Reserved • Powered by Septellar &trade;</p>
 </div>
-
-
 
 
 <!-- Bootstrap Js -->
@@ -116,8 +116,6 @@
 
 <!-- Materialize Js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-
 
 
 <!-- Custom Js -->
