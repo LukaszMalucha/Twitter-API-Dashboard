@@ -3,28 +3,33 @@
 
 {% block content %}
 
-
 <div class="row row-title">
     <div class="card card-title">
         <div class="row row-blue">
-            <h1> Check what's trending in US at the moment </h1>
+            <h1>Check what's trending at the moment </h1>
         </div>
         <br>
-
+        <div class="row plain element text-center">
+            Specify how many tweets you want to upload to database
+        </div>
+        <form method="POST" id="localityForm" enctype="multipart/form-data">
+            <div class="row row-form">
+                <div class="input-field col s12">
+                    <input id="locality" type="text" class="validate" name="locality" maxlength="50"
+                           required>
+                    <label for="locality">Search for City, Town or Village </label>
+                </div>
+            </div>
+            <h5 style="color: orange">{{ asd }}</h5>
+            <div class="row row-button text-center">
+                <button class="btn-trends" target="_blank" href=""><i class="fas fa-search"></i> &nbsp; Find
+                    WOEID
+                </button>
+            </div>
+        </form>
         <br>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
 
 
 <script src="{{url_for('static', filename='js/trend_search.js')}}"></script>
