@@ -1,82 +1,58 @@
 {% extends 'base.html' %}
 
-{% block extrahead %}
-<link href="{{url_for('static', filename='css/data.css')}}" rel="stylesheet"/>
-{% endblock %}
-
-{% block row_header %}
-<div class="row row-header">
-    <div class="row">
-        <div class="col-xs-0 col-sm-0 col-md-4 col-lg-2 text-right">
-
-            <img src="{{url_for('static', filename='img/main/two_cities.jpg')}}" class="img responsive img-header">
-        </div>
-
-        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-10">
-            <div class="row row-summary">
-                <h5>The Tale of Two Cities</h5>
-                <p>To find out what's the city's woe_id please visit <a target="_blank"
-                                                                        href="http://woeid.rosselliot.co.nz/lookup/">
-                    woeidlookup.com </a>.
-                <p>
-            </div>
-
-        </div>
-    </div>
-</div>
-{% endblock %}
 {% block content %}
-<div class="dashboard-cards">
 
-    <div class="row row-cards">
-        <div class="col-md-3 plain-element">
-            <form method="POST" id="twoCities">
-                <div class="card form-card">
-                    <div class="card-content">
-                        <span class="card-title">Specify woe_id of two cities</span>
-                        <a class="modal-trigger" href="#modal1">( sample woe_id's )</a>
-                        <div class="input-field">
-                            <img class="img-responsive prefix"
-                                 src="{{url_for('static', filename='img/data/city_1.jpg')}}"/>
-                            <input id="city_1" name="city_1" type="number" class="validate" required>
-                            <label for="city_1">City #1</label>
-                        </div>
-                        <div class="input-field">
-                            <img class="img-responsive prefix"
-                                 src="{{url_for('static', filename='img/data/city_2.jpg')}}"/>
-                            <input id="city_2" name="city_2" type="number" class="validate" required>
-                            <label for="city_2">City #2</label>
-                        </div>
-                    </div>
 
-                    <button type="submit" class="btn-card"><span><i class="fas fa-terminal"></i> Submit </span>
-                    </button>
-                </div>
-            </form>
+<div class="row row-title">
+    <div class="card card-title">
+        <div class="row row-blue">
+            <h1><i class="fas fa-city"></i> &nbsp; The Tale of Two Cities </h1>
         </div>
 
-        <div class="col-md-1 plain-element"></div>
-        <div class="col-md-8 plain-element">
-            <div class="card card-data">
-                <span class="card-title">Common Trends</span>
-                <div class="loader"></div>
-                <div class="card-content" id="trendtData">
-
-
+        <div class="row plain-element text-center">
+            <p>Specify woe_id of two cities</p>
+        </div>
+        <div class="row plain-element text-center">
+            <a class="modal-trigger" href="#modal1">( sample woe_id's )</a>
+        </div>
+        <br>
+        <form method="POST" id="twoCities">
+            <div class="row row-form plain-element text-center">
+                <div class="input-field col s1"></div>
+                <div class="input-field col s4">
+                    <img class="img-responsive prefix"
+                         src="{{url_for('static', filename='img/data/city_1.jpg')}}"/>
+                    <input id="city_1" name="city_1" type="number" class="validate" required>
+                    <label for="city_1">City 1</label>
+                </div>
+                <div class="input-field col s2"></div>
+                <div class="input-field col s4">
+                    <img class="img-responsive prefix"
+                         src="{{url_for('static', filename='img/data/city_2.jpg')}}"/>
+                    <input id="city_2" name="city_2" type="number" class="validate" required>
+                    <label for="city_2">City 2</label>
                 </div>
             </div>
+            <div class="row row-button text-center">
+                <button class="btn-trends" target="_blank" href=""><i class="fas fa-search"></i> &nbsp; Get Common
+                    Trends
+                </button>
+            </div>
+        </form>
+        <br>
+    </div>
+</div>
+<div class="row row-cards">
+    <div class="card card-data">
+        <div class="loader"></div>
+        <div class="card-content" id="trendtData">
 
         </div>
-        <div class="row row-cards">
-        </div>
+        <div class="row"></div>
+
     </div>
 </div>
 
-<div class="fixed-action-btn">
-    <a class="btn-floating btn-large" href="{{url_for('dashboard')}}">
-        <i class="large material-icons">exit_to_app</i>
-    </a>
-</div>
 
 <div id="modal1" class="modal">
     <div class="table-responsive">

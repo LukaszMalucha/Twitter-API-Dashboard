@@ -1,105 +1,13 @@
-/*------------------------------------------------------------------------------
-    ROWS
-------------------------------------------------------------------------------*/
-
-.dashboard-cards {
-    width: 60%;
-    margin: auto;
-}
-
-.row-title {
-    width: 100%;
-    margin: auto;
-    text-align: center;
-}
-
-
-.row-title h1 {
-    font-size: 24px;
-    font-weight: 600;
-    color: white;
-    margin-bottom: 1%;
-    margin-top: 0;
-}
-
-.row-title p {
-    color: #14171a;;
-    font-size: 14px;
-    text-shadow: 1px 1px #ECECEC;
-}
-
-
-.row-cards {
-    width: 100%;
-    text-align: center;
-    margin-top: 6px;
-    margin-bottom: 3%;
-}
-
-.row-form {
-    width: 60%;
-    margin-left: 18%;
-    margin-right: 15%;
-    text-align: center;
-}
-
-.row-blue {
-    padding: 2%;
-    background: #1da1f2;
-}
-
-
-.row-side-blue {
-    height: 95px;
-    min-height: 95px;
-    margin: 0;
-    background: #1da1f2;
-    border: none;
-}
-
-.row-description {
-    margin: 0px;
-}
-
-.row-description p {
-    color: #657786;
-    font-size: 0.8rem;
-    margin-bottom: 5px;
-    font-weight: 500;
-    z-index: 5;
-}
-
-.row-trend {
-    margin-bottom: 0px;
-    height: 57px;
-}
-
-.row-side-trend {
-    margin-bottom: 0px;
-    height: 40px;
-}
-
-.row-button {
-    margin: 3%;
-}
-
-
-.row-visit {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #e6ecf0;
-}
 
 /*------------------------------------------------------------------------------
     CARDS
 ------------------------------------------------------------------------------*/
 
-
-
 .card-title {
     padding-top: 0%;
     width: 98%;
     margin: auto;
+
 }
 
 .card-side {
@@ -118,7 +26,7 @@
     margin-top: 1%;
     margin-bottom: 1%;
     color: #14171a;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .card-side .card-content {
@@ -127,7 +35,7 @@
     padding-bottom: 12px;
     margin-top: 0px;
     color: #1DA1F2;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 0.8rem;
     max-height: 700px;
     overflow: auto;
@@ -138,11 +46,11 @@
     color: #657786;
     font-size: 0.7rem;
     margin-bottom: 5px;
-    font-weight: 500;
+    font-weight: 300;
     z-index: 5;
 }
 
-.card-side .span-trend {
+.card-data .span-trend {
     color: #7f7f7f;
     border: none;
 }
@@ -170,7 +78,7 @@
 
 .card-menu h5 {
     margin: 1%;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 0.9rem;
     color: #252b30;
 
@@ -181,7 +89,7 @@
     color: #657786;
     font-size: 0.8rem;
     margin-bottom: 0px;
-    font-weight: 500;
+    font-weight: 300;
     z-index: 5;
 
 }
@@ -209,7 +117,19 @@
     padding: 1.5%;
 }
 
+.card-data .trend {
+    font-size: 0.8rem;
+    color: #1DA1F2;
+    font-weight: 700;
+}
 
+.card-data p {
+    color: #657786;
+    font-size: 0.7rem;
+    margin-bottom: 5px;
+    font-weight: 500;
+    z-index: 5;
+}
 
 
 
@@ -230,7 +150,7 @@
     margin-top: 1%;
     margin-bottom: 1%;
     color: #14171a;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .card-projects .card-content {
@@ -239,7 +159,7 @@
     padding-bottom: 12px;
     margin-top: 0px;
     color: #1DA1F2;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 0.8rem;
     max-height: 700px;
     overflow: auto;
@@ -250,7 +170,7 @@
     color: #252b30;
     font-size: 0.9rem;
     margin-bottom: 4px;
-    font-weight: 600;
+    font-weight: 400;
     z-index: 5;
 }
 
@@ -359,6 +279,7 @@
     FORMS
 ------------------------------------------------------------------------------*/
 
+input[type="number"]:not(.browser-default),
 input[type="text"]:not(.browser-default) {
     border: 1px solid #e6ecf0;
     background-color: #f5f8fa;
@@ -367,10 +288,15 @@ input[type="text"]:not(.browser-default) {
     padding: 5px 5%;
 }
 
+input[type="number"]:not(.browser-default):focus:not([readonly]),
 input[type="text"]:not(.browser-default):focus:not([readonly]) {
     border: 1px solid #1da1f2;
     box-shadow: none;
     background: #fff;
+}
+
+input[type="number"]:not(.browser-default) {
+    text-align: center;
 }
 
 .input-field > label {
@@ -385,17 +311,55 @@ input[type="text"]:not(.browser-default):focus:not([readonly]) {
     transform: translateX( 10%) translateY(-20px) scale(0.8);
 }
 
-
+input.valid[type="number"]:not(.browser-default),
 input.valid[type="text"]:not(.browser-default) {
     border: 1px solid #e6ecf0;
     box-shadow: none;
 }
 
+input.invalid[type="number"]:not(.browser-default),
 input.invalid[type="text"]:not(.browser-default) {
     border: 1px solid #F44336;
     box-shadow: none;
 }
 
+[type="radio"]:not(:checked) + span, [type="radio"]:checked + span {
+   font-weight: 300;
+   font-size: 0.8rem;
+   color: #657786;;
+   padding-left: 25px;
+}
+
+
+[type="radio"]:not(:checked) + span::before {
+   border: 1px solid #657786;;
+   height: 0.8rem;
+   width: 0.8rem;
+   margin-top: 0.5rem;
+}
+
+[type="radio"]:checked + span {
+    color: #1DA1F2;
+}
+
+
+[type="radio"].with-gap:checked + span::before {
+    border: 2px solid #1DA1F2;
+    left: -2px;
+}
+
+[type="radio"]:checked + span::after, [type="radio"].with-gap:checked + span::after {
+    background-color: #1DA1F2;
+    border: 2px solid #1DA1F2;
+    left: -2px;
+}
+
+
+.input-field .prefix {
+    top: 0;
+    left: 5px;
+    width: 3rem;
+}
 
 /*------------------------------------------------------------------------------
     FOOTER
@@ -502,13 +466,6 @@ td {
 @media(max-width:1440px) {
 
 
-    .row-trend {
-        height: 50px;
-    }
-
-    .row-side-trend {
-        height:  36px;
-    }
 
     .card-data {
         height: 400px;
@@ -542,18 +499,13 @@ td {
         font-size: 0.8rem;
     }
 
-    .row-description p {
-        font-size: 0.7rem;
-    }
+
 
     .btn-visit {
         font-size: 9px;
         padding: 2px 12px;
     }
 
-    .row-button {
-        margin-bottom: 5%;
-    }
 
     .card-side .card-content {
         padding-bottom: 4px;
@@ -578,10 +530,6 @@ td {
 
     .card-side h1 {
         font-size: 0.9rem;
-    }
-
-    .row-description p {
-        font-size: 0.7rem;
     }
 
     .card-side .card-content {

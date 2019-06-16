@@ -25,7 +25,7 @@ $(document).ready(function() {
                     console.log(value);
                     $('#trendtData').append(
                         '<div class="col-sm-4 col-md-4">' +
-                        '<div class="row plain-element"><a  target="_blank" href="https://twitter.com/search?q=' +
+                        '<div class="row plain-element row-trend"><a  class="trend" target="_blank" href="https://twitter.com/search?q=' +
                         value[0] +
                         '&src=typd"> #' +
                         value[0] +

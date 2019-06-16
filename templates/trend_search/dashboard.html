@@ -2,35 +2,54 @@
 
 
 {% block content %}
-
-<div class="row row-title">
-    <div class="card card-title">
-        <div class="row row-blue">
-            <h1>Check what's trending at the moment </h1>
-        </div>
-        <br>
-        <div class="row plain element text-center">
-            Specify how many tweets you want to upload to database
-        </div>
-        <form method="POST" id="localityForm" enctype="multipart/form-data">
-            <div class="row row-form">
-                <div class="input-field col s12">
-                    <input id="locality" type="text" class="validate" name="locality" maxlength="50"
-                           required>
-                    <label for="locality">Search for City, Town or Village </label>
-                </div>
+<form method="POST" id="localityForm" enctype="multipart/form-data">
+    <div class="row row-title">
+        <div class="card card-title">
+            <div class="row row-blue">
+                <h1><i class="fas fa-database"></i> &nbsp; Upload tweets into MongoDB </h1>
             </div>
-            <h5 style="color: orange">{{ asd }}</h5>
+
+            <div class="row plain-element text-center">
+                <p>Specify how many tweets you want to upload to database (max. 100)</p>
+            </div>
+
+            <div class="row row-form plain-element text-center">
+                <div class="input-field col s4"></div>
+                <div class="input-field col s4">
+                    <input id="count" name="count" type="number" class="max-tweets" max="100" placeholder="100"
+                           required>
+                    <label for="count"> </label>
+                </div>
+                <div class="input-field col s4"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row row-cards">
+        <div class="card card-data">
+            <div class="card-content" id="trendtData">
+                {% for element in us_trends_list %}
+                <div class="col-xs-12 col-sm-6 col-md-6 text-left">
+                    <p>
+                        <label>
+                            <input class="with-gap" id="trend" name="trend" type="radio" value="{{element}}"/>
+                            <span class="span-trend">{{element}}</span>
+                        </label>
+                    </p>
+                </div>
+                {% endfor %}
+
+            </div>
+            <div class="row"></div>
             <div class="row row-button text-center">
-                <button class="btn-trends" target="_blank" href=""><i class="fas fa-search"></i> &nbsp; Find
-                    WOEID
+
+                <button class="btn-trends" target="_blank" href=""><i class="fas fa-database"></i> &nbsp; Upload to DB
                 </button>
             </div>
-        </form>
-        <br>
+        </div>
     </div>
-</div>
 
+
+</form>
 
 <script src="{{url_for('static', filename='js/trend_search.js')}}"></script>
 

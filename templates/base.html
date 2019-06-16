@@ -59,12 +59,12 @@
     <!-- DROPDOWN -->
     <ul id="dropdown1" class="dropdown-content">
         {% if current_user.email != "Guest" %}
-        <li><a href="{{ url_for('userlogout') }}" id="dropdown_link"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+        <li><a href="{{ url_for('userlogout') }}" class="dropdown-link"><i class="fas fa-sign-out-alt"></i> Log Out</a>
         </li>
         {% else %}
-        <li><a href="{{ url_for('userlogin') }}" id="dropdown_link"><i class="fa fa-user fa-fw"></i> Log In</a>
+        <li><a href="{{ url_for('userlogin') }}" class="dropdown-link"><i class="fa fa-user fa-fw"></i> Log In</a>
         </li>
-        <li><a href="{{ url_for('userregister') }}" id="dropdown_link"><i class="fas fa-tasks"></i> Register</a>
+        <li><a href="{{ url_for('userregister') }}" class="dropdown-link"><i class="fas fa-tasks"></i> Register</a>
         </li>
         {% endif %}
     </ul>
@@ -121,9 +121,9 @@
                                         </div>
                                         <div class="col-xs-8 col-sm-8 col-md-8 plain-element">
                                             <h5>
-                                                Trend Search
+                                                Trend Upload
                                             </h5>
-                                            <p>Find out what is currently trending on Twitter. </p>
+                                            <p>Upload tweets into DB for sentiment analysis. </p>
                                         </div>
                                     </div>
                                 </div>
@@ -162,7 +162,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="#">
+                            <a href="{{ url_for('two_cities') }}">
                                 <div class="card card-menu">
                                     <div class="row plain-element">
                                         <div class="col-xs-4 col-sm-4 col-md-4 plain-element">
@@ -172,7 +172,7 @@
                                         </div>
                                         <div class="col-xs-8 col-sm-8 col-md-8 plain-element">
                                             <h5>
-                                                Tale of Two Cities
+                                                The Tale of Two Cities
                                             </h5>
                                             <p>Find the common trends in two chosen locations. </p>
                                         </div>
@@ -222,75 +222,7 @@
                             </div>
                         </div>
                         <div class="card card-projects">
-                            <div class="row plain-element">
-                                <h1>Visit other projects</h1>
-                            </div>
-                            <br>
-                            <div class="row plain-element row-visit">
-                                <div class="col-xs-4 col-sm-4 col-md-4 plain-element">
-                                    <img src="{{url_for('static', filename='img/blockchain.jpg')}}"
-                                         class="img responsive img-icon" alt="blockchain">
-                                </div>
-                                <div class="col-xs-8 col-sm-8 col-md-8 plain-element">
-                                    <p> Blockchain Example</p>
-                                    <button class="btn-visit" onclick="window.open('http://www.minerstartup.com')">Visit
-                                        the
-                                        Application
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="row plain-element row-visit">
-                                <div class="col-xs-4 col-sm-4 col-md-4 plain-element">
-                                    <img src="{{url_for('static', filename='img/thompson.jpg')}}"
-                                         class="img responsive img-icon" alt="thompson">
-                                </div>
-                                <div class="col-xs-8 col-sm-8 col-md-8 plain-element">
-                                    <p> Thompson Sampling</p>
-                                    <button class="btn-visit" onclick="window.open('http://www.thompsonsampling.com')">
-                                        Visit the
-                                        Application
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="row plain-element row-visit">
-                                <div class="col-xs-4 col-sm-4 col-md-4 plain-element">
-                                    <img src="{{url_for('static', filename='img/quant.jpg')}}"
-                                         class="img responsive img-icon" alt="quant">
-                                </div>
-                                <div class="col-xs-9 col-sm-9 col-md-9 plain-element">
-                                    <p> Quant Properties</p>
-                                    <button class="btn-visit" onclick="window.open('http://www.quantproperties.com')">
-                                        Visit the
-                                        Application
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="row plain-element row-visit">
-                                <div class="col-xs-4 col-sm-4 col-md-4 plain-element">
-                                    <img src="{{url_for('static', filename='img/unflasking.jpg')}}"
-                                         class="img responsive img-icon" alt="unflasking">
-                                </div>
-                                <div class="col-xs-9 col-sm-9 col-md-9 plain-element">
-                                    <p> Unflasking AI - Python </p>
-                                    <button class="btn-visit" onclick="window.open('http://www.unflasked.com')">Visit
-                                        the
-                                        Application
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="row plain-element row-visit">
-                                <div class="col-xs-4 col-sm-4 col-md-4 plain-element">
-                                    <img src="{{url_for('static', filename='img/bepartisan.jpg')}}"
-                                         class="img responsive img-icon" alt="bepartisan">
-                                </div>
-                                <div class="col-xs-9 col-sm-9 col-md-9 plain-element">
-                                    <p> Be-partisan </p>
-                                    <button class="btn-visit" onclick="window.open('http://www.bepartisan.com')">Visit
-                                        the
-                                        Application
-                                    </button>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
