@@ -112,6 +112,16 @@ a:hover {
 
 }
 
+.row-form-s6 {
+    width: 50%;
+    margin: auto;
+}
+
+.row-form-s3 {
+    width: 25%;
+    margin: auto;
+}
+
 
 .row-title h1 {
     font-size: 24px;
