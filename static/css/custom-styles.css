@@ -70,6 +70,10 @@ a:hover {
     text-decoration: none !important;
 }
 
+#tweetColumn a {
+    color: black;
+}
+
 #trends {
     padding-top: 10px;
     padding-right: 0px;
@@ -97,7 +101,7 @@ a:hover {
 }
 
 /*------------------------------------------------------------------------------
-    ROWS
+    ROWS & COLUMNS
 ------------------------------------------------------------------------------*/
 
 .dashboard-cards {
@@ -198,7 +202,14 @@ a:hover {
     border-bottom: 1px solid #e6ecf0;
 }
 
+#tweetColumn {
+    max-height: 510px;
+    overflow: auto;
+}
 
+#tweetColumn a:hover {
+    color: #1DA1F2;
+}
 
 
 /*------------------------------------------------------------------------------
@@ -367,9 +378,8 @@ td {
 }
 
 .popular-loader {
-  margin-top: 10%;
-  margin-left: 50%;
-
+    margin-top: 5%;
+    margin-left: 40%;
 }
 
 

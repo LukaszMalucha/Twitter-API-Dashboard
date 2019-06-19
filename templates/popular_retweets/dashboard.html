@@ -12,29 +12,21 @@
             <h1><i class="fas fa-retweet"></i> &nbsp; Popular Retweets </h1>
         </div>
         <form method="POST" id="popularRetweets">
-            <div class="row row-form plain-element">
-                <div class="input-field col xs0 s3"></div>
-                <div class="input-field col s6">
-                    <img class="img-responsive prefix"
-                         src="{{url_for('static', filename='img/data/searched_keyword.jpg')}}"/>
+            <div class="row row-form-s6 plain-element">
+
+                <div class="input-field">
                     <input id="keyword" name="keyword" type="text" class="validate" required>
                     <label for="keyword">Searched Keyword </label>
                 </div>
             </div>
-            <div class="row plain-element">
-                <div class="input-field col xs0 s3"></div>
-                <div class="input-field col s6">
-                    <img class="img-responsive prefix"
-                         src="{{url_for('static', filename='img/data/min_retweets.jpg')}}"/>
+            <div class="row row-form-s6 plain-element">
+                <div class="input-field">
                     <input id="retweets" name="retweets" type="number" class="validate" required>
                     <label for="retweets">Min. Retweets</label>
                 </div>
             </div>
-            <div class="row plain-element">
-                <div class="input-field col xs0 s3"></div>
-                <div class="input-field col s6">
-                    <img class="img-responsive prefix"
-                         src="{{url_for('static', filename='img/data/search_results.jpg')}}"/>
+            <div class="row row-form-s6 plain-element">
+                <div class="input-field">
                     <input id="count" name="count" type="number" class="validate" max="50" required>
                     <label for="count">Search Results (max.50)</label>
                 </div>
@@ -51,10 +43,49 @@
 <div class="row row-cards">
     <div class="loader popular-loader"></div>
     <div class="col-md-12 plain-element" id="tweetColumn">
-
+        <div class="row plain-element">
+            <a target="_blank" href="https://twitter.com/search?q=&src=typd/">
+                <div class="card card-tweet">
+                    <p>
+                        RT @smbproject: Keep America Great by not giving Trump another 4 years. We can turn this ship
+                        around by all heading to the polls in mass nu…
+                    </p>
+                    <b>&mdash; Golden Galaxy</b>
+                    <br/>
+                    <span>
+                        <h5>
+                            <i class="fas fa-retweet">
+                        </i>
+                        49
+                        </h5>
+                    </span>
+                </div>
+            </a>
+        </div>
+        <div class="row plain-element">
+            <a target="_blank" href="https://twitter.com/search?q=&src=typd/">
+                <div class="card card-tweet">
+                    <p>
+                        RT @smbproject: Keep America Great by not giving Trump another 4 years. We can turn this ship
+                        around by all heading to the polls in mass nu…
+                    </p>
+                    <b>&mdash; Golden Galaxy</b>
+                    <br/>
+                    <span>
+                        <h5>
+                            <i class="fas fa-retweet">
+                        </i>
+                        49
+                        </h5>
+                    </span>
+                </div>
+            </a>
+        </div>
     </div>
 </div>
 
 <script src="{{url_for('static', filename='js/popular_retweets.js')}}"></script>
 
 {% endblock %}
+
+
