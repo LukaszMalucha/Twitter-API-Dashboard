@@ -131,9 +131,17 @@
     z-index: 5;
 }
 
+.card-data h1 {
+    font-size: 1rem;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    color: #14171a;
+    font-weight: 400;
+}
+
 .card-tweet {
     width: 98%;
-    margin: 0.5rem 1% 2% 1%;
+    margin: 0.5rem 1% 1% 1%;
     text-align: left;
     font-size: 0.8rem;
     line-height: 16px;
@@ -311,8 +319,21 @@
     box-shadow: none;
 }
 
+.button-db {
+    width: 100%;
+    text-align: left;
+    background-color: transparent;
+    color: black;
+    font-weight: 500;
+    font-size: 0.8rem;
+    box-shadow: none;
+    text-transform: inherit;
+}
 
-
+.button-db:hover, .button-db:focus, .button-db:active {
+    background-color: #fcfcfc;
+    box-shadow: none;
+}
 
 /*------------------------------------------------------------------------------
     FORMS

@@ -18,10 +18,9 @@ $(document).ready(function() {
             console.log(data);
             $('.loader').hide();
             jQuery.each(data, function(index, value){
-                console.log(value.user);
-                console.log(value.text);
+                $('form').hide();
                 $('#tweetColumn').append(
-                    '<div class="col-md-6 plain-element">' +
+                    '<div class="row plain-element">' +
                     '<a target="_blank" href="https://twitter.com/search?q=' + value.keyword + '&src=typd/">' +
                     '<div class="card card-tweet"><p>' + value.text + '</p>' +
                     '<b >&mdash;' +  value.user + '</b> ' + value.created_at +
