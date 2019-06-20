@@ -243,14 +243,17 @@
 .card-sentiment {
     width: 98%;
     margin: auto;
-    padding: 20px 20px 10px 20px;
+    padding: 10px 20px 10px 20px;
     box-shadow: 0 3px 3px 0 #A9A9A9, 0 3px 1px -2px #838383, 0 1px 5px 0 #838383;
 }
 
 .card-sentiment .card-image img{
-    border-radius: 10px;
-
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: -1px;
 }
+
+
 
 
 
@@ -353,6 +356,42 @@
     background-color: #fcfcfc;
     box-shadow: none;
 }
+
+.btn-sentiment {
+    width: 100%;
+    background: white;
+    margin-top: -1px;
+    border: 1px solid #e6ecf0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: left;
+    padding: .75em;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-size: 14px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.btn-sentiment:active,
+.btn-sentiment:hover,
+.btn-sentiment:focus {
+    background-color: #f5f8fa;
+}
+
+
+.btn-sentiment b {
+    font-size: 14px;
+
+}
+
+
+.btn-sentiment p {
+    margin-top: 5px !important;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 1.3em;
+}
+
+
 
 /*------------------------------------------------------------------------------
     FORMS
