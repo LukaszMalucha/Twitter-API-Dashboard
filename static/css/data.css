@@ -240,6 +240,20 @@
 }
 
 
+.card-sentiment {
+    width: 98%;
+    margin: auto;
+    padding: 20px 20px 10px 20px;
+    box-shadow: 0 3px 3px 0 #A9A9A9, 0 3px 1px -2px #838383, 0 1px 5px 0 #838383;
+}
+
+.card-sentiment .card-image img{
+    border-radius: 10px;
+
+}
+
+
+
 .hashtag-column {
     position: relative;
     top: -30px;
