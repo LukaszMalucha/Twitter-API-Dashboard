@@ -10,9 +10,9 @@
     </div>
 </div>
 <div class="row row-cards">
-    <div class="card card-data">
+    <div class="card card-data card-data-short">
         <div class="row plain-element text-center">
-            <h1>Delete MongoDB Collection</h1>
+            <h1>Delete Tweet Trend Collection</h1>
         </div>
 
         <div class="card-content">
@@ -22,11 +22,57 @@
             <br>
             {% for element in mongo_hashtags %}
             <div class="col-md-6">
-                <div class="row row-form-content rowMongo">
+                <div class="row plain-element rowMongo">
                     <form action="{{url_for('deletecollection')}}" method="POST">
                         <input id="hashtag_collection" name="hashtag_collection" type="hidden" value="{{element}}">
-                        <button class="waves-effect waves-light btn button-db" type="submit"><span><i
+                        <button class="card-menu text-left" type="submit"><span>&nbsp;<i
                                 class="fas fa-trash-alt" style=" color: #e63c2e"></i> {{ element }}</span></button>
+                    </form>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="card card-data card-data-short">
+        <div class="row plain-element text-center">
+            <h1>Transform & Load Trend Data to SQL Database</h1>
+        </div>
+        <div class="card-content">
+            <div class="row plain-element text-center">
+                <p class="mongoCount">(10/10)</p>
+            </div>
+            <br>
+            {% for element in mongo_hashtags %}
+            <div class="col-md-6">
+                <div class="row plain-element">
+                    <form action="{{url_for('datatransform')}}" method="POST">
+                        <input id="hashtag_cleaning" name="hashtag_cleaning" type="hidden" value="{{element}}">
+                        <button class="card-menu text-left" type="submit"><span>&nbsp;<i
+                                class="fas fa-database" style=" color: green"></i> &nbsp; {{ element }}
+                                &nbsp; <i class="fas fa-long-arrow-alt-right" style=" color: green"></i></span></button>
+                    </form>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="card card-data card-data-short">
+        <div class="row plain-element text-center">
+            <h1>Delete SQL Table</h1>
+        </div>
+        <div class="card-content">
+            <div class="row plain-element text-center">
+                <p class="sqlCount">(10/10)</p>
+            </div>
+            <br>
+            {% for element in sqlite_hashtags %}
+            <div class="col-md-6">
+                <div class="row plain-element rowSql">
+                    <form action="{{url_for('deletetable')}}" method="POST">
+                        <input id="hashtag_table" name="hashtag_table" type="hidden" value="{{element[0]}}">
+                        <button class="card-menu text-left" type="submit"><span>&nbsp;<i
+                                class="fas fa-trash-alt" style=" color: #e63c2e"></i> {{ element[0] }}</span>
+                        </button>
                     </form>
                 </div>
             </div>

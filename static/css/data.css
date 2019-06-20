@@ -139,6 +139,11 @@
     font-weight: 400;
 }
 
+.card-data-short {
+    min-height: 100px;
+    margin-bottom: 6px;
+}
+
 .card-tweet {
     width: 98%;
     margin: 0.5rem 1% 1% 1%;
