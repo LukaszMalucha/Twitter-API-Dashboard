@@ -185,6 +185,14 @@
     margin: 5px;
 }
 
+.card-tweet-narrow {
+    padding: 1%;
+    margin: 0.5rem 0% 2% 2%;
+}
+.card-tweet-narrow .fas {
+    font-size: 20px;
+}
+
 .card-projects {
     padding: 15px;
     width: 94%;
@@ -243,18 +251,27 @@
 .card-sentiment {
     width: 98%;
     margin: auto;
-    padding: 10px 20px 10px 20px;
+    padding: 10px 10px 10px 10px;
     box-shadow: 0 3px 3px 0 #A9A9A9, 0 3px 1px -2px #838383, 0 1px 5px 0 #838383;
+    display: none;
 }
 
 .card-sentiment .card-image img{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    border: 1px solid #e6ecf0;
     margin-bottom: -1px;
 }
 
 
-
+.card-chart {
+    width: 98%;
+    padding: 10px 20px 10px 20px;
+    margin: auto;
+    background: white;
+    height: 300px;
+    display: none;
+}
 
 
 .hashtag-column {

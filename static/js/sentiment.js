@@ -22,6 +22,7 @@ $(document).ready(function() {
         var hashtag_choice = $("input:radio:checked").val();
         $('.loader').show();
         $('.btn-header').show();
+        $('#rowTokenize').hide();
         $.ajax({
             data: {
                 hashtag: hashtag_choice,
@@ -33,7 +34,7 @@ $(document).ready(function() {
             console.log(data);
             $('.loader').hide();
             $('.card-sentiment').show();
-            $('#sentiment').text(data)
+            $('#sentiment').text(data + ' Sentiment Analysis')
 
         });
 
@@ -81,7 +82,7 @@ $(document).ready(function() {
                 }
                 var pcx = document.getElementById('sentimentChart').getContext('2d');
                 var providersChart = new Chart(pcx, {
-                    type: 'horizontalBar',
+                    type: 'bar',
                     data: {
                         labels: Object.keys(data.sentiment_counter),
                         datasets: [{

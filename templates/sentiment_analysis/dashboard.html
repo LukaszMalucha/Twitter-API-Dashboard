@@ -12,35 +12,37 @@
             <h1><i class="fas fa-laugh-wink"></i>&nbsp;<i class="fas fa-frown"></i>&nbsp; Tweet Data Sentiment Analysis
             </h1>
         </div>
-        <div class="row plain-element text-center">
-            <h6>Tokenize Trend Dataset</h6>
-        </div>
-        <form method="POST" id="tokenizeDataset">
-            <div class="card-content">
-                {% for element in sqlite_hashtags %}
-                <div class="col-md-6 text-left">
-                    <p>
-                        <label>
-                            <input class="with-gap" id="hashtag" name="hashtag" type="radio"
-                                   value="{{element.0 }}"/>
-                            <span class="span-sentiment">{{element.0 }}</span>
-                        </label>
-                    </p>
+        <div class="row plain-element" id="rowTokenize">
+            <div class="row plain-element text-center">
+                <h6>Tokenize Trend Dataset</h6>
+                <p>(Not seeing your Tweets? Try to <a href="{{ url_for('trend_search') }}">upload</a> your trend data
+                    first.)</p>
+            </div>
+            <form method="POST" id="tokenizeDataset">
+                <div class="card-content">
+                    {% for element in sqlite_hashtags %}
+                    <div class="col-md-6 text-left">
+                        <p>
+                            <label>
+                                <input class="with-gap" id="hashtag" name="hashtag" type="radio"
+                                       value="{{element.0 }}"/>
+                                <span class="span-sentiment">{{element.0 }}</span>
+                            </label>
+                        </p>
+                    </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
-            </div>
-            <div class="row text-center"></div>
-            <div class="row text-center">
-                <button class="btn-trends" target="_blank" href=""><i class="fas fa-code"></i> &nbsp; Tokenize
-                </button>
-            </div>
-            <div class="row text-center"></div>
-        </form>
+                <div class="row text-center"></div>
+                <div class="row text-center">
+                    <button class="btn-trends" target="_blank" href=""><i class="fas fa-code"></i> &nbsp; Tokenize
+                    </button>
+                </div>
+                <div class="row text-center"></div>
+            </form>
+        </div>
     </div>
 </div>
 <div class="row row-cards">
-
-
     <div class="card card-sentiment glow">
         <div class="card-content">
             <div class="card-image">
@@ -48,13 +50,20 @@
             </div>
             <button class="btn-sentiment" id="buttonSentiment">
                 <b id="sentiment">#Hashtag Sentiment Analysis</b>
-                <p>"Click to apply LSTM on stored data to find out what's the dominating sentiment among conversation participants."</p>
+                <p>"Click to apply LSTM on stored data to find out what's the dominating sentiment among conversation
+                    participants."</p>
             </button>
         </div>
     </div>
 </div>
+<div class="row row-cards">
+    <div class="card card-chart">
+        <canvas id="sentimentChart"></canvas>
+    </div>
+</div>
+<div class="row row-cards" id="tweetColumn">
 
-
+</div>
 <script src="{{url_for('static', filename='js/sentiment.js')}}"></script>
 
 
