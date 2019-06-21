@@ -16,8 +16,8 @@ $(document).ready(function() {
             console.log(data);
             $('.loader').hide();
             if (data.error) {
-                $('#trendtData').append(
-                    '<div class="col-md-6"><h6 class="warning">' + data.error + '</h6></div>'
+                $('#warningRow').append(
+                    '<h5 class="warning">' + data.error + '</h5>'
                     )
             }
             else {

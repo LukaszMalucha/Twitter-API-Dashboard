@@ -27,15 +27,19 @@ $(document).ready(function() {
             if (data.error) {
                 console.log(data.error)
                 $('.loader').hide();
-                $('.card-data').show();
-                $('#pDescription').text(data.error).css('color', 'red');
-                $('.btn-navigation').show();
+                $('.card-data').hide();
+                $('#tweetColumn').hide();
+                $('.row-text').hide();
+                $('.card-title').append('<h6 class="warning">' + data.error + '</h6>');
+                $('.card-menu-small').show();
                 $('#count').hide();
             }
             else {
             $('.loader').hide();
             $('.card-data').hide();
-            $('.btn-header').show();
+            $('.row-text').hide();
+            $('.row-form-s3').hide();
+            $('#Text').text('Trend Data uploaded successfully');
             jQuery.each(data, function(index, value){
                 $('#tweetColumn').append(
                     '<div class="col-md-4 plain-element">' +

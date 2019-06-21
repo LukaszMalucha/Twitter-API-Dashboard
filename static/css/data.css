@@ -102,6 +102,11 @@
     background-color: #f5f8fa;
 }
 
+.card-menu-small {
+    width: 50%;
+    display: none;
+
+}
 
 .card-data {
     padding-top: 0%;
@@ -494,9 +499,16 @@ input.invalid[type="text"]:not(.browser-default) {
 
 
 .input-field .prefix {
-    top: -1px;
+    top: 0px;
     left: 5px;
-    width: 3rem;
+    width: 2.8rem;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+
+.input-field .prefix ~ label, .input-field .prefix ~ .validate ~ label {
+    margin-left: 2rem;
 }
 
 /*------------------------------------------------------------------------------
