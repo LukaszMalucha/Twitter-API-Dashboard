@@ -8,8 +8,8 @@
 {% block content %}
 <div class="row row-title">
     <div class="card card-title">
-        <div class="row row-blue">
-            <h1><i class="fas fa-laugh-wink"></i>&nbsp;<i class="fas fa-frown"></i>&nbsp; Tweet Data Sentiment Analysis
+        <div class="row row-blue plain-element">
+            <h1 id="sentimentHashtag"><i class="fas fa-laugh-wink"></i>&nbsp;<i class="fas fa-frown"></i>&nbsp; Tweet Data Sentiment Analysis
             </h1>
         </div>
         <div class="row plain-element" id="rowTokenize">
@@ -25,7 +25,7 @@
                         <p>
                             <label>
                                 <input class="with-gap" id="hashtag" name="hashtag" type="radio"
-                                       value="{{element.0 }}"/>
+                                       value="{{element.0 }}" required/>
                                 <span class="span-sentiment">{{element.0 }}</span>
                             </label>
                         </p>
@@ -34,42 +34,42 @@
                 </div>
                 <div class="row text-center"></div>
                 <div class="row text-center">
-                    <button class="btn-trends" target="_blank" href=""><i class="fas fa-code"></i> &nbsp; Tokenize
+                    <button class="btn-trends"><i class="fas fa-code"></i> &nbsp; Tokenize
                     </button>
                 </div>
-                <div class="row text-center"></div>
+
             </form>
         </div>
-    </div>
-</div>
-<div class="row row-cards">
-    <div class="card card-sentiment glow">
-        <div class="card-content">
-            <div class="card-image">
-                <img src="{{url_for('static', filename='img/data/sentiment.jpg')}}">
+        <div class="row plain-element">
+            <div class="card card-sentiment">
+                <div class="card-content">
+                    <div class="card-image">
+                        <img src="{{url_for('static', filename='img/data/sentiment.jpg')}}">
+                    </div>
+                    <button class="btn-sentiment" id="buttonSentiment">
+                        <b id="sentiment">#Hashtag Sentiment Analysis</b>
+                        <p>"Click to apply LSTM on stored data to find out what's the dominating sentiment among
+                            conversation
+                            participants."</p>
+                    </button>
+
+                </div>
             </div>
-            <button class="btn-sentiment" id="buttonSentiment">
-                <b id="sentiment">#Hashtag Sentiment Analysis</b>
-                <p>"Click to apply LSTM on stored data to find out what's the dominating sentiment among conversation
-                    participants."</p>
-            </button>
         </div>
+        <div class="row plain-element">
+            <div class="card card-chart">
+                <canvas id="sentimentChart"></canvas>
+            </div>
+        </div>
+
     </div>
-</div>
-<div class="row row-cards">
-    <div class="card card-chart">
-        <canvas id="sentimentChart"></canvas>
-    </div>
-</div>
-<div class="row row-cards" id="tweetColumn">
 
 </div>
+
+<div class="row row-cards" id="tweetColumn">
+</div>
+<div class="loader popular-loader"></div>
 <script src="{{url_for('static', filename='js/sentiment.js')}}"></script>
 
 
 {% endblock %}
-
-<div class="row plain-element text-center">
-    <p>Apply LSTM on stored data to find out what's the dominating sentiment among conversation
-        participants.</p>
-</div>

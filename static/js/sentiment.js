@@ -47,6 +47,7 @@ $(document).ready(function() {
         $('.loader').show();
         $('.card-sentiment').hide();
         $('.card-data').hide();
+        $('#rowSentiment').hide();
         $('.btn-header').show();
         req = $.ajax({
             url: '/results',
@@ -55,6 +56,7 @@ $(document).ready(function() {
         req.done(function(data){
             $('.loader').hide();
             $('.card-chart').show();
+            $('#sentimentHashtag').text(data.hashtag + ' Sentiment Analysis');
             jQuery.each(data.sentiment_predictions, function(index, value){
                 if (value[1] == "Positive") {
                 $('#tweetColumn').append(
@@ -104,7 +106,7 @@ $(document).ready(function() {
                         title: {
                         fontSize: 16,
                         fontColor: 'black',
-                        display: true,
+                        display: false,
                         text: 'Sentiment'
                         },
                         scales: {

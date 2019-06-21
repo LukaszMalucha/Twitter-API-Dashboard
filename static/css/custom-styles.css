@@ -154,7 +154,6 @@ a:hover {
     padding: 2%;
     background: #1da1f2;
 
-
 }
 
 
@@ -203,7 +202,7 @@ a:hover {
 }
 
 #tweetColumn {
-    max-height: 690px;
+    max-height: 490px;
     overflow: auto;
 }
 

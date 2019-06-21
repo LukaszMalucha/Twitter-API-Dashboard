@@ -186,8 +186,7 @@
 }
 
 .card-tweet-narrow {
-    padding: 1%;
-    margin: 0.5rem 0% 2% 2%;
+    padding: 0.5%;
 }
 .card-tweet-narrow .fas {
     font-size: 20px;
@@ -249,11 +248,10 @@
 
 
 .card-sentiment {
-    width: 98%;
-    margin: auto;
-    padding: 10px 10px 10px 10px;
-    box-shadow: 0 3px 3px 0 #A9A9A9, 0 3px 1px -2px #838383, 0 1px 5px 0 #838383;
+    padding: 10px 10px 0px 10px;
+    box-shadow: none;
     display: none;
+    margin-top: 0px;
 }
 
 .card-sentiment .card-image img{
@@ -265,12 +263,13 @@
 
 
 .card-chart {
-    width: 98%;
     padding: 10px 20px 10px 20px;
     margin: auto;
     background: white;
     height: 300px;
     display: none;
+    box-shadow: none;
+    norder: none;
 }
 
 

@@ -73,4 +73,5 @@ class Results(Resource):
         sentiment_predictions = list(zip(tweets, predictions))
         sentiment_counter = dict(Counter(predictions))
 
-        return {'sentiment_predictions' : sentiment_predictions, 'sentiment_counter': sentiment_counter}
+        return {'sentiment_predictions': sentiment_predictions, 'sentiment_counter': sentiment_counter,
+                'hashtag': hashtag}
