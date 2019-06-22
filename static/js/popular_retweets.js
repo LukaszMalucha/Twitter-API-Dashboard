@@ -19,7 +19,7 @@ $(document).ready(function() {
             $('.loader').hide();
             jQuery.each(data, function(index, value){
                 $('form').hide();
-                $('#tweetColumn').append(
+                $('#tweetColumnLong').append(
                     '<div class="row plain-element">' +
                     '<a target="_blank" href="https://twitter.com/search?q=' + value.keyword + '&src=typd/">' +
                     '<div class="card card-tweet"><p>' + value.text + '</p>' +

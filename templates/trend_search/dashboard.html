@@ -10,19 +10,21 @@
             </div>
             <div class="row plain-element row-warning"></div>
             <div class="row text-center">
-                <a href="{{ url_for('trend_search') }}">
+                <a href="{{ url_for('manage_db') }}">
                     <div class="card card-menu card-menu-small text-left">
                         <div class="row plain-element">
-                            <div class="col-xs-4 col-sm-4 col-md-4 plain-element">
-                                <img src="{{url_for('static', filename='img/main/trend-search.jpg')}}"
-                                     class="img img-card responsive"
-                                     alt="retweets">
-                            </div>
-                            <div class="col-xs-8 col-sm-8 col-md-8 plain-element">
-                                <h5>
-                                    Trend Upload
-                                </h5>
-                                <p>Upload tweets into DB for sentiment analysis. </p>
+                            <div class="row plain-element">
+                                <div class="col-xs-4 col-sm-4 col-md-4 plain-element">
+                                    <img src="{{url_for('static', filename='img/main/manage-db.jpg')}}"
+                                         class="img img-card responsive"
+                                         alt="manage db">
+                                </div>
+                                <div class="col-xs-8 col-sm-8 col-md-8 plain-element">
+                                    <h5>
+                                        Tweet Data ETL
+                                    </h5>
+                                    <p>Manage Tweets in MongoDB & SQLite databases. </p>
+                                </div>
                             </div>
                         </div>
                     </div>

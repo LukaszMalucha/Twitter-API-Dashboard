@@ -210,9 +210,13 @@ a:hover {
     overflow: auto;
 }
 
-#tweetColumn a:hover {
-    color: #1DA1F2;
+#tweetColumnLong {
+    max-height: 690px;
+    overflow: auto;
 }
+
+
+
 
 
 /*------------------------------------------------------------------------------

@@ -26,7 +26,7 @@
     margin-top: 1%;
     margin-bottom: 1%;
     color: #14171a;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .card-side .card-content {
@@ -174,6 +174,11 @@
     max-height: 140px;
     overflow-y: hidden;
     overflow-x: hidden;
+    color: #333;
+}
+
+.card-tweet:hover {
+    background-color: #f5f8fa;
 }
 
 .card-tweet p {
@@ -214,7 +219,7 @@
     margin-top: 1%;
     margin-bottom: 1%;
     color: #14171a;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .card-projects .card-content {
@@ -234,7 +239,7 @@
     color: #252b30;
     font-size: 0.9rem;
     margin-bottom: 4px;
-    font-weight: 400;
+    font-weight: 600;
     z-index: 5;
 }
 
@@ -321,31 +326,6 @@
     color: white;
 }
 
-
-.btn-visit {
-    color: #1DA1F2;
-    background: #ffff;
-    border-radius: 20px;
-    border: 1px solid #1DA1F2;
-    box-shadow: none;
-    cursor: pointer;
-    font-size: 11px;
-    font-weight: bold;
-    line-height: 16px;
-    padding: 4px 12px;
-    width: 60%;
-    position: relative;
-    text-align: center;
-    margin: 1%;
-    text-transform: none;
-}
-
-
-.btn-visit:hover,
-.btn-visit:active,
-.btn-visit:focus {
-    background: #e8f5fd;
-}
 
 .inline-button {
     background: none;
