@@ -30,7 +30,7 @@ $(document).ready(function() {
                 $('.card-data').hide();
                 $('#tweetColumn').hide();
                 $('.row-text').hide();
-                $('.card-title').append('<h6 class="warning">' + data.error + '</h6>');
+                $('.row-warning').append('<p class="warning">' + data.error + '</p>' + '<br/>');
                 $('.card-menu-small').show();
                 $('#count').hide();
             }
