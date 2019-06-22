@@ -20,6 +20,8 @@ class TrendSearch(Resource):
 
         if keyword[0] != '#':
             keyword = '#' + keyword
+        else:
+            pass
         count = int(request.form.get('count'))
 
         # Prevent overpopulating by deleting previously loaded tweets

@@ -64,7 +64,7 @@
     box-shadow: none;
     border-radius: 10px;
     margin: auto;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 
 }
 
@@ -262,6 +262,11 @@
     box-shadow: none;
     display: none;
     margin-top: 0px;
+}
+
+.card-sentiment p {
+    font-size: 14px;
+    color: #333;
 }
 
 .card-sentiment .card-image img{
@@ -563,17 +568,13 @@ td {
         width: 80%;
     }
 
-
-}
-
-@media(max-width:1440px) {
-
-
-
     .card-data {
-        height: 400px;
         min-height: 400px;
         overflow: auto;
+    }
+
+    .card-data-short {
+        min-height: 100px;
     }
 
     .card-side h1 {

@@ -112,13 +112,13 @@ nav ul a {
 
 .dropdown-content {
     width: 150px !important;
-    right: -50px !important;
-    top: 60px !important;
+    left:  20px !important;
+    top: 42px !important;
 
 }
 
 .dropdown-content li>a {
-    font-size: 14px;
+    font-size: 13px;
     text-decoration: none;
 }
 .dropdown-content li>a>i {
@@ -208,8 +208,8 @@ nav ul a {
 }
 
 .dropdown-content li>a {
-    color: white;
-    background-color: #003f67;
+    color: #798b9a;
+    background-color: #fff;
 }
 
 .dropdown-content li>fa {
@@ -234,7 +234,8 @@ nav ul a {
 
 
  nav ul a:hover {
-     color: #003f67;
+     background-color: #f5f8fa;
+     color: #1da1f2;
  }
 
 .nav > li > a:hover,

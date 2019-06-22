@@ -1,7 +1,7 @@
 ## App Utilities
 import os
 import env
-from db import db, mongo
+from db import db, mongo, autoreconnect_retry
 from twitter import twitter_api
 
 from flask import Flask, render_template
@@ -79,6 +79,7 @@ def sentiment_analysis():
     sqlite_hashtags = TweetsModel.distinct_hashtags()
     return render_template('sentiment_analysis/dashboard.html', sqlite_hashtags=sqlite_hashtags)
 
+@autoreconnect_retry
 @app.route('/manage_db')
 def manage_db():
     """Manage Databases View"""

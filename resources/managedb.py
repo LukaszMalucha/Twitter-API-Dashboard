@@ -15,6 +15,7 @@ from models.stopwords import stopwords  # get rid of irrelevant and stemming wor
 class DeleteCollection(Resource):
 
     def post(self):
+
         hashtag = request.form.get('hashtag_collection')
         Collection.delete_by_hashtag(hashtag=hashtag)
         return redirect('manage_db')

@@ -7,9 +7,20 @@
         <div class="row row-blue">
             <h1><i class="fab fa-twitter"></i> Twitter API Dashboard </h1>
         </div>
-        <br>
+        <div class="row plain-element">
+            <div class="card card-sentiment visible">
+                <div class="card-content">
+                    <div class="card-image">
+                        <img src="{{url_for('static', filename='img/data/twitter.jpg')}}">
+                    </div>
+                    <button class="btn-sentiment">
+                        <b>Welcome to Twitter API Dashboard</b>
+                        <p> Find out what is currently trending and apply Keras LSTM model on processed tweets to discover what's the dominating sentiment among conversation participants - positive, negative or neutral...</p>
+                    </button>
 
-        <br>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
