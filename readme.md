@@ -3,8 +3,7 @@
 #### [Visit App](https://twitter-rest-api-dashboard.herokuapp.com/)
 
 
-![1](https://user-images.githubusercontent.com/26208598/57719179-178fda00-7677-11e9-951c-bb751ac65602.JPG)
-
+![1](https://user-images.githubusercontent.com/26208598/59977978-9578c680-95cf-11e9-83c2-13eec9e8e325.PNG)
 
 ## PROJECT OVERVIEW
 
@@ -23,7 +22,7 @@ Choose between app main functionalities:
 
 <br>
 
-![1](https://user-images.githubusercontent.com/26208598/57719179-178fda00-7677-11e9-951c-bb751ac65602.JPG)
+![1](https://user-images.githubusercontent.com/26208598/59977978-9578c680-95cf-11e9-83c2-13eec9e8e325.PNG)
 
 <br>
 
@@ -33,7 +32,7 @@ Find out what is currently trending in US. Pick most interesting subject and gui
 
 <br>
 
-![2](https://user-images.githubusercontent.com/26208598/56461858-839d5c00-63b1-11e9-88b9-a4c4e0bd0221.JPG)
+![2](https://user-images.githubusercontent.com/26208598/59977980-96115d00-95cf-11e9-8191-ae404f69d024.PNG)
 
 <br>
 
@@ -43,7 +42,7 @@ Get rid of obsolete collections from MongoDB or delete processed data from SQLit
 
 <br>
 
-![3](https://user-images.githubusercontent.com/26208598/56461859-8435f280-63b1-11e9-82ca-2fdd7f27be71.JPG)
+![3](https://user-images.githubusercontent.com/26208598/59977982-97428a00-95cf-11e9-9b22-bb09935d1fd6.PNG)
 
 <br>
 
@@ -53,7 +52,7 @@ Apply Deep learning LSTM model on previously stored Twitter dataset. Find out wh
 
 <br>
 
-![4](https://user-images.githubusercontent.com/26208598/56461860-8435f280-63b1-11e9-816d-46d989e0f853.JPG)
+![4](https://user-images.githubusercontent.com/26208598/59977983-9a3d7a80-95cf-11e9-83ae-5bc7d4427c9b.PNG)
 
 <br>
 
@@ -63,7 +62,7 @@ Find out what is currently trending in two chosen locations. Specify woe_id and 
 
 <br>
 
-![6](https://user-images.githubusercontent.com/26208598/56461861-8435f280-63b1-11e9-9b28-0ce89dca1a18.JPG)
+![5](https://user-images.githubusercontent.com/26208598/59977984-9b6ea780-95cf-11e9-87ef-7f704c2ad7bc.PNG)
 
 <br>
 
@@ -74,7 +73,7 @@ Choose a keyword and find out most popular tweets in a subject:
 
 <br>
 
-![7](https://user-images.githubusercontent.com/26208598/56461862-8435f280-63b1-11e9-9557-db3468aa9de3.JPG)
+![6](https://user-images.githubusercontent.com/26208598/59977986-9d386b00-95cf-11e9-8a08-3814d86c39f5.PNG)
 
 <br>
 
