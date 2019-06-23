@@ -4,31 +4,30 @@
 * {-webkit-font-smoothing: antialiased;}
 
 @font-face {
-    font-family: 'Open Sans Light';
+    font-family: 'Open Sans';
     font-weight:  200 300;
+    src: url('/static/fonts/TTF/OpenSans-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Open Sans';
     font-weight: normal;
     src: url('/static/fonts/TTF/OpenSans-Light.ttf');
 }
 
 @font-face {
-    font-family: 'Open Sans Light';
-    font-weight: normal;
-    src: url('/static/fonts/TTF/OpenSans-Light.ttf');
-}
-
-@font-face {
-    font-family: 'Open Sans Light';
+    font-family: 'Open Sans';
     font-weight:  400 500;
     src: url('/static/fonts/TTF/OpenSans-Regular.ttf');
 }
 @font-face {
-    font-family: 'Open Sans Light';
+    font-family: 'Open Sans';
     font-weight: 600 700;
     src: url('/static/fonts/TTF/OpenSans-Bold.ttf');
 }
 
 body {
-    font-family: 'Open Sans Light';
+    font-family: 'Open Sans';
     position: relative;
     background-color: #e6ecf0;
     margin: 0;
@@ -106,6 +105,22 @@ a:hover {
 
 .visible {
     display: block !important;
+}
+
+
+.keyword {
+    background-color: #f1f8ff;
+    color: #0366d6;
+    margin: .5em .5em .5em .5em;
+    padding: .3em .9em;
+    font-weight: 500;
+    font-size: 0.7rem !important;
+    line-height: 1.5;
+    border-radius: 5px;
+}
+
+.keyword:hover {
+    background-color: #def;
 }
 
 /*------------------------------------------------------------------------------

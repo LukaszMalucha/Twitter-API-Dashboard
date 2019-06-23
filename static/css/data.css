@@ -262,6 +262,7 @@
     box-shadow: none;
     display: none;
     margin-top: 0px;
+    border-bottom: 1px solid #e6ecf0;
 }
 
 .card-sentiment p {

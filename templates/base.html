@@ -27,6 +27,8 @@
     <link href="{{url_for('static', filename='css/custom-styles.css')}}" rel="stylesheet"/>
     <link href="{{url_for('static', filename='css/navbar.css')}}" rel="stylesheet"/>
     <link href="{{url_for('static', filename='css/data.css')}}" rel="stylesheet"/>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap" rel="stylesheet">
     <!-- jQuery-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     {% block extrahead %}
@@ -47,6 +49,8 @@
         <ul class="nav navbar-top-links navbar-right">
             <li><a class="nav-link" target="_blank" href="http://www.findmecity.com/">
                 <i class="fas fa-globe"></i> WOEID Search Engine </a></li>
+            <li><a class="nav-link" href="{{ url_for('blog') }}">
+                <i class="fas fa-code"></i> Code Blog</a></li>
             <li><a class="nav-link" target="_blank" href="https://github.com/LukaszMalucha/"><i
                     class="fab fa-github"></i> GitHub</a></li>
             <li><a class='dropdown-trigger nav-link' href='#' data-target='dropdown1' id="user_dropdown"><i
@@ -73,6 +77,8 @@
     <ul class="sidenav" id="mobile-demo">
         <li><a target="_blank" href="http://www.findmecity.com/">
                 <i class="fas fa-globe"></i> WOEID Search Engine </a></li>
+        <li><a href="{{ url_for('blog') }}">
+                <i class="fas fa-code"></i> Code Blog</a></li>
         <li><a target="_blank" href="https://github.com/LukaszMalucha/"><i
                 class="fab fa-github"></i> GitHub</a></li>
         {% if current_user.email != "Guest" %}
