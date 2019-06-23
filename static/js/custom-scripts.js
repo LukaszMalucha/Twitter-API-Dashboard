@@ -16,6 +16,12 @@ $(document).ready(function() {
 
     $('.modal').modal();
 
+    $('#flashButton').on('click', function(event){
+
+        $('.card-menu').fadeOut(150).fadeIn(150);
+
+    });
+
 
 });
 
