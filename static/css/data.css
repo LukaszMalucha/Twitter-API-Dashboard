@@ -35,7 +35,7 @@
     padding-bottom: 12px;
     margin-top: 0px;
     color: #1DA1F2;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 0.8rem;
     max-height: 700px;
     overflow: auto;
@@ -46,7 +46,7 @@
     color: #657786;
     font-size: 0.7rem;
     margin-bottom: 5px;
-    font-weight: 300;
+    font-weight: 500;
     z-index: 5;
 }
 
@@ -78,7 +78,7 @@
 
 .card-menu h5 {
     margin: 1%;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 0.9rem;
     color: #252b30;
 
@@ -89,7 +89,7 @@
     color: #657786;
     font-size: 0.8rem;
     margin-bottom: 0px;
-    font-weight: 300;
+    font-weight: 500;
     z-index: 5;
 
 }
@@ -141,7 +141,7 @@
     margin-top: 1%;
     margin-bottom: 1%;
     color: #14171a;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .card-data-short {
@@ -228,7 +228,7 @@
     padding-bottom: 12px;
     margin-top: 0px;
     color: #1DA1F2;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 0.8rem;
     max-height: 700px;
     overflow: auto;
@@ -455,7 +455,7 @@ input.invalid[type="text"]:not(.browser-default) {
 }
 
 [type="radio"]:not(:checked) + span, [type="radio"]:checked + span {
-   font-weight: 300;
+   font-weight: 500;
    font-size: 0.8rem;
    color: #657786;;
    padding-left: 25px;
