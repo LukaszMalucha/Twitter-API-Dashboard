@@ -111,7 +111,7 @@ nav ul a {
 
 
 .dropdown-content {
-    width: 150px !important;
+    width: max-content !important;
     left:  20px !important;
     top: 42px !important;
 
@@ -283,13 +283,15 @@ nav ul a {
 
 }
 
-@media(min-width:992px) {
+@media(min-width:1025px) {
 
     .sidenav-trigger {
         display: none !important;
     }
+
+
 }
-@media(max-width:992px) {
+@media(max-width:1025px) {
     .top-navbar {
         margin: 0px;
         padding-left: 0%;
@@ -322,6 +324,7 @@ nav ul a {
 
     nav a.sidenav-trigger {
         line-height: 1;
+        display: block;
     }
 
     nav a.sidenav-trigger i {

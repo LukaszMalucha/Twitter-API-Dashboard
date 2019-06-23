@@ -138,24 +138,15 @@ label {
 @media(max-width:1900px) {}
 
 
-@media(max-width:1500px) {}
-
 @media(max-width:1500px) {
-    .form-signin {
-    max-width: 60%;
-    }
-
-     #page-index {
-    padding-top: 0px;
+    .container {
+        width: 90%;
     }
 
 
 }
 
 @media(max-width:859px) {
-    .form-signin {
-    max-width: 100%;
-    }
 
 
 }

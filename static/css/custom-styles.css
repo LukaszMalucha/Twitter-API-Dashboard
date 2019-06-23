@@ -508,12 +508,16 @@ td {
 
 
 
+
+
 }
 
 
 /* MAX WIDTHS: EXTRA-SMALL SCREEN---------------------------------------------*/
 
 @media(max-width:522px) {
+
+
 
     .dashboard-cards {
         width: 95%;
@@ -522,6 +526,10 @@ td {
 
     #activeTrendsColumn {
         display: none;
+    }
+
+    .col-features {
+        text-align: center;
     }
 
 

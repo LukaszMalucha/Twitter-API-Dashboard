@@ -1,8 +1,10 @@
 ## App Utilities
 import os
-import env
-from db import db, mongo, autoreconnect_retry
+# import env
+from db import db, mongo
 from twitter import twitter_api
+from pymongo.errors import AutoReconnect
+import time
 
 from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
@@ -27,7 +29,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.config['PROPAGATE_EXCEPTIONS'] = True
-app.config['DEBUG'] = True
+app.config['DEBUG'] = False
 api = Api(app)
 mongo.init_app(app)
 Bootstrap(app)
@@ -79,11 +81,14 @@ def sentiment_analysis():
     sqlite_hashtags = TweetsModel.distinct_hashtags()
     return render_template('sentiment_analysis/dashboard.html', sqlite_hashtags=sqlite_hashtags)
 
-@autoreconnect_retry
 @app.route('/manage_db')
 def manage_db():
     """Manage Databases View"""
-    mongo_hashtags = Collection.hashtags()
+    for attempt in range(0,3):
+        try:
+            mongo_hashtags = Collection.hashtags()
+        except AutoReconnect:
+            time.sleep(2)
     sqlite_hashtags = TweetsModel.distinct_hashtags()
     return render_template('manage_db/dashboard.html', mongo_hashtags=mongo_hashtags, sqlite_hashtags=sqlite_hashtags)
 
@@ -117,11 +122,11 @@ if __name__ == '__main__':
         def create_tables():
             db.create_all()
 
-    app.run()
+    # app.run()
 
 # Docker
 #     app.run(host='0.0.0.0')
 
 # Heroku
-#     port = int(os.environ.get('PORT', 5000))
-#     app.run(host='0.0.0.0', port=port)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)

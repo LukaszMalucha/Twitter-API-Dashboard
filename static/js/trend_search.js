@@ -39,6 +39,8 @@ $(document).ready(function() {
             $('.card-data').hide();
             $('.row-text').hide();
             $('.row-form-s3').hide();
+            $('.row-success').append('<p>Guide your Trend Data through ETL pipeline</p><br/>');
+            $('.card-menu-small').show();
             $('#Text').text('Trend Data uploaded successfully');
             jQuery.each(data, function(index, value){
                 $('#tweetColumn').append(

@@ -71,7 +71,8 @@
 
     <!-- MOBILE -->
     <ul class="sidenav" id="mobile-demo">
-        <li><a href="{{ url_for('blog') }}"><i class="fas fa-terminal"></i> Code Blog</a></li>
+        <li><a target="_blank" href="http://www.findmecity.com/">
+                <i class="fas fa-globe"></i> WOEID Search Engine </a></li>
         <li><a target="_blank" href="https://github.com/LukaszMalucha/"><i
                 class="fab fa-github"></i> GitHub</a></li>
         {% if current_user.email != "Guest" %}
@@ -93,11 +94,11 @@
         {% block row_header %}{% endblock %}
         <div class="dashboard-cards">
             <div class="row plain-element">
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-lg-push-3 plain-element">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-sm-push-3 col-md-push-3 col-lg-push-3 plain-element">
                     {% block content %} {% endblock %}
 
                 </div>
-                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-lg-pull-6 plain-element">
+                <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-sm-pull-6 col-md-pull-6 col-lg-pull-6 col-lg-pull-6 plain-element">
                     <div class="row plain-element">
                         <div class="card card-side">
                             <div class="row row-side-blue"></div>
@@ -105,7 +106,7 @@
                                 <div class="col-sm-4 col-md-4 plain-element text-center hashtag-column">
                                     <i class="fas fa-hashtag hashtag-icon"></i>
                                 </div>
-                                <div class="col-sm-8 col-md-8 plain-element">
+                                <div class="col-sm-8 col-md-8 plain-element col-features">
                                     <h1>Twitter API Features</h1>
                                     <p> Choose between API functions</p>
                                 </div>
@@ -204,10 +205,10 @@
                         <div class="card card-side">
                             <div class="row row-side-blue"></div>
                             <div class="row row-description">
-                                <div class="col-xs-4 col-sm-4 col-md-4 plain-element text-center hashtag-column">
+                                <div class="col-sm-4 col-md-4 plain-element text-center hashtag-column">
                                     <i class="fas fa-hashtag hashtag-icon"></i>
                                 </div>
-                                <div class="col-xs-8 col-sm-8 col-md-8 plain-element">
+                                <div class="col-sm-8 col-md-8 plain-element col-features">
                                     <h1>Top 10 US Trends </h1>
                                     <p>Updated every 60 seconds </p>
                                 </div>

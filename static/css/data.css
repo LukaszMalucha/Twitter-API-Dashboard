@@ -414,6 +414,8 @@ input[type="text"]:not(.browser-default) {
     border-radius: 20px;
     height: 2rem;
     padding: 5px 5%;
+    padding-left: 10%;
+    padding-right: 5px;
 }
 
 input[type="number"]:not(.browser-default):focus:not([readonly]),
@@ -421,6 +423,7 @@ input[type="text"]:not(.browser-default):focus:not([readonly]) {
     border: 1px solid #1da1f2;
     box-shadow: none;
     background: #fff;
+    padding-left: 10%;
 }
 
 input[type="number"]:not(.browser-default) {
@@ -615,6 +618,10 @@ td {
         padding-bottom: 4px;
     }
 
+    .row-break {
+        display: none;
+    }
+
 
 }
 
@@ -622,7 +629,7 @@ td {
 
 /* MAX WIDTHS: MEDIUM SCREEN---------------------------------------------------*/
 
-@media(max-width:993px) {
+@media(max-width:1024px) {
     .dashboard-cards {
         width: 100%;
     }
