@@ -59,7 +59,7 @@ def dashboard():
 def trend_search():
     """Trend Search View"""
     us_trends = twitter_api.trends_place(23424977)
-    us_trends_list = [trend['name'] for trend in us_trends[0]['trends'][:30]]
+    us_trends_list = [trend['name'] for trend in us_trends[0]['trends'][:24]]
     return render_template('trend_search/dashboard.html', us_trends_list=us_trends_list)
 
 

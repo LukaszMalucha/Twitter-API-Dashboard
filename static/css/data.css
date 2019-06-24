@@ -620,7 +620,11 @@ td {
     }
 
     .row-break {
-        display: none;
+        height: 10px;
+    }
+
+    .card-menu p {
+        font-size: 0.7rem;
     }
 
 
