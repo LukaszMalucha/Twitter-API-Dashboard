@@ -559,15 +559,15 @@ input.invalid[type="text"]:not(.browser-default) {
     }
 
     .card-frontpage {
-    border-bottom: none;
-    margin-bottom: 77px;
+        border-bottom: none;
+        margin-bottom: 77px;
     }
 
 }
 
 @media(max-width:1300px) {
-    .hashtag-icon {
-        font-size: 25px;
+    .dashboard-cards {
+        width: 90%;
     }
 }
 
@@ -607,7 +607,6 @@ input.invalid[type="text"]:not(.browser-default) {
         line-height: 15px;
     }
 }
-
 
 
 /* MAX WIDTHS: EXTRA-SMALL SCREEN---------------------------------------------*/
