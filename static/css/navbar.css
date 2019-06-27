@@ -291,6 +291,14 @@ nav ul a {
 
 
 }
+
+@media(max-width:1300px) {
+    .top-navbar {
+        padding-left: 4.5%;
+        padding-right: 6%;
+    }
+}
+
 @media(max-width:1025px) {
     .top-navbar {
         margin: 0px;

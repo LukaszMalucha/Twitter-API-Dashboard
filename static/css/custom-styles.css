@@ -236,7 +236,7 @@ a:hover {
 
 
 .row-break {
-    height: 1px;
+    height: 2px;
 }
 
 
@@ -285,6 +285,7 @@ a:hover {
     margin-bottom: 0;
     text-transform: none;
 }
+
 .btn-visit:hover,
 .btn-visit:active,
 .btn-visit:focus {
@@ -441,56 +442,9 @@ td {
 
 @media(max-width:1700px) {
 
-    .dashboard-cards {
-        width: 80%;
-    }
-
-
 }
 
 @media(max-width:1440px) {
-
-
-    .row-trend {
-        height: 50px;
-    }
-
-    .row-side-trend {
-        height:  36px;
-    }
-
-
-
-    .hashtag-icon {
-        font-size: 32px;
-        color: #fff;
-        background: #1da1f2;
-        padding: 15px 17px 15px 17px;
-        border: 1px solid #A4D9F9;
-        border-radius: 50px;
-    }
-
-
-    .img-icon {
-        width: 45px;
-        height: 45px;
-    }
-
-    .row-description p {
-        font-size: 0.7rem;
-    }
-
-    .btn-visit {
-        font-size: 9px;
-        padding: 2px 12px;
-    }
-
-    .row-button {
-        margin-bottom: 5%;
-    }
-
-
-
 
 }
 
@@ -500,59 +454,11 @@ td {
 
 @media(max-width:993px) {
 
-    .dashboard-cards {
-        width: 100%;
-    }
-
-    .btn-visit {
-        font-size: 9px;
-    }
-
-
-
-    .row-description p {
-        font-size: 0.7rem;
-    }
-
-
-    .img-icon {
-        width: 36px;
-        height: 36px;
-    }
-
-
-
-
-
-
 }
 
 
 /* MAX WIDTHS: EXTRA-SMALL SCREEN---------------------------------------------*/
 
 @media(max-width:522px) {
-
-
-
-    .dashboard-cards {
-        width: 95%;
-        margin-bottom: 80px;
-    }
-
-    #activeTrendsColumn {
-        display: none;
-    }
-
-    .col-features {
-        text-align: center;
-    }
-
-
-    .img-icon {
-        width: 48px;
-        height: 48px;
-    }
-
-
 
 }

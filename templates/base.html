@@ -76,9 +76,9 @@
     <!-- MOBILE -->
     <ul class="sidenav" id="mobile-demo">
         <li><a target="_blank" href="http://www.findmecity.com/">
-                <i class="fas fa-globe"></i> WOEID Search Engine </a></li>
+            <i class="fas fa-globe"></i> WOEID Search Engine </a></li>
         <li><a href="{{ url_for('blog') }}">
-                <i class="fas fa-code"></i> Code Blog</a></li>
+            <i class="fas fa-code"></i> Code Blog</a></li>
         <li><a target="_blank" href="https://github.com/LukaszMalucha/"><i
                 class="fab fa-github"></i> GitHub</a></li>
         {% if current_user.email != "Guest" %}
@@ -114,7 +114,7 @@
                                 </div>
                                 <div class="col-sm-8 col-md-8 plain-element col-features">
                                     <h1>Twitter API Features</h1>
-                                    <p> Choose between API functions</p>
+                                    <p> Choose API function</p>
                                 </div>
                             </div>
                             <a href="{{ url_for('trend_search') }}">
@@ -229,71 +229,73 @@
                             </div>
                         </div>
                         <div class="card card-projects">
-                    <div class="row plain-element">
-                        <h1>Visit other projects</h1>
-                    </div>
-                    <br>
-                    <div class="row plain-element row-visit">
-                        <div class="col-xs-3 col-sm-3 col-md-3 plain-element">
-                            <img src="{{url_for('static', filename='img/main/blockchain.jpg')}}"
-                                 class="img responsive img-icon" alt="blockchain">
+                            <div class="row plain-element">
+                                <h1>Visit other projects</h1>
+                            </div>
+                            <br>
+                            <div class="row plain-element row-visit">
+                                <div class="col-xs-3 col-sm-3 col-md-3 plain-element">
+                                    <img src="{{url_for('static', filename='img/main/blockchain.jpg')}}"
+                                         class="img responsive img-icon" alt="blockchain">
+                                </div>
+                                <div class="col-xs-8 col-sm-8 col-md-8 plain-element">
+                                    <p> Blockchain Example</p>
+                                    <button class="btn-visit" onclick="window.open('http://www.minerstartup.com')">Visit
+                                        Application
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="row plain-element row-visit">
+                                <div class="col-xs-3 col-sm-3 col-md-3 plain-element">
+                                    <img src="{{url_for('static', filename='img/main/thompson.jpg')}}"
+                                         class="img responsive img-icon" alt="thompson">
+                                </div>
+                                <div class="col-xs-8 col-sm-8 col-md-8 plain-element">
+                                    <p> Thompson Sampling</p>
+                                    <button class="btn-visit" onclick="window.open('http://www.thompsonsampling.com')">
+                                        Visit
+                                        Application
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="row plain-element row-visit">
+                                <div class="col-xs-3 col-sm-3 col-md-3 plain-element">
+                                    <img src="{{url_for('static', filename='img/main/quant.jpg')}}"
+                                         class="img responsive img-icon" alt="quant">
+                                </div>
+                                <div class="col-xs-8 col-sm-8 col-md-8 plain-element">
+                                    <p> Quant Properties</p>
+                                    <button class="btn-visit" onclick="window.open('http://www.quantproperties.com')">
+                                        Visit
+                                        Application
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="row plain-element row-visit">
+                                <div class="col-xs-3 col-sm-3 col-md-3 plain-element">
+                                    <img src="{{url_for('static', filename='img/main/unflasking.jpg')}}"
+                                         class="img responsive img-icon" alt="unflasking">
+                                </div>
+                                <div class="col-xs-8 col-sm-8 col-md-8 plain-element">
+                                    <p> Unflasking AI </p>
+                                    <button class="btn-visit" onclick="window.open('http://www.unflasked.com')">Visit
+                                        Application
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="row plain-element row-visit">
+                                <div class="col-xs-3 col-sm-3 col-md-3 plain-element">
+                                    <img src="{{url_for('static', filename='img/main/bepartisan.jpg')}}"
+                                         class="img responsive img-icon" alt="bepartisan">
+                                </div>
+                                <div class="col-xs-8 col-sm-8 col-md-8 plain-element">
+                                    <p> Be-partisan </p>
+                                    <button class="btn-visit" onclick="window.open('http://www.bepartisan.com')">Visit
+                                        Application
+                                    </button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-xs-8 col-sm-8 col-md-8 plain-element">
-                            <p> Blockchain Example</p>
-                            <button class="btn-visit" onclick="window.open('http://www.minerstartup.com')">Visit
-                                Application
-                            </button>
-                        </div>
-                    </div>
-                    <div class="row plain-element row-visit">
-                        <div class="col-xs-3 col-sm-3 col-md-3 plain-element">
-                            <img src="{{url_for('static', filename='img/main/thompson.jpg')}}"
-                                 class="img responsive img-icon" alt="thompson">
-                        </div>
-                        <div class="col-xs-8 col-sm-8 col-md-8 plain-element">
-                            <p> Thompson Sampling</p>
-                            <button class="btn-visit" onclick="window.open('http://www.thompsonsampling.com')">Visit
-                                Application
-                            </button>
-                        </div>
-                    </div>
-                    <div class="row plain-element row-visit">
-                        <div class="col-xs-3 col-sm-3 col-md-3 plain-element">
-                            <img src="{{url_for('static', filename='img/main/quant.jpg')}}"
-                                 class="img responsive img-icon" alt="quant">
-                        </div>
-                        <div class="col-xs-8 col-sm-8 col-md-8 plain-element">
-                            <p> Quant Properties</p>
-                            <button class="btn-visit" onclick="window.open('http://www.quantproperties.com')">Visit
-                                Application
-                            </button>
-                        </div>
-                    </div>
-                    <div class="row plain-element row-visit">
-                        <div class="col-xs-3 col-sm-3 col-md-3 plain-element">
-                            <img src="{{url_for('static', filename='img/main/unflasking.jpg')}}"
-                                 class="img responsive img-icon" alt="unflasking">
-                        </div>
-                        <div class="col-xs-8 col-sm-8 col-md-8 plain-element">
-                            <p> Unflasking AI - Python </p>
-                            <button class="btn-visit" onclick="window.open('http://www.unflasked.com')">Visit
-                                Application
-                            </button>
-                        </div>
-                    </div>
-                    <div class="row plain-element row-visit">
-                        <div class="col-xs-3 col-sm-3 col-md-3 plain-element">
-                            <img src="{{url_for('static', filename='img/main/bepartisan.jpg')}}"
-                                 class="img responsive img-icon" alt="bepartisan">
-                        </div>
-                        <div class="col-xs-8 col-sm-8 col-md-8 plain-element">
-                            <p> Be-partisan </p>
-                            <button class="btn-visit" onclick="window.open('http://www.bepartisan.com')">Visit
-                                Application
-                            </button>
-                        </div>
-                    </div>
-                </div>
                     </div>
                 </div>
             </div>
