@@ -1,6 +1,6 @@
 ## App Utilities
 import os
-# import env
+import env
 from db import db, mongo
 from twitter import twitter_api
 from pymongo.errors import AutoReconnect
@@ -29,7 +29,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.config['PROPAGATE_EXCEPTIONS'] = True
-app.config['DEBUG'] = False
+app.config['DEBUG'] = True
 api = Api(app)
 mongo.init_app(app)
 Bootstrap(app)
@@ -122,11 +122,11 @@ if __name__ == '__main__':
         def create_tables():
             db.create_all()
 
-    # app.run()
+    app.run()
 
 ## Docker
 #     app.run(host='0.0.0.0')
 
 ## Heroku
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)
+    # port = int(os.environ.get('PORT', 5000))
+    # app.run(host='0.0.0.0', port=port)
