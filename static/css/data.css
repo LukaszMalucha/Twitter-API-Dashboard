@@ -14,7 +14,7 @@
     padding-top: 0%;
     width: 94%;
     margin: auto;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     text-align: left;
     padding-bottom: 1px;
     border: 1px solid #e6ecf0;
@@ -310,6 +310,30 @@
     border-bottom: none;
     margin-bottom: 78px;
 }
+
+/*------------------------------------------------------------------------------
+    BALANCING HEIGHTS
+------------------------------------------------------------------------------*/
+
+
+.card-side-left {
+    height: 640px;
+}
+
+
+.card-title-main {
+    height: 640px;
+}
+
+
+.card-side-right {
+    height: 210px;
+}
+
+.card-projects-right {
+    height: 425px;
+}
+
 /*------------------------------------------------------------------------------
     BUTTONS
 ------------------------------------------------------------------------------*/
