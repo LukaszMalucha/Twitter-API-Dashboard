@@ -49,14 +49,6 @@ api.add_resource(UserLogin, '/login')
 api.add_resource(UserLogout, '/logout')
 
 # QUICKFIX
-trends_list = [["Mother's Day", "1124741"], ["MothersDay", "591302"], ["Moms", "536456"], ["Happy Mothers", "276271"],
-            ["IPL2019Final", "126930"], ["HappyMothersDay2019", "111327"], ["Porzingis", "112398"],
-            ["Doris Day", "108480"], ["lotteryseatupgrade", "33000"], ["Brault", "15000"]]
-
-tweets_list = ["Mother's Day", "MothersDay", "Moms", "Happy Mothers","IPL2019Final", "HappyMothersDay2019","Porzingis",
-            "Doris Day", "108480", "lotteryseatupgrade", "Brault" ,"LindseyGrahamResign", "TuesdayThoughts",
-            "Tim Conway", "Zion", "Knicks", "Venus Williams","Wimbledon", "Zaha", "Hong Kong", "Vampire Weekend",
-               "Waterford","Zaha", "Hong Kong", "Cori Gauff", "Wimbledon"]
 
 ## Main View
 @app.route('/')
@@ -67,9 +59,9 @@ def dashboard():
 @app.route('/trend_search')
 def trend_search():
     """Trend Search View"""
-    # us_trends = twitter_api.trends_place(23424977)
-    # us_trends_list = [trend['name'] for trend in us_trends[0]['trends'][:24]]
-    us_trends_list = tweets_list
+    us_trends = twitter_api.trends_place(23424977)
+    us_trends_list = [trend['name'] for trend in us_trends[0]['trends'][:24]]
+
     return render_template('trend_search/dashboard.html', us_trends_list=us_trends_list)
 
 
