@@ -409,6 +409,8 @@
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+
+
 .btn-sentiment:active,
 .btn-sentiment:hover,
 .btn-sentiment:focus {
@@ -418,7 +420,7 @@
 
 .btn-sentiment b {
     font-size: 14px;
-
+    font-weight: 600;
 }
 
 
