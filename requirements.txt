@@ -11,7 +11,7 @@ Jinja2==2.10.3
 Keras==2.2.4
 Keras-Applications==1.0.7
 Keras-Preprocessing==1.0.8
-nltk==3.4
+nltk==3.4.5
 numpy==1.16.4
 oauthlib==2.1.0
 pymongo==3.9.0
