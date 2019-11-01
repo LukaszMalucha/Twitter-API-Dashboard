@@ -634,10 +634,24 @@ input.invalid[type="text"]:not(.browser-default) {
     }
 }
 
+@media(max-width:836px) {
+
+    .hashtag-icon {
+        font-size: 2rem;
+    }
+    .card-projects p {
+    font-size: 0.70rem;
+    }
+
+    .btn-visit {
+        font-size: 9px;
+    }
+
+}
 
 /* MAX WIDTHS: EXTRA-SMALL SCREEN---------------------------------------------*/
 
-@media(max-width:522px) {
+@media(max-width:767px) {
 
     .dashboard-cards {
         width: 95%;
@@ -677,4 +691,16 @@ input.invalid[type="text"]:not(.browser-default) {
     padding: 0px;
     }
 
+    .card-menu .img-card {
+        width: 40%;
+    }
+
+    .card-title-main {
+        height: 540px;
+        margin-bottom: 10px;
+    }
+
+    .card-side-right {
+        height: 260px;
+    }
 }

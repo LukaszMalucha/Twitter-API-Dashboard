@@ -133,9 +133,25 @@ nav ul a {
 }
 
 .sidenav-trigger {
-    height: 60px !important;
+    height: 40px !important;
 
 
+}
+
+nav a.sidenav-trigger {
+    line-height: 1;
+    display: block;
+    padding: 0px !important;
+    margin: 0px !important;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+
+nav a.sidenav-trigger i {
+    height: 40px;
+    line-height: 1;
 }
 
 .sidenav-trigger i {
@@ -145,12 +161,15 @@ nav ul a {
 
 
 #trigger {
+   position: fixed
+   height:24px;
    font-size: 24px;
-   padding: 10px 0px 10px 0px;
+   padding: 0px;
 }
 
-
-
+.sidenav li > a > i {
+    margin: 0px !important;
+}
 
 
 
@@ -330,24 +349,8 @@ nav ul a {
         width: 70%;
     }
 
-    nav a.sidenav-trigger {
-        line-height: 1;
-        display: block;
-    }
-
-    nav a.sidenav-trigger i {
-        height: 60px;
-        line-height: 1;
-    }
-
-    #trigger {
-        position: relative;
-        top: -10px;
-        left: 24px;
-        margin: 10px 0px 10px 0px;
-    }
-
 }
+
 
 
 @media(max-width:415px) {
