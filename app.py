@@ -29,7 +29,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.config['PROPAGATE_EXCEPTIONS'] = True
-app.config['DEBUG'] = True
+app.config['DEBUG'] = False
 api = Api(app)
 mongo.init_app(app)
 Bootstrap(app)

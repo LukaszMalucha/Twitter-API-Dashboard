@@ -7,14 +7,14 @@ Flask-SQLAlchemy==2.3.2
 Flask-WTF==0.14.2
 gunicorn==19.9.0
 h5py==2.9.0
-Jinja2==2.10.1
+Jinja2==2.10.3
 Keras==2.2.4
 Keras-Applications==1.0.7
 Keras-Preprocessing==1.0.8
 nltk==3.4
 numpy==1.16.4
 oauthlib==2.1.0
-pymongo==3.8.0
+pymongo==3.9.0
 requests==2.21.0
 scipy==1.2.0
 selenium==3.141.0
@@ -23,5 +23,5 @@ tensorboard==1.13.1
 tensorflow==1.13.1
 tweepy==3.8.0
 urllib3==1.24.1
-Werkzeug==0.15.5
+Werkzeug==0.16
 WTForms==2.2.1
